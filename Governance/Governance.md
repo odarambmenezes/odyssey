@@ -22,6 +22,7 @@
 | Side Quest generation engine v2 (livre/ancorada via "holofote") | Previous logic was thinner; see Playbook, Side Quest Path | Locked |
 | **GitHub backup repo created (`odarambmenezes/odyssey`), made public** (2026-09-01) | Notion publicly acknowledged an MCP tool-call reliability issue (2026-08-31) that stalled work mid-session. Repo holds a manual markdown mirror of docs (Codex, Playbook, GM Charter, Governance, Skills) as a fallback. No personal task data ever committed here — that stays in private Notion only. | Locked |
 | **Notion → GitHub fallback rule added to GM Charter** (2026-09-01) | Any chat/scheduled task should try the Notion link first; only on error/unreachable, check the matching file in this repo; if neither works, surface the error to Odara rather than inventing content. Sync from Notion → GitHub happens manually, after structural sessions in Building Odyssey — not automatic/background. | Locked |
+| **`about-me.md` stays standalone, not mirrored to/from Notion** (2026-09-01) | It's a general "how I like to collaborate with any AI" doc — not Odyssey-specific data, no factual overlap with Player/Character Sheet. Some philosophical echo of GM Charter rule 15, intentional (general-purpose vs. Odyssey-specific). | Locked |
 
 ## 🗓️ Session Log
 
@@ -46,7 +47,7 @@
 
 - **Too many separate keywords/routine names** — no design yet, needs calm dedicated thought.
 - **Automating the GitHub sync further** — currently manual (download zip → drag into Claude Code clone → commit/push). No GitHub connector available in claude.ai as of 2026-09-01; revisit if one becomes available in the connector directory.
-- **`about-me.md`** (found already in the repo, pre-dating this sync) — arguably belongs in Notion as source of truth with this repo as its mirror too, matching the pattern for everything else. Not yet actioned — flagged 2026-09-01.
+- ~~`about-me.md` destination~~ — **Resolved 2026-09-01**: stays standalone in this repo, not mirrored to/from Notion. See Decision Log.
 
 ## 🔄 Review Cadence
 
