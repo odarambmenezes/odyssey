@@ -1,0 +1,683 @@
+<title>Mala da Odisseia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Um só mundo visual (carta náutica à noite), de propósito: o iPad fica aceso na bancada. */
+:root{
+  --bg:#0b1a2b; --bg2:#0f2237; --panel:#132a43; --line:#244566; --ink:#eef4fa; --mute:#8fa8c2;
+  --card:#f3f6f9; --card-ink:#10253a; --card-mute:#5b7089;
+  --go:#2fd3a0; --go-ink:#04281d; --wait:#f5a83c; --wait-ink:#3a2200; --no:#9a8be0; --ok:#7ee0ff;
+  --font-d:"Bricolage Grotesque","Avenir Next",system-ui,sans-serif;
+  --font-b:"Figtree",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:radial-gradient(1200px 700px at 80% -10%,#16385a 0%,transparent 60%),var(--bg);color:var(--ink);font-family:var(--font-b);font-size:16px;line-height:1.35;padding-inline:16px;padding-block:12px;-webkit-tap-highlight-color:transparent;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--ok);outline-offset:2px;border-radius:8px}
+.app{max-width:1240px;margin:0 auto;display:flex;flex-direction:column;gap:14px;min-height:calc(100vh - 24px)}
+
+/* topo */
+.top{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center}
+.brand h1{font:800 clamp(1.3rem,2.6vw,1.9rem)/1 var(--font-d);margin:0;letter-spacing:-.01em}
+.brand p{margin:4px 0 0;color:var(--mute);font-size:.85rem}
+.route{position:relative;height:54px;min-width:0}
+.route .line{position:absolute;left:18px;right:18px;top:26px;height:4px;border-radius:4px;background:var(--line)}
+.route .fill{position:absolute;left:18px;top:26px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--go),var(--ok));width:0;transition:width .6s cubic-bezier(.2,.8,.2,1)}
+.port{position:absolute;top:19px;width:18px;height:18px;margin-left:-9px;border-radius:50%;background:var(--bg);border:3px solid var(--line);transition:.4s}
+.port.on{border-color:var(--go);background:var(--go)}
+.port span{position:absolute;top:-19px;left:50%;transform:translateX(-50%);font-size:.72rem;color:var(--mute);white-space:nowrap}
+.port span.b{top:22px}
+.ship{position:absolute;top:2px;width:30px;height:30px;margin-left:-15px;transition:left .6s cubic-bezier(.2,.8,.2,1)}
+.stats{display:flex;gap:10px;align-items:center}
+.rank{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:8px 12px;text-align:right}
+.rank b{display:block;font:700 1rem/1.1 var(--font-d)}
+.rank small{color:var(--mute);font-variant-numeric:tabular-nums}
+.docs{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:.85rem;color:var(--mute)}
+.docs a{color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-height:44px;display:inline-flex;align-items:center;text-decoration:none;font-weight:600}
+.docs a:hover{border-color:var(--ok)}
+.sync{font-size:.72rem;color:var(--mute);display:flex;gap:6px;align-items:center}
+.sync i{width:8px;height:8px;border-radius:50%;background:var(--go);display:inline-block}
+.sync.off i{background:var(--wait)}
+
+/* modos */
+.modes{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:4px;gap:4px;align-self:flex-start}
+.modes button{background:none;border:0;padding:10px 20px;border-radius:10px;font-weight:600;color:var(--mute);min-height:44px}
+.modes button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+
+/* corpo */
+.body{display:grid;grid-template-columns:260px 1fr;gap:16px;flex:1;min-height:0}
+.rail{display:flex;flex-direction:column;gap:8px}
+.cat{display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:center;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:10px 12px;min-height:60px}
+.cat[aria-current=true]{border-color:var(--ok);background:var(--bg2);box-shadow:0 0 0 1px var(--ok) inset}
+.cat b{display:block;font-weight:600}
+.cat small{color:var(--mute);font-variant-numeric:tabular-nums}
+.ring{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--go) calc(var(--p)*1%),var(--line) 0);position:relative}
+.ring::after{content:"";position:absolute;inset:5px;border-radius:50%;background:var(--panel)}
+.cat[aria-current=true] .ring::after{background:var(--bg2)}
+.ring svg{position:relative;z-index:1;width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ring.done svg{stroke:var(--go)}
+.stamp{display:inline-block;margin-left:6px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--go);border:1.5px solid var(--go);border-radius:6px;padding:0 5px;transform:rotate(-4deg)}
+
+.stage{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;min-width:0}
+.deckrow{width:100%;display:grid;grid-template-columns:minmax(70px,1fr) minmax(0,440px) minmax(70px,1fr);gap:14px;align-items:center}
+.pile{text-align:center;border-radius:18px;padding:14px 8px;border:2px dashed var(--line);color:var(--mute);transition:.2s}
+.pile b{display:block;font:800 2.2rem/1 var(--font-d);font-variant-numeric:tabular-nums}
+.pile span{font-size:.78rem}
+.pile.l b{color:var(--wait)} .pile.r b{color:var(--go)}
+.pile.hot.l{border-color:var(--wait);background:rgba(245,168,60,.12)} .pile.hot.r{border-color:var(--go);background:rgba(47,211,160,.12)}
+.deck{position:relative;width:100%;aspect-ratio:3/4;max-height:56vh;min-height:330px;touch-action:pan-y}
+.ghost{position:absolute;inset:0;background:var(--card);border-radius:26px;opacity:.5}
+.ghost.g1{transform:translateY(10px) scale(.96);opacity:.35}
+.ghost.g2{transform:translateY(20px) scale(.92);opacity:.2}
+.card{position:absolute;inset:0;background:var(--card);color:var(--card-ink);border-radius:26px;padding:56px 26px 22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 18px 40px rgba(0,0,0,.45);cursor:grab;user-select:none;-webkit-user-select:none;touch-action:pan-y;will-change:transform}
+.card:active{cursor:grabbing}
+.card.fly{transition:transform .28s ease-in,opacity .28s}
+.card.back{transition:transform .25s cubic-bezier(.2,1.4,.4,1)}
+.card::before{content:"";position:absolute;top:16px;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:var(--bg);box-shadow:inset 0 2px 4px rgba(0,0,0,.5)}
+.card .tag{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--card-mute)}
+.card h2{font:800 clamp(1.5rem,3.4vw,2.2rem)/1.08 var(--font-d);margin:0;text-wrap:balance}
+.card .hint{color:var(--card-mute);font-size:.95rem;margin:0}
+.card .dest{display:inline-flex;align-self:flex-start;gap:6px;border-radius:999px;padding:4px 12px;font-size:.8rem;font-weight:600;background:#dde7f0;color:var(--card-ink)}
+.card .dest.mao{background:#d7f3ea}
+.qty{margin-top:auto;display:flex;align-items:center;gap:12px;background:#e7eef5;border-radius:16px;padding:8px 10px}
+.qty span{flex:1;font-size:.82rem;color:var(--card-mute)}
+.qty button{width:44px;height:44px;border-radius:12px;border:0;background:var(--card-ink);color:var(--card);font:700 1.4rem/1 var(--font-d)}
+.qty output{min-width:2.2ch;text-align:center;font:800 1.7rem/1 var(--font-d);font-variant-numeric:tabular-nums}
+.sugg{font-size:.72rem;color:var(--card-mute)}
+.swipelbl{position:absolute;top:28px;padding:6px 14px;border:3px solid;border-radius:10px;font:800 1.1rem var(--font-d);letter-spacing:.06em;opacity:0;pointer-events:none;text-transform:uppercase}
+.swipelbl.r{right:22px;color:#0b9c71;border-color:#0b9c71;transform:rotate(8deg)}
+.swipelbl.l{left:22px;color:#c77708;border-color:#c77708;transform:rotate(-8deg)}
+.empty{position:absolute;inset:0;border-radius:26px;border:2px dashed var(--line);display:flex;flex-direction:column;gap:14px;align-items:center;justify-content:center;text-align:center;padding:24px}
+.empty h2{font:800 1.6rem var(--font-d);margin:0}
+.empty p{margin:0;color:var(--mute);max-width:30ch}
+
+.actions{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;width:100%;max-width:700px}
+.btn{min-height:56px;border-radius:16px;border:0;font-weight:700;padding:0 18px}
+.btn.l{background:var(--wait);color:var(--wait-ink)}
+.btn.r{background:var(--go);color:var(--go-ink)}
+.btn.n{background:var(--panel);border:1px solid var(--line);color:var(--ink)}
+.btn.p{background:var(--ink);color:var(--bg)}
+.btn:disabled{opacity:.35;cursor:default}
+.sub{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;color:var(--mute);font-size:.85rem}
+.link{background:none;border:0;color:var(--ok);text-decoration:underline;padding:8px;min-height:40px}
+.add{display:flex;gap:8px}
+.add input{background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--ink);padding:10px 12px;font:inherit;min-height:44px;width:min(260px,52vw)}
+
+.clima{width:100%;max-width:700px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 14px;font-size:.85rem}
+.clima summary{cursor:pointer;min-height:32px;display:flex;align-items:center}
+.clima table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.clima th,.clima td{text-align:left;padding:3px 6px;border-bottom:1px solid var(--line)}
+.clima .wrap{overflow-x:auto}
+.clima p{margin:8px 0 0;color:var(--mute)}
+.rain{color:var(--ok);font-weight:600}
+
+/* resumo */
+.sum{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;align-items:start}
+.sumcol{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:14px}
+.sumcol h3{margin:0 0 4px;font:700 1.05rem var(--font-d);display:flex;justify-content:space-between}
+.sumcol h3 em{font-style:normal;color:var(--mute);font-variant-numeric:tabular-nums}
+.sumcol ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.chip{width:100%;text-align:left;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:44px;display:flex;justify-content:space-between;gap:8px}
+.chip small{color:var(--mute)}
+.chip.essential{border-color:var(--wait)}
+.ready{grid-column:1/-1;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:linear-gradient(135deg,#123a45,#0f2a40);border:1px solid var(--go);border-radius:18px;padding:16px}
+.ready p{margin:0;max-width:60ch}
+
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:20;text-align:center;max-width:90vw}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.dot{position:fixed;width:9px;height:9px;border-radius:2px;pointer-events:none;z-index:19;animation:pop 1s ease-out forwards}
+@keyframes pop{from{transform:translate(0,0) rotate(0);opacity:1}to{transform:translate(var(--x),var(--y)) rotate(360deg);opacity:0}}
+/* plano */
+.plan{width:100%;display:flex;flex-direction:column;gap:14px}
+.plan .intro{margin:0;color:var(--mute);font-size:.9rem}
+.stage-sec{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px}
+.stage-sec h3{margin:0;font:800 1.1rem var(--font-d);display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.stage-sec h3 em{font:600 .85rem var(--font-b);font-style:normal;color:var(--mute)}
+.stage-sec .sub2{margin:2px 0 0;color:var(--mute);font-size:.82rem}
+.stage-sec ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.ptask .tk{background:none;border:0;padding:4px 0;min-height:44px}
+.ptask.done .nmx{color:var(--mute)}
+.pmeta{font-size:.84rem;color:var(--mute);display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap}
+.pcond{font-size:.84rem;color:var(--ink)}
+.tagc{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;border-radius:6px;padding:2px 6px;border:1.5px solid;white-space:nowrap}
+.tagc.ok{color:var(--go);border-color:var(--go)} .tagc.pend{color:var(--wait);border-color:var(--wait)} .tagc.man{color:var(--ok);border-color:var(--ok)}
+.pdel{align-self:flex-start}
+.padd{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px;display:grid;gap:8px}
+.padd label{font-size:.82rem;color:var(--mute);display:grid;gap:4px}
+.padd input,.padd select{background:var(--bg2);border:1px solid var(--line);border-radius:12px;color:var(--ink);padding:10px 12px;font:inherit;min-height:44px;width:100%}
+/* à vista */
+.vis{width:100%;display:flex;flex-direction:column;gap:14px}
+.tally{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.tally p{margin:0;color:var(--mute);font-size:.9rem}
+.zones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.zone{background:var(--panel);border:1px solid var(--line);border-top:5px solid var(--line);border-radius:16px;padding:12px}
+.zone.z-f{border-top-color:var(--wait)} .zone.z-s{border-top-color:var(--ok)} .zone.z-m{border-top-color:var(--go)}
+.zone h3{margin:0;font:800 1.05rem var(--font-d);display:flex;justify-content:space-between;align-items:baseline}
+.zone h3 em{font:800 1.8rem/1 var(--font-d);font-style:normal;font-variant-numeric:tabular-nums}
+.zone ul,.ess ul,.tasks ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.row{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:8px 10px;display:flex;flex-direction:column;gap:6px}
+.row .nm{display:flex;justify-content:space-between;gap:8px;align-items:center;font-weight:600}
+.row .nm small{color:var(--mute);font-weight:400;white-space:nowrap}
+.seg{display:flex;gap:4px;flex-wrap:wrap}
+.seg button{flex:1;min-width:64px;min-height:40px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--mute);font-weight:600;font-size:.82rem}
+.seg button.on.f{background:var(--wait);color:var(--wait-ink);border-color:var(--wait)}
+.seg button.on.s{background:var(--ok);color:#04202b;border-color:var(--ok)}
+.seg button.on.m{background:var(--go);color:var(--go-ink);border-color:var(--go)}
+.seg button.x{flex:0 0 auto;min-width:40px;font-size:.75rem}
+.vq{display:inline-flex;gap:6px;align-items:center}
+.vq button{width:36px;height:36px;border-radius:10px;border:0;background:var(--ink);color:var(--bg);font:700 1.2rem/1 var(--font-d)}
+.vq output{min-width:2ch;text-align:center;font-weight:800;font-variant-numeric:tabular-nums}
+.ess,.tasks,.nao{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px}
+.ess h3,.tasks h3{margin:0;font:700 1.05rem var(--font-d)}
+.ess p,.tasks p{margin:4px 0 0;color:var(--mute);font-size:.85rem}
+.ess ul{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.tk{display:flex;gap:10px;align-items:center;min-height:44px;width:100%;text-align:left;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:8px 12px}
+.tk i{width:22px;height:22px;border-radius:7px;border:2px solid var(--mute);flex:none;display:grid;place-items:center;font-style:normal;color:var(--go-ink)}
+.tk.done i{background:var(--go);border-color:var(--go)}
+.tk.done span{color:var(--mute);text-decoration:line-through}
+.nao summary{cursor:pointer;min-height:32px;color:var(--mute)}
+@media (max-width:900px){.zones{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+@media (max-width:900px){
+  .top{grid-template-columns:1fr auto}.route{grid-column:1/-1;order:3}
+  .body{grid-template-columns:1fr}
+  .rail{flex-direction:row;overflow-x:auto;padding-bottom:4px;scroll-snap-type:x proximity}
+  .cat{min-width:190px;scroll-snap-align:start}
+  .deckrow{grid-template-columns:1fr}
+  .pile{display:none}
+  .deck{max-height:none;aspect-ratio:auto;height:min(60vh,430px)}
+}
+</style>
+
+<div class="app">
+  <header class="top">
+    <div class="brand"><h1>Mala da Odisseia</h1><p>Barcelona → Sevilha → Málaga · 19 a 28 de outubro</p></div>
+    <div class="route" id="route" aria-hidden="true">
+      <div class="line"></div><div class="fill" id="fill"></div>
+      <div class="port" id="p0" style="left:18px"><span>Barcelona</span></div>
+      <div class="port" id="p1" style="left:calc(18px + (100% - 36px)*.33)"><span>Sevilha</span></div>
+      <div class="port" id="p2" style="left:calc(18px + (100% - 36px)*.66)"><span>Málaga</span></div>
+      <div class="port" id="p3" style="left:calc(100% - 18px)"><span>De volta</span></div>
+      <svg class="ship" id="ship" viewBox="0 0 30 30" aria-hidden="true"><path d="M15 3v15M15 4l9 11H15M15 7l-7 8h7" fill="#eef4fa" stroke="#eef4fa" stroke-width="1" stroke-linejoin="round"/><path d="M4 19h22l-3 6H7z" fill="#f5a83c"/></svg>
+    </div>
+    <div class="stats">
+      <div class="rank"><b id="rank">Grumete</b><small id="xp">0 XP</small></div>
+    </div>
+  </header>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div class="modes" role="group" aria-label="Fase">
+      <button id="m-vis" aria-pressed="true">À vista</button>
+      <button id="m-plan" aria-pressed="false">Plano</button>
+      <button id="m-sep" aria-pressed="false">Triagem</button>
+      <button id="m-con" aria-pressed="false">Guardar</button>
+    </div>
+    <div class="sync" id="sync"><i></i><span>conectando…</span></div>
+  </div>
+
+  <nav class="docs" aria-label="Documentos da viagem"><span>Documentos:</span><a href="https://drive.google.com/drive/folders/1omKXabh84e0LUbiOM9FHRgWeCgVFaUjH" target="_blank" rel="noopener noreferrer">Pasta da viagem no Drive</a><a href="https://docs.google.com/document/d/1vIoC_Xm5gk3HN-Bu2h_fnv586c2aNUGqNkakAN_EFdg/edit" target="_blank" rel="noopener noreferrer">00 - Documentos e confirmações (índice)</a></nav>
+
+  <main class="body">
+    <nav class="rail" id="rail" aria-label="Categorias"></nav>
+    <section class="stage" id="stage"></section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var CATS=[
+ {id:"docs",name:"Documentos e essenciais",icon:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/>'},
+ {id:"roupas",name:"Roupas",icon:'<path d="M8 3l-5 4 3 3 2-1v12h8V9l2 1 3-3-5-4a4 4 0 01-8 0z"/>'},
+ {id:"clima",name:"Clima",icon:'<path d="M7 18a4 4 0 010-8 5 5 0 019.6-1A4.5 4.5 0 0117 18z"/><path d="M9 21l1-2M13 21l1-2"/>'},
+ {id:"necess",name:"Necessaire e rotina",icon:'<rect x="4" y="8" width="16" height="12" rx="3"/><path d="M9 8V6a3 3 0 016 0v2"/>'},
+ {id:"eletro",name:"Eletrônicos",icon:'<rect x="8" y="2" width="8" height="20" rx="2"/><path d="M11 18h2"/>'},
+ {id:"mao",name:"Comigo na mão",icon:'<path d="M5 9h14l-1 11H6z"/><path d="M9 9V7a3 3 0 016 0v2"/>'}
+];
+var ITEMS=[
+ {id:"id-foto",cat:"docs",name:"Documento de identidade com foto",dest:"mao",hint:"O trem de segunda (09:12) e o ônibus de quinta pedem documento."},
+ {id:"cel-bilhetes",cat:"docs",name:"Celular com os bilhetes baixados",dest:"mao",hint:"Trem iryo, Alcázar, Luminiscence (QR da Fever) e ônibus Alsa."},
+ {id:"carteira",cat:"docs",name:"Carteira e cartões de pagamento",dest:"mao",hint:""},
+ {id:"chaves",cat:"docs",name:"Chaves de casa",dest:"mao",hint:""},
+ {id:"ryan",cat:"docs",name:"Cartão de embarque da Ryanair",dest:"mao",hint:"Fazer o check-in antes. Voo FR 482, dia 28, às 18:00."},
+ {id:"calcinhas",cat:"roupas",name:"Calcinhas",dest:"mala",qty:10,unit:"peças",hint:"10 dias de viagem."},
+ {id:"sutias",cat:"roupas",name:"Sutiãs e tops",dest:"mala",qty:4,unit:"peças",hint:""},
+ {id:"meias",cat:"roupas",name:"Meias",dest:"mala",qty:7,unit:"pares",hint:""},
+ {id:"blusas",cat:"roupas",name:"Blusas e camisetas",dest:"mala",qty:6,unit:"peças",hint:"Dá para repetir algumas."},
+ {id:"calcas",cat:"roupas",name:"Calças",dest:"mala",qty:2,unit:"peças",hint:""},
+ {id:"shorts",cat:"roupas",name:"Shorts ou saia",dest:"mala",qty:2,unit:"peças",hint:"Máximas de 24 a 26 °C na previsão."},
+ {id:"noite",cat:"roupas",name:"Roupa para a noite ou show",dest:"mala",qty:1,unit:"look",hint:""},
+ {id:"dormir",cat:"roupas",name:"Roupa de dormir",dest:"mala",qty:2,unit:"peças",hint:""},
+ {id:"calcado",cat:"roupas",name:"Calçado extra",dest:"mala",qty:1,unit:"par",hint:"O que está no pé não conta."},
+ {id:"banho",cat:"roupas",name:"Roupa de banho",dest:"mala",qty:1,unit:"peça",hint:"Sábado 24 é dia de Nerja."},
+ {id:"guarda",cat:"clima",name:"Guarda-chuva compacto",dest:"mala",hint:"AEMET prevê chuva em Sevilha na segunda 19 e na terça 20."},
+ {id:"capa",cat:"clima",name:"Capa de chuva leve",dest:"mala",hint:"Terça 20 tem Alcázar, ao ar livre."},
+ {id:"casaco",cat:"clima",name:"Casaco leve ou jaqueta",dest:"mala",hint:"Mínimas de 9 a 14 °C na previsão."},
+ {id:"oculos",cat:"clima",name:"Óculos de sol",dest:"mao",hint:""},
+ {id:"solar",cat:"clima",name:"Protetor solar",dest:"mala",hint:""},
+ {id:"calcchuva",cat:"clima",name:"Calçado que aguenta chuva",dest:"mala",hint:"Pode ser o que você já vai calçando."},
+ {id:"cabelo",cat:"necess",name:"Creme de cabelo",dest:"mala",hint:""},
+ {id:"pente",cat:"necess",name:"Pente",dest:"mala",hint:""},
+ {id:"chinelo",cat:"necess",name:"Chinelo",dest:"mala",hint:""},
+ {id:"dentes",cat:"necess",name:"Escova e pasta de dente",dest:"mala",hint:""},
+ {id:"desod",cat:"necess",name:"Desodorante",dest:"mala",hint:""},
+ {id:"skin",cat:"necess",name:"Hidratante e skincare",dest:"mala",hint:""},
+ {id:"gilete",cat:"necess",name:"Gilete",dest:"mala",hint:""},
+ {id:"labial",cat:"necess",name:"Protetor labial",dest:"mao",hint:""},
+ {id:"remedios",cat:"necess",name:"Medicamentos de uso diário",dest:"mao",hint:"Só o item, sem detalhe nenhum."},
+ {id:"carreg",cat:"eletro",name:"Carregador do celular",dest:"mao",hint:""},
+ {id:"power",cat:"eletro",name:"Power bank",dest:"mao",hint:""},
+ {id:"fones",cat:"eletro",name:"Fones de ouvido",dest:"mao",hint:""},
+ {id:"note",cat:"eletro",name:"Notebook de trabalho e carregador",dest:"mala",hint:"Na semana de 26/10 você precisa estar online a partir das 16h."},
+ {id:"cabo",cat:"eletro",name:"Cabo extra",dest:"mala",hint:""},
+ {id:"ipad",cat:"eletro",name:"iPad",dest:"mala",hint:"Só se for levar."},
+ {id:"agua",cat:"mao",name:"Água e um lanchinho para o trem",dest:"mao",hint:""},
+ {id:"casacomao",cat:"mao",name:"Casaco leve à mão no trem",dest:"mao",hint:"Ar-condicionado de trem costuma gelar."},
+ {id:"lencos",cat:"mao",name:"Lenços e álcool em gel",dest:"mao",hint:""},
+ {id:"distr",cat:"mao",name:"Algo para ver ou ler no trem",dest:"mao",hint:"A viagem de segunda é longa."}
+];
+var CLIMA={fonte:"AEMET, previsão por município, lida em 18/10 às 16h35",
+ rows:[["Seg 19","14 / 26","Trovoadas","30–75%","16 / 23","Chuva e trovoada","100%"],
+       ["Ter 20","13 / 25","Chuva","80–95%","15 / 26","Pouco nublado","35%"],
+       ["Qua 21","10 / 24","Chuva fraca","0–5%","14 / 25","Pouco nublado","0%"],
+       ["Qui 22","9 / 25","Pouco nublado","0%","13 / 24","Nuvens altas","0%"],
+       ["Sex 23","10 / 25","Nuvens altas","0%","14 / 25","Pouco nublado","5%"]]};
+
+var TASKS=[
+ {id:"t-bilhetes",name:"Baixar os bilhetes no celular"},
+ {id:"t-clima",name:"Olhar a previsão no app da AEMET antes de sair"},
+ {id:"t-carregar",name:"Carregar celular, power bank e iPad"},
+ {id:"t-ryan",name:"Check-in da Ryanair (voo de 28/10)"}
+];
+var STAGES=[
+ {id:"pre",name:"Pré-viagem",sub:"Hoje e amanhã, até sair de casa"},
+ {id:"transito",name:"Em trânsito",sub:"Trem de segunda e ônibus de quinta"},
+ {id:"chegada",name:"Na chegada / durante a viagem",sub:"Sevilha, Málaga e a volta"}
+];
+/* tag: ok = confirmado em e-mail/reserva; pend = ainda não confirmado */
+var PLAN=[
+ {id:"pl-bilhetes",stage:"pre",tag:"ok",name:"Baixar os bilhetes no celular",note:"iryo B49CC6, Alcázar (Infoticketing 25181625), Alsa 1gkvpot e QR da Luminiscence na Fever.",cond:"Todos abrem no celular sem internet."},
+ {id:"pl-ryan",stage:"pre",tag:"ok",name:"Check-in online da Ryanair (FR 482, dia 28, 18:00)",note:"Reserva AYL5NR confirmada. Em 18/10 você viu no app que o check-in ainda não abriu; é para depois, na viagem.",cond:"Cartão de embarque salvo no celular."},
+ {id:"pl-sevilla",stage:"pre",tag:"ok",name:"Ter à mão o endereço de Sevilha: Calle Valle 15 (Casco Antiguo)",note:"Airbnb da Rocío, reserva HMBHCMC2XQ, 19 a 22/10, check-in 14:00 às 24:00, entrada autônoma com caixa de chaves. Está registrado na V15; hoje não consegui reencontrar o e-mail da reserva no Gmail.",cond:"Reserva aberta no app do Airbnb, com o código da caixa de chaves à vista."},
+ {id:"pl-lumin",stage:"pre",tag:"pend",name:"Decidir se a Luminiscence (ter 20, 21:45) entra no plano",note:"Ingresso da Fever de 19,99 € no e-mail; não sei se você quer ir.",cond:"Você decide ir ou não."},
+ {id:"pl-guarda",stage:"pre",tag:"pend",name:"Decidir guarda-chuva e capa de chuva",note:"AEMET (lida em 18/10) prevê chuva em Sevilha na seg 19 e ter 20; faixas aproximadas.",cond:"Você decide levar ou comprar lá."},
+ {id:"pl-clima",stage:"pre",tag:"ok",name:"Olhar a previsão da AEMET antes de sair",note:"Os dias 24 a 28 ainda não tinham previsão por município.",cond:"Você viu a previsão atualizada."},
+ {id:"pl-carregar",stage:"pre",tag:"ok",name:"Carregar celular, power bank e iPad",note:"",cond:"Aparelhos carregados."},
+ {id:"pl-roupa",stage:"pre",tag:"ok",name:"Terminar a roupa lavada e fechar a mala",note:"",cond:"Mala fechada."},
+ {id:"pl-lixo",stage:"pre",tag:"ok",name:"Tirar o lixo antes de sair",note:"",cond:"Lixo na rua."},
+ {id:"pl-alarme",stage:"pre",tag:"pend",name:"Decidir alarme de amanhã",note:"Trem às 09:12; chegar a Sants 30 min antes, ~08:40; sair de casa ~08:00. Nenhum alarme foi criado.",cond:"Você escolhe o horário e cria o alarme."},
+ {id:"pl-revolut",stage:"pre",tag:"pend",name:"Conferir o login novo na Revolut em Palma (17/10, 14:28)",note:"Veio um alerta de aparelho novo; não sei se foi você.",cond:"Você confirma que foi você, ou toma providência."},
+ {id:"tr-sants",stage:"transito",tag:"ok",name:"Estar em Sants às 08:40 (trem 09:12)",note:"Vagão 4, assento 6D; chega às 15:46 em Santa Justa. O embarque fecha 2 minutos antes da partida.",cond:"Você embarcou."},
+ {id:"tr-doc",stage:"transito",tag:"ok",name:"Documento com foto à mão para embarcar",note:"O iryo e o Alsa pedem documento.",cond:"Embarque feito."},
+ {id:"tr-mao",stage:"transito",tag:"ok",name:"Água, lanche e casaco leve à mão no trem",note:"",cond:"Na bolsa antes de embarcar."},
+ {id:"tr-alsa",stage:"transito",tag:"ok",name:"Quinta 22: ônibus Alsa Sevilha → Málaga, chegada 17:45",note:"Sai às 15:00 da Plaza de Armas (não da Santa Justa), ônibus 1, assento 33, mala até 25 kg. Documento obrigatório.",cond:"Você embarcou."},
+ {id:"ch-sevilla",stage:"chegada",tag:"ok",name:"Entrar no apartamento de Sevilha (Calle Valle 15)",note:"O trem chega 15:46; o check-in vai até 24:00. Na saída, quinta até 12:00: lixo nos contêineres da rua e chave sobre a mesa.",cond:"Check-in feito."},
+ {id:"ch-alcazar",stage:"chegada",tag:"ok",name:"Ter 20, 12:30: Alcázar",note:"Ingresso Infoticketing 25181625; ao ar livre, com chuva na previsão.",cond:"Você entrou."},
+ {id:"ch-casa",stage:"chegada",tag:"pend",name:"Casa Al Sur (Málaga, calle Pizarro 15): aceitar a reserva no app do Airbnb e seguir a resposta",note:"Reserva HMYA538JEQ. Você avisou que chega ~18:30 em 22/10. Não vi resposta.",cond:"Reserva aceita e horário de chegada combinado."},
+ {id:"ch-empad",stage:"chegada",tag:"pend",name:"Checar o prazo do empadronamento / contrato de longa duração (22/10)",note:"A data coincide com o dia de viagem Sevilha → Málaga. Não foi decidido nada.",cond:"Você confirma se o prazo é real e o que fazer."},
+ {id:"ch-nerja",stage:"chegada",tag:"pend",name:"Sáb 24 (Nerja): ver o horário do Alsa Málaga → Nerja",note:"Horário ainda não conferido.",cond:"Ida e volta definidas."},
+ {id:"ch-inverno",stage:"chegada",tag:"ok",name:"Dom 25: relógio volta 1 hora; corrida às 9:30 na Av. de Andalucía",note:"Alerta que já estava na V15.",cond:"Você decide se vai."},
+ {id:"ch-online",stage:"chegada",tag:"ok",name:"Semana de 26/10: estar perto de casa e online a partir de ~16h",note:"Passeios longos só sex 23, sáb 24 e dom 25.",cond:"Programação da semana respeita isso."},
+ {id:"ch-reunioes",stage:"chegada",tag:"pend",name:"Confirmar as reuniões de quarta 28 (voo às 18:00)",note:"Ainda não confirmei com você.",cond:"Reuniões confirmadas ou remanejadas."},
+ {id:"ch-locker",stage:"chegada",tag:"pend",name:"Dia 28: decidir Locker M ou ficar com as malas",note:"",cond:"Você decide."}
+];
+function isEss(i){return i.cat==="docs"||i.dest==="mao"}
+var S={plano:{},pcol:null,docs:{},cat:"docs",mode:"vis",undo:[],db:null,col:null,sync:"conectando"};
+var chain={};
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+function allItems(){
+  var out=ITEMS.slice();
+  Object.keys(S.docs).forEach(function(id){var d=S.docs[id];if(d&&d.custom&&d.name){out.push({id:id,cat:d.cat||"docs",name:d.name,dest:d.dest||"mala",hint:d.hint||"",qty:d.qty,unit:d.unit,custom:true})}});
+  return out;
+}
+function st(id){var d=S.docs[id];return (d&&d.state)||"novo"}
+function qtyOf(it){var d=S.docs[it.id];return (d&&typeof d.qty==="number")?d.qty:it.qty}
+function inCat(c){return allItems().filter(function(i){return i.cat===c})}
+function catDone(c){return inCat(c).every(function(i){var s=st(i.id);return s==="separado"||s==="namala"||s==="conferido"||s==="naovai"})}
+function catStats(c){var l=inCat(c).filter(function(i){return st(i.id)!=="naovai"});var d=l.filter(function(i){var s=st(i.id);return s==="separado"||s==="namala"||s==="conferido"}).length;return {d:d,t:l.length}}
+function deck(){
+  var items=allItems();
+  if(S.mode==="con"){
+    return items.filter(function(i){return st(i.id)==="separado"}).sort(function(a,b){return CATS.findIndex(function(c){return c.id===a.cat})-CATS.findIndex(function(c){return c.id===b.cat})});
+  }
+  var c=inCat(S.cat);
+  var novos=c.filter(function(i){return st(i.id)==="novo"});
+  var falta=c.filter(function(i){return st(i.id)==="falta"}).sort(function(a,b){return ((S.docs[a.id]||{}).updatedAt||0)-((S.docs[b.id]||{}).updatedAt||0)});
+  return novos.concat(falta);
+}
+
+/* persistência */
+function save(id,data){
+  S.docs[id]=data; render();
+  if(!S.col){return}
+  var prev=chain[id]||Promise.resolve();
+  chain[id]=prev.then(function(){return S.col.doc(id).set(data)}).then(function(){setSync("ok")},function(){setSync("err")});
+}
+function drop(id){
+  delete S.docs[id]; render();
+  if(!S.col){return}
+  var prev=chain[id]||Promise.resolve();
+  chain[id]=prev.then(function(){return S.col.doc(id).delete()}).then(function(){setSync("ok")},function(){setSync("err")});
+}
+var pchain={};
+function psave(id,data){
+  S.plano[id]=data; render();
+  if(!S.pcol){return}
+  var prev=pchain[id]||Promise.resolve();
+  pchain[id]=prev.then(function(){return S.pcol.doc(id).set(data)}).then(function(){setSync("ok")},function(){setSync("err")});
+}
+function pdrop(id){
+  delete S.plano[id]; render();
+  if(!S.pcol){return}
+  var prev=pchain[id]||Promise.resolve();
+  pchain[id]=prev.then(function(){return S.pcol.doc(id).delete()}).then(function(){setSync("ok")},function(){setSync("err")});
+}
+function ptasks(){
+  var out=PLAN.slice();
+  Object.keys(S.plano).forEach(function(id){var d=S.plano[id];if(d&&d.custom&&d.name){out.push({id:id,stage:d.stage||"pre",tag:"man",name:d.name,note:d.note||"",cond:d.cond||"",custom:true,linked:d.linked})}});
+  return out;
+}
+function pdone(id){return !!(S.plano[id]&&S.plano[id].done)}
+function setItem(id,patch,noUndo){
+  var before=S.docs[id]?JSON.parse(JSON.stringify(S.docs[id])):null;
+  if(!noUndo){S.undo.push({id:id,prev:before});if(S.undo.length>40)S.undo.shift()}
+  var d=Object.assign({},S.docs[id]||{},patch,{updatedAt:Date.now(),by:"odara"});
+  save(id,d);
+}
+function undo(){
+  var u=S.undo.pop(); if(!u)return;
+  if(u.prev){save(u.id,u.prev)}else{drop(u.id)}
+}
+function setSync(k){
+  var el=$("sync");el.className="sync"+(k==="ok"?"":" off");
+  el.querySelector("span").textContent=k==="ok"?"salvo e compartilhado":(k==="off"?"só neste aparelho":(k==="err"?"não consegui salvar agora":"conectando…"));
+}
+
+/* ações */
+function act(dir){
+  var d=deck(); if(!d.length)return;
+  var it=d[0], wasDone=catDone(it.cat);
+  if(dir==="r"){setItem(it.id,{state:S.mode==="con"?(isEss(it)?"conferido":"namala"):"separado"})}
+  else if(dir==="l"){setItem(it.id,{state:"falta"})}
+  else if(dir==="n"){setItem(it.id,{state:"naovai"})}
+
+}
+function celebrate(c){
+  var name=CATS.find(function(x){return x.id===c}).name;
+  toast("Carimbo conquistado: "+name);
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+  var cols=["#2fd3a0","#f5a83c","#7ee0ff","#eef4fa"];
+  for(var i=0;i<18;i++){
+    var e=document.createElement("div");e.className="dot";
+    e.style.left="50%";e.style.top="55%";e.style.background=cols[i%4];
+    e.style.setProperty("--x",(Math.random()*500-250)+"px");e.style.setProperty("--y",(Math.random()*-300-30)+"px");
+    document.body.appendChild(e);setTimeout(function(n){n.remove()},1000,e);
+  }
+}
+var tt;function toast(m){var t=$("toast");t.textContent=m;t.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("show")},2600)}
+
+/* swipe */
+function bindCard(){
+  var card=document.getElementById("card"); if(!card)return;
+  var x0=null,dx=0,id=null,lr=card.querySelector(".swipelbl.r"),ll=card.querySelector(".swipelbl.l");
+  var pl=document.querySelector(".pile.l"),pr=document.querySelector(".pile.r");
+  card.addEventListener("pointerdown",function(e){
+    if(e.target.closest(".qty"))return;
+    x0=e.clientX;dx=0;id=e.pointerId;card.setPointerCapture(id);card.classList.remove("back");
+  });
+  card.addEventListener("pointermove",function(e){
+    if(x0===null)return;dx=e.clientX-x0;
+    card.style.transform="translateX("+dx+"px) rotate("+dx/22+"deg)";
+    lr.style.opacity=Math.max(0,Math.min(1,dx/110));ll.style.opacity=Math.max(0,Math.min(1,-dx/110));
+    if(pl&&pr){pl.classList.toggle("hot",dx<-40);pr.classList.toggle("hot",dx>40)}
+  });
+  function end(){
+    if(x0===null)return;var d=dx;x0=null;
+    if(Math.abs(d)>110){
+      card.classList.add("fly");
+      card.style.transform="translateX("+(d>0?900:-900)+"px) rotate("+(d>0?28:-28)+"deg)";card.style.opacity="0";
+      setTimeout(function(){act(d>0?"r":"l")},230);
+    }else{
+      card.classList.add("back");card.style.transform="";lr.style.opacity=0;ll.style.opacity=0;
+      if(pl&&pr){pl.classList.remove("hot");pr.classList.remove("hot")}
+    }
+  }
+  card.addEventListener("pointerup",end);card.addEventListener("pointercancel",end);
+}
+function flyBtn(dir){
+  var card=document.getElementById("card");
+  if(!card){act(dir);return}
+  card.classList.add("fly");
+  card.style.transform=dir==="n"?"translateY(-40px) scale(.9)":"translateX("+(dir==="r"?900:-900)+"px) rotate("+(dir==="r"?28:-28)+"deg)";
+  card.style.opacity="0";
+  setTimeout(function(){act(dir)},230);
+}
+
+/* render */
+function render(){
+  renderTop();renderRail();renderModes();
+  var s=$("stage");
+  if(S.mode==="plan"){renderPlan(s)}else if(S.mode==="vis"){renderVis(s)}else if(S.mode==="res"){renderSum(s)}else{renderDeck(s)}
+}
+function renderModes(){
+  $("m-vis").setAttribute("aria-pressed",S.mode==="vis");$("m-plan").setAttribute("aria-pressed",S.mode==="plan");$("m-sep").setAttribute("aria-pressed",S.mode==="sep");$("m-con").setAttribute("aria-pressed",S.mode==="con");
+  $("rail").style.display=S.mode==="sep"?"":"none";
+  document.querySelector(".body").style.gridTemplateColumns=S.mode==="sep"&&window.innerWidth>900?"260px 1fr":"1fr";
+}
+function renderTop(){
+  var items=allItems().filter(function(i){return st(i.id)!=="naovai"});
+  var inb=items.filter(function(i){var s=st(i.id);return s==="namala"||s==="conferido"}).length;
+  var sepn=items.filter(function(i){return st(i.id)==="separado"}).length;
+  var done=inb;
+  var pct=items.length?done/items.length:0;
+  $("rank").textContent=inb+" na mala";$("xp").textContent=sepn+" separados · "+(items.length-inb-sepn)+" faltam";
+  $("fill").style.width="calc((100% - 36px)*"+pct+")";
+  $("ship").style.left="calc(18px + (100% - 36px)*"+pct+")";
+  [0,.33,.66,1].forEach(function(t,i){$("p"+i).classList.toggle("on",pct>=t-0.001)});
+}
+function renderRail(){
+  var h="";
+  CATS.forEach(function(c){
+    var s=catStats(c.id),p=s.t?Math.round(s.d/s.t*100):100,dn=catDone(c.id);
+    h+='<button class="cat" data-c="'+c.id+'" aria-current="'+(S.cat===c.id)+'"><span class="ring'+(dn?" done":"")+'" style="--p:'+p+'"><svg viewBox="0 0 24 24" aria-hidden="true">'+c.icon+'</svg></span><span><b>'+c.name+(dn?'<span class="stamp">ok</span>':'')+'</b><small>'+s.d+' de '+s.t+'</small></span></button>';
+  });
+  $("rail").innerHTML=h;
+}
+function counts(){
+  var scope=S.mode==="con"?allItems():inCat(S.cat);
+  var f=scope.filter(function(i){return st(i.id)==="falta"}).length;
+  var g=scope.filter(function(i){var s=st(i.id);return S.mode==="con"?(s==="namala"||s==="conferido"):(s==="separado"||s==="namala"||s==="conferido")}).length;
+  return {f:f,g:g};
+}
+function renderDeck(s){
+  var d=deck(),c=counts(),it=d[0],con=S.mode==="con";
+  var h='';
+  if(S.mode==="sep"&&S.cat==="clima"){
+    h+='<details class="clima"><summary><b>Previsão AEMET:</b> chuva em Sevilha na seg 19 e ter 20. Toque para ver os dias.</summary><div class="wrap" style="margin-top:8px"><table><thead><tr><th>Dia</th><th>Sevilha °C</th><th></th><th>Chuva</th><th>Málaga °C</th><th></th><th>Chuva</th></tr></thead><tbody>';
+    CLIMA.rows.forEach(function(r){h+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td><td class="rain">'+r[3]+'</td><td>'+r[4]+'</td><td>'+r[5]+'</td><td class="rain">'+r[6]+'</td></tr>'});
+    h+='</tbody></table></div><p>Fonte: '+CLIMA.fonte+'. Li a tabela da página da AEMET e as faixas por dia são aproximadas; confira no app antes de sair. Dias 24 a 28 ainda sem previsão municipal.</p></details>';
+  }
+  h+='<div class="deckrow"><div class="pile l"><b>'+c.f+'</b><span>'+(con?"ainda falta":"ainda falta")+'</span></div><div class="deck" id="deck">';
+  if(it){
+    var cat=CATS.find(function(x){return x.id===it.cat});
+    var q=qtyOf(it);
+    h+='<div class="ghost g2"></div><div class="ghost g1"></div>';
+    h+='<div class="card" id="card" role="group" aria-label="'+esc(it.name)+'"><span class="swipelbl r">'+(con?"Na mala":"Separado")+'</span><span class="swipelbl l">Falta</span>';
+    h+='<div class="tag">'+cat.name+' · '+(d.length)+(d.length===1?" carta":" cartas")+'</div><h2>'+esc(it.name)+'</h2>';
+    if(it.hint)h+='<p class="hint">'+esc(it.hint)+'</p>';
+    h+='<span class="dest '+it.dest+'">'+(it.dest==="mao"?"Vai comigo, na mão":"Vai na mala")+'</span>';
+    if(typeof q==="number"){h+='<div class="qty"><span>Quantidade<br><span class="sugg">sugestão, você ajusta</span></span><button data-q="-1" aria-label="Menos">−</button><output>'+q+'</output><button data-q="1" aria-label="Mais">+</button></div>'}
+    h+='</div>';
+  }else{
+    h+='<div class="empty">';
+    if(con){
+      var tot=allItems().filter(function(i){var x=st(i.id);return x==="namala"||x==="conferido"}).length;
+      h+='<h2>'+(tot?"Nada esperando para guardar":"Nada separado ainda")+'</h2><p>'+(tot?"Tudo o que estava separado já está na mala ou com você.":"Separe algumas coisas na Triagem, depois elas aparecem aqui.")+'</p><button class="btn p" data-go="vis">Ver à vista</button>';
+    }else{
+      var next=CATS.find(function(x){return !catDone(x.id)});
+      h+='<h2>'+CATS.find(function(x){return x.id===S.cat}).name+': feito</h2><p>Carimbo conquistado. '+(next?"Próxima parada: "+next.name+".":"Todas as categorias passaram por você.")+'</p>';
+      h+=next?'<button class="btn p" data-cat="'+next.id+'">Ir para '+esc(next.name)+'</button>':'<button class="btn p" data-go="vis">Ver à vista</button>';
+    }
+    h+='</div>';
+  }
+  h+='</div><div class="pile r"><b>'+c.g+'</b><span>'+(con?"na mala":"separados")+'</span></div></div>';
+  h+='<div class="actions"><button class="btn l" data-a="l"'+(it?"":" disabled")+'>← Ainda falta'+'</button><button class="btn n" data-a="n"'+(it?"":" disabled")+'>Não vou levar</button><button class="btn r" data-a="r"'+(it?"":" disabled")+'>'+(con?"Na mala":"Separado")+' →</button></div>';
+  h+='<div class="sub"><button class="link" data-undo="1"'+(S.undo.length?"":" disabled")+'>Desfazer</button>';
+  if(!con){h+='<form class="add" id="addf"><input id="addin" type="text" placeholder="Adicionar item nesta categoria" maxlength="60" aria-label="Adicionar item"><button class="btn n" type="submit" style="min-height:44px">Adicionar</button></form>'}
+  h+='</div>';
+  s.innerHTML=h;
+  bindCard();
+}
+function hhmm(t){var d=new Date(t);return ("0"+d.getHours()).slice(-2)+":"+("0"+d.getMinutes()).slice(-2)}
+function renderVis(s){
+  var items=allItems().sort(function(a,b){return CATS.findIndex(function(c){return c.id===a.cat})-CATS.findIndex(function(c){return c.id===b.cat})});
+  var ess=items.filter(isEss).filter(function(i){return st(i.id)!=="naovai"});
+  var rest=items.filter(function(i){return !isEss(i)});
+  var fa=rest.filter(function(i){var x=st(i.id);return x==="novo"||x==="falta"});
+  var se=rest.filter(function(i){return st(i.id)==="separado"});
+  var ma=rest.filter(function(i){var x=st(i.id);return x==="namala"||x==="conferido"});
+  var na=items.filter(function(i){return st(i.id)==="naovai"});
+  var last=0;Object.keys(S.docs).forEach(function(k){var u=S.docs[k]&&S.docs[k].updatedAt;if(u>last)last=u});
+  function catName(i){return CATS.find(function(c){return c.id===i.cat}).name.split(" ")[0]}
+  function qtyH(i){var q=qtyOf(i);return typeof q==="number"?'<span class="vq"><button data-vq="'+i.id+'|-1" aria-label="Menos">−</button><output>'+q+'</output><button data-vq="'+i.id+'|1" aria-label="Mais">+</button></span>':''}
+  function row(i){
+    var x=st(i.id);
+    var f=(x==="novo"||x==="falta");
+    return '<li class="row"><div class="nm"><span>'+esc(i.name)+'</span><small>'+catName(i)+'</small></div><div class="seg">'
+      +'<button class="f'+(f?' on':'')+'" data-set="'+i.id+'|falta">Falta</button>'
+      +'<button class="s'+(x==="separado"?' on':'')+'" data-set="'+i.id+'|separado">Separado</button>'
+      +'<button class="m'+((x==="namala"||x==="conferido")?' on':'')+'" data-set="'+i.id+'|namala">Na mala</button>'
+      +'<button class="x" data-set="'+i.id+'|naovai" aria-label="Não vou levar">não vou</button><button class="x" data-buy="'+i.id+'" aria-label="Não levar e comprar no destino">comprar lá</button></div>'
+      +(qtyOf(i)!==undefined&&typeof qtyOf(i)==="number"?'<div style="display:flex;justify-content:space-between;align-items:center"><small style="color:var(--mute)">Quantidade (sugestão)</small>'+qtyH(i)+'</div>':'')+'</li>';
+  }
+  function zone(cls,title,list,empty){
+    var h='<section class="zone '+cls+'"><h3>'+title+'<em>'+list.length+'</em></h3><ul>';
+    if(!list.length)h+='<li style="color:var(--mute);font-size:.85rem">'+empty+'</li>';
+    list.forEach(function(i){h+=row(i)});
+    return h+'</ul></section>';
+  }
+  var h='<div class="vis"><div class="tally"><p>Toque para mover cada coisa de zona. Nada é obrigatório: você decide quando está pronta.</p><p>'+(last?'Última mudança às '+hhmm(last):'Sem mudanças ainda')+' · <button class="link" data-undo="1"'+(S.undo.length?"":" disabled")+'>Desfazer</button></p></div>';
+  h+='<section class="ess"><h3>Essenciais comigo</h3><p>Documentos e o que vai na mão ou no bolso. Marque quando estiver mesmo com você.</p><ul>';
+  ess.forEach(function(i){var x=st(i.id);
+    h+='<li class="row"><div class="nm"><span>'+esc(i.name)+'</span><small>'+catName(i)+'</small></div>'+(i.hint?'<small style="color:var(--mute)">'+esc(i.hint)+'</small>':'')+'<div class="seg"><button class="s'+(x==="separado"?' on':'')+'" data-tog="'+i.id+'|separado">Separado</button><button class="m'+(x==="conferido"?' on':'')+'" data-tog="'+i.id+'|conferido">Conferido comigo</button></div></li>'});
+  h+='</ul></section>';
+  h+='<div class="zones">'+zone("z-f","Falta pegar",fa,"Nada faltando aqui.")+zone("z-s","Separado, fora da mala",se,"Nada esperando para entrar na mala.")+zone("z-m","Na mala",ma,"Ainda nada na mala.")+'</div>';
+  var pend=ptasks().filter(function(t){return !pdone(t.id)}).length;
+  h+='<button class="btn n" data-go="plan" style="width:100%">Ver o Plano da Viagem ('+pend+' tarefas pendentes)</button>';
+  if(na.length){h+='<details class="nao"><summary>Não vou levar ('+na.length+')</summary><ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:6px">';na.forEach(function(i){h+='<li class="row"><div class="nm"><span>'+esc(i.name)+'</span><span><button class="link" data-buy="'+i.id+'">comprar lá</button><button class="link" data-set="'+i.id+'|falta">Voltar para falta</button></span></div></li>'});h+='</ul></details>'}
+  h+='</div>';
+  s.innerHTML=h;
+}
+function renderPlan(s){
+  var all=ptasks();
+  var h='<div class="plan"><p class="intro">Fatos confirmados em reservas e e-mails aparecem como <b>Confirmado</b>. O que ainda depende de você ou de confirmação aparece como <b>Pendente de confirmação</b>. Nenhuma tarefa vem marcada.</p>';
+  STAGES.forEach(function(st2){
+    var list=all.filter(function(t){return t.stage===st2.id});
+    var open=list.filter(function(t){return !pdone(t.id)}).length;
+    h+='<section class="stage-sec"><h3>'+st2.name+'<em>'+open+' pendentes de '+list.length+'</em></h3><p class="sub2">'+st2.sub+'</p><ul>';
+    list.forEach(function(t){
+      var d=pdone(t.id);
+      var tag=t.tag==="ok"?'<span class="tagc ok">Confirmado</span>':t.tag==="pend"?'<span class="tagc pend">Pendente de confirmação</span>':'<span class="tagc man">'+(t.linked?'Ligada a um item da mala':'Adicionada por você')+'</span>';
+      h+='<li class="row ptask'+(d?' done':'')+'"><div class="nm"><button class="tk'+(d?' done':'')+'" data-ptask="'+t.id+'" aria-pressed="'+d+'"><i>'+(d?'✓':'')+'</i><span class="nmx">'+esc(t.name)+'</span></button>'+(t.custom?'<button class="link pdel" data-pdel="'+t.id+'" aria-label="Remover tarefa">remover</button>':'')+'</div><div class="pmeta">'+tag+(t.note?'<span>'+esc(t.note)+'</span>':'')+'</div>'+(t.cond?'<div class="pcond">Concluída quando: '+esc(t.cond)+'</div>':'')+'</li>';
+    });
+    h+='</ul></section>';
+  });
+  h+='<form class="padd" id="padd"><b>Adicionar tarefa</b><label for="padd-stage">Etapa<select id="padd-stage">'+STAGES.map(function(x){return '<option value="'+x.id+'">'+x.name+'</option>'}).join('')+'</select></label><label for="padd-name">Tarefa<input id="padd-name" type="text" maxlength="120" placeholder="Ex.: comprar shampoo"></label><label for="padd-note">Observação (opcional)<input id="padd-note" type="text" maxlength="200"></label><label for="padd-cond">Concluída quando (opcional)<input id="padd-cond" type="text" maxlength="160"></label><button class="btn p" type="submit">Adicionar</button></form></div>';
+  s.innerHTML=h;
+}
+function renderSum(s){
+  var items=allItems();
+  function col(title,list,fn){
+    var h='<div class="sumcol"><h3>'+title+'<em>'+list.length+'</em></h3><ul>';
+    if(!list.length)h+='<li><small style="color:var(--mute)">Nada aqui.</small></li>';
+    list.forEach(function(i){h+='<li><button class="chip'+(fn&&fn(i)?" essential":"")+'" data-cy="'+i.id+'"><span>'+esc(i.name)+(typeof qtyOf(i)==="number"?' <small>×'+qtyOf(i)+'</small>':'')+'</span><small>'+CATS.find(function(c){return c.id===i.cat}).name.split(" ")[0]+'</small></button></li>'});
+    return h+'</ul></div>';
+  }
+  var falta=items.filter(function(i){var x=st(i.id);return x==="novo"||x==="falta"});
+  var sep=items.filter(function(i){return st(i.id)==="separado"});
+  var con=items.filter(function(i){return st(i.id)==="conferido"});
+  var nao=items.filter(function(i){return st(i.id)==="naovai"});
+  var ess=falta.filter(function(i){return i.cat==="docs"}).length+sep.filter(function(i){return i.cat==="docs"}).length;
+  var ready=S.docs._meta&&S.docs._meta.ready;
+  var h='<div class="sum"><div class="ready"><p>'+(ready?'<b>Você decidiu: pronta para partir.</b> Se lembrar de algo, é só reabrir.':'<b>Você decide quando está pronta.</b> '+(falta.length?falta.length+' ainda sem separar':'Nada sem separar')+(ess?', e '+ess+' essenciais em Documentos ainda sem conferência.':'.'))+'</p><button class="btn p" data-ready="'+(ready?0:1)+'">'+(ready?'Reabrir':'Estou pronta para partir')+'</button></div>';
+  h+=col("Falta pegar",falta,function(i){return i.cat==="docs"})+col("Separado, falta conferir",sep,function(i){return i.cat==="docs"})+col("Conferido comigo",con)+col("Não vou levar",nao);
+  h+='</div><p style="color:var(--mute);font-size:.85rem;margin:0">Toque num item para avançar o estado dele: falta, separado, conferido.</p>';
+  s.innerHTML=h;
+}
+
+/* eventos */
+document.addEventListener("click",function(e){
+  var b;
+  if((b=e.target.closest("[data-c]"))){S.cat=b.dataset.c;render();return}
+  if((b=e.target.closest("[data-cat]"))){S.cat=b.dataset.cat;render();return}
+  if((b=e.target.closest("[data-go]"))){S.mode=b.dataset.go;render();return}
+  if((b=e.target.closest("[data-a]"))){if(!b.disabled)flyBtn(b.dataset.a);return}
+  if((b=e.target.closest("[data-q]"))){
+    var it=deck()[0];if(!it)return;var q=qtyOf(it)+Number(b.dataset.q);if(q<0)q=0;setItem(it.id,{qty:q},true);return}
+  if((b=e.target.closest("[data-undo]"))){undo();return}
+  if((b=e.target.closest("[data-set]"))){var p=b.dataset.set.split("|");setItem(p[0],{state:p[1]});return}
+  if((b=e.target.closest("[data-tog]"))){var q2=b.dataset.tog.split("|");setItem(q2[0],{state:st(q2[0])===q2[1]?"falta":q2[1]});return}
+  if((b=e.target.closest("[data-vq]"))){var q3=b.dataset.vq.split("|");var cur=allItems().filter(function(i){return i.id===q3[0]})[0];var nq=Math.max(0,qtyOf(cur)+Number(q3[1]));setItem(q3[0],{qty:nq},true);return}
+  if((b=e.target.closest("[data-ptask]"))){var pid=b.dataset.ptask;psave(pid,Object.assign({},S.plano[pid]||{},{done:!pdone(pid),updatedAt:Date.now(),by:"odara"}));return}
+  if((b=e.target.closest("[data-pdel]"))){pdrop(b.dataset.pdel);toast("Tarefa removida");return}
+  if((b=e.target.closest("[data-buy]"))){
+    var bid=b.dataset.buy,bit=allItems().filter(function(i){return i.id===bid})[0];if(!bit)return;
+    setItem(bid,{state:"naovai"});
+    var tid2="pl-buy-"+bid;
+    if(!S.plano[tid2]){psave(tid2,{custom:true,stage:"chegada",name:"Comprar no destino: "+bit.name,note:"Você decidiu não levar. Ainda não foi comprado.",cond:"Concluída quando você comprar e marcar aqui.",linked:bid,done:false,by:"odara",updatedAt:Date.now()})}
+    toast("Tarefa de compra criada em Na chegada");return}
+  if((b=e.target.closest("[data-task]"))){var tid=b.dataset.task;setItem(tid,{done:!(S.docs[tid]&&S.docs[tid].done)},true);return}
+  if((b=e.target.closest("[data-ready]"))){setItem("_meta",{ready:b.dataset.ready==="1"},true);return}
+  if((b=e.target.closest("[data-cy]"))){
+    var id=b.dataset.cy,cur=st(id),nx={novo:"separado",falta:"separado",separado:"conferido",conferido:"falta",naovai:"falta"}[cur];
+    setItem(id,{state:nx});return}
+  if(e.target.id==="m-sep"){S.mode="sep";render();return}
+  if(e.target.id==="m-con"){S.mode="con";render();return}
+  if(e.target.id==="m-vis"){S.mode="vis";render();return}
+  if(e.target.id==="m-plan"){S.mode="plan";render();return}
+});
+document.addEventListener("submit",function(e){
+  if(e.target.id==="padd"){
+    e.preventDefault();
+    var nm=$("padd-name").value.trim();if(!nm)return;
+    var id="pl-m-"+Date.now().toString(36);
+    psave(id,{custom:true,stage:$("padd-stage").value,name:nm,note:$("padd-note").value.trim(),cond:$("padd-cond").value.trim(),done:false,by:"odara",updatedAt:Date.now()});
+    toast("Tarefa adicionada");return;
+  }
+  if(e.target.id!=="addf")return;e.preventDefault();
+  var v=$("addin").value.trim();if(!v)return;
+  var id="c-"+Date.now().toString(36);
+  setItem(id,{custom:true,cat:S.cat,name:v,dest:"mala",state:"novo"},true);
+  toast("Adicionado: "+v);
+});
+document.addEventListener("keydown",function(e){
+  if(e.target.tagName==="INPUT")return;
+  if(S.mode!=="sep"&&S.mode!=="con")return;
+  if(e.key==="ArrowRight")flyBtn("r");else if(e.key==="ArrowLeft")flyBtn("l");
+});
+window.addEventListener("resize",renderModes);
+
+/* início */
+render();
+(async function(){
+  var db=null;
+  try{db=await claude.use("db")}catch(e){db=null}
+  if(!db){setSync("off");return}
+  S.db=db;S.col=db.collection("mala");S.pcol=db.collection("plano");
+  S.pcol.onSnapshot(function(snap){
+    var next={};snap.docs.forEach(function(d){next[d.id]=d.data()});
+    S.plano=next;render();
+  },function(){setSync("err")});
+  S.col.onSnapshot(function(snap){
+    var next={};snap.docs.forEach(function(d){next[d.id]=d.data()});
+    S.docs=next;setSync("ok");render();
+  },function(){setSync("err")});
+})();
+})();
+</script>

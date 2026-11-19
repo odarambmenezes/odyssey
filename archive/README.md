@@ -12,6 +12,7 @@ Live documentation stays in Notion (Project Odyssey). Nothing here may be linked
 - `notion-legacy/crew-noticeboard_before-redesign_2026-11-17/` — all Noticeboard notes and the old protocol before the redesign.
 - `notion-legacy/ai-project-instructions_before-v1_2026-11-17/` — the old "GM" instructions of the Claude project.
 - `notion-legacy/skill_mesa-do-time-weekly-board-clean-up_2026-11-17.md` — the retired weekly clean-up skill.
+- `claude-project-knowledge_2026-11-19/` — the 22 working files removed from the Claude project's knowledge (reconstructions, see its README).
 - `notion-mirror-2026-09-01/` — the first manual mirror of Notion (Codex, Playbook, GM Charter, Governance, Bom Dia), kept as history.
 
 ## Notes
