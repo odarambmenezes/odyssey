@@ -1,0 +1,301 @@
+{
+  "name": "Odyssey — Backlog de Tarefas",
+  "schema": {
+    "Categoria": {
+      "description": "",
+      "name": "Categoria",
+      "options": [
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Home"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "Health"
+        },
+        {
+          "color": "pink",
+          "description": "",
+          "name": "Personal Care"
+        },
+        {
+          "color": "yellow",
+          "description": "",
+          "name": "Financeiro"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Admin"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Work & Study"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "Social"
+        },
+        {
+          "color": "red",
+          "description": "",
+          "name": "Life in Spain"
+        },
+        {
+          "color": "brown",
+          "description": "",
+          "name": "Leisure"
+        },
+        {
+          "color": "default",
+          "description": "",
+          "name": "Travel"
+        },
+        {
+          "color": "default",
+          "description": "",
+          "name": "Main Quest"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Side Quest"
+        },
+        {
+          "description": "",
+          "name": "Auto Cuidado"
+        }
+      ],
+      "type": "select"
+    },
+    "Descrição": {
+      "description": "",
+      "name": "Descrição",
+      "type": "text"
+    },
+    "Notas do Claude": {
+      "description": "",
+      "name": "Notas do Claude",
+      "type": "text"
+    },
+    "Obrigação": {
+      "description": "",
+      "name": "Obrigação",
+      "type": "title"
+    },
+    "Próximo Deadline": {
+      "description": "",
+      "name": "Próximo Deadline",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:Próximo Deadline:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Próximo Deadline:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Próximo Deadline:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    },
+    "Recorrência": {
+      "description": "",
+      "name": "Recorrência",
+      "options": [
+        {
+          "color": "red",
+          "description": "",
+          "name": "Diária"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "A cada dois dias"
+        },
+        {
+          "color": "red",
+          "description": "",
+          "name": "2x por semana"
+        },
+        {
+          "color": "yellow",
+          "description": "",
+          "name": "Semanal"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "Quinzenal"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Mensal"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Trimestral"
+        },
+        {
+          "color": "brown",
+          "description": "",
+          "name": "Semestral"
+        },
+        {
+          "color": "pink",
+          "description": "",
+          "name": "A cada 8 meses"
+        },
+        {
+          "color": "default",
+          "description": "",
+          "name": "Anual"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Pontual"
+        },
+        {
+          "color": "pink",
+          "description": "",
+          "name": "Ad hoc"
+        },
+        {
+          "color": "default",
+          "description": "",
+          "name": "A definir"
+        }
+      ],
+      "type": "select"
+    },
+    "Rigidez": {
+      "description": "",
+      "name": "Rigidez",
+      "options": [
+        {
+          "color": "red",
+          "description": "",
+          "name": "Rígido"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "Flexível"
+        }
+      ],
+      "type": "select"
+    },
+    "Status": {
+      "description": "",
+      "name": "Status",
+      "options": [
+        {
+          "color": "default",
+          "description": "",
+          "name": "A Fazer"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Em Andamento"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Feito (Ciclo)"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "Done"
+        },
+        {
+          "color": "yellow",
+          "description": "",
+          "name": "Em Pausa"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "Aguardando Terceiros"
+        }
+      ],
+      "type": "select"
+    },
+    "Tipo": {
+      "description": "",
+      "name": "Tipo",
+      "options": [
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Obligation"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Quest"
+        }
+      ],
+      "type": "select"
+    },
+    "Última Side Quest Recebida": {
+      "description": "Só usado em linhas Categoria=Main Quest. Alimenta o holofote orgânico do motor de geração de Side Quests — consultado silenciosamente pelo GM, nunca exposto como prazo/cobrança pra Odara.",
+      "name": "Última Side Quest Recebida",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:Última Side Quest Recebida:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Última Side Quest Recebida:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Última Side Quest Recebida:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    },
+    "Última vez feito": {
+      "description": "",
+      "name": "Última vez feito",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:Última vez feito:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Última vez feito:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Última vez feito:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    }
+  },
+  "url": "collection://a4f2dc93-71ae-44c6-8049-b2cd8f752220"
+}

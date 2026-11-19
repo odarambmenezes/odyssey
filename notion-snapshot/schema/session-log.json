@@ -1,0 +1,118 @@
+{
+  "name": "Session Log - Odyssey",
+  "schema": {
+    "End Date": {
+      "description": "",
+      "name": "End Date",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:End Date:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:End Date:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:End Date:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    },
+    "Last Edited": {
+      "description": "",
+      "name": "Last Edited",
+      "type": "last_edited_time"
+    },
+    "Last Edited By:": {
+      "description": "",
+      "name": "Last Edited By:",
+      "options": [
+        {
+          "color": "default",
+          "description": "",
+          "name": "ChatGPT"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "Claude"
+        },
+        {
+          "color": "yellow",
+          "description": "",
+          "name": "Odara"
+        }
+      ],
+      "type": "select"
+    },
+    "Name": {
+      "description": "",
+      "name": "Name",
+      "type": "title"
+    },
+    "Number": {
+      "description": "",
+      "name": "Number",
+      "type": "number"
+    },
+    "Start Date": {
+      "date_format": "MM/DD/YYYY",
+      "description": "",
+      "name": "Start Date",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:Start Date:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Start Date:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Start Date:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    },
+    "Status": {
+      "defaultOption": "Not started",
+      "description": "",
+      "groups": {
+        "complete": [
+          {
+            "color": "green",
+            "description": "",
+            "name": "Done"
+          }
+        ],
+        "current": [],
+        "future": [],
+        "in_progress": [
+          {
+            "color": "blue",
+            "description": "",
+            "name": "In progress"
+          }
+        ],
+        "to_do": [
+          {
+            "description": "",
+            "name": "Not started"
+          }
+        ]
+      },
+      "name": "Status",
+      "type": "status"
+    }
+  },
+  "url": "collection://3fe107b1-9b49-80b1-b1bf-000b79ba6ea0"
+}

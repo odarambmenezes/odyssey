@@ -1,31 +1,26 @@
-# Odyssey — Documentation Backup
+# Odyssey — backup, archive and Builder workspace
 
-This repo is a **manual markdown mirror** of the Project Odyssey documentation, which normally lives in Notion.
+Private repository of **Project Odyssey**, Odara's personal Life Operating System.
 
-## Why this exists
+## ⚠️ Notion is the source of truth
+Everything current lives in Notion (Project Odyssey). This repository never competes with it:
 
-On 2026-08-31, Notion publicly acknowledged an issue causing some Notion AI MCP tool calls to fail. This broke Claude's ability to write to Notion mid-session, which stalled work on the project. This repo exists so that:
+| Folder | What it is | Use it when |
+|---|---|---|
+| `notion-snapshot/` | Point-in-time copy of the core documentation pages and the schema of the core databases | Notion is unreachable (Operating Manual G16), or to compare structure over time |
+| `archive/` | Legacy material removed from Notion, never current instructions | Tracing why something was decided or what existed before |
+| `CHANGELOG.md` | Log of every structural session done by a Builder | Auditing what changed in the structure, when and why |
+| `AGENTS.md` / `CLAUDE.md` | Instructions for Builder environments (Codex, Claude Code) | Automatically read at the start of every Builder session |
 
-1. **If Notion is fully down**, the docs/rules here can be read directly, and any chat (Claude or otherwise) can keep functioning off this content until Notion recovers.
-2. **Any chat/scheduled task in the project** should still try the Notion link **first**. Only if that link errors or is unreachable should it fall back to checking the matching file in this repo. If **neither** Notion nor this repo has usable content, the chat should surface the error to Odara rather than inventing content.
+If a file here disagrees with Notion, **Notion wins**: the snapshot may simply be older.
 
-## ⚠️ Notion is still the source of truth
+## How it is updated
+Structure in Notion changes only in a Builder environment (Claude Code or Codex), after reconciling with the live documentation (Operating Manual G21). Every structural session ends with:
+1. a fresh `notion-snapshot/`,
+2. a `CHANGELOG.md` entry,
+3. one commit, so the diff shows exactly what changed.
 
-This repo is a **backup**, not a replacement. It gets updated manually, after structural changes are made in the "Building Odyssey" Notion chat — it is not live-synced automatically (Claude has no standing background process; syncing happens only when explicitly done during or after a session).
+A structural change that appears in a snapshot diff without a matching changelog entry was made outside a Builder environment and must be reviewed.
 
-If a file here looks out of date compared to what a chat remembers, **trust Notion first** — this file may simply not have been re-synced yet.
-
-## Structure
-
-Mirrors the Notion page hierarchy:
-
-```
-/Codex/                — reference layer (what things are)
-/Playbook/              — mechanics + GM Charter (how the game plays / how the GM behaves)
-/Governance/             — decision log, guardrails
-/Skills/                 — individual routine chat prompts (Bom Dia Claude, Meal Routine, etc.)
-```
-
-## Last full sync
-
-**2026-09-01** — Codex, Playbook, GM Charter mirrored. Governance and Skills folders still pending — to be added in a follow-up sync.
+## Privacy (G22)
+Private repository. The snapshot leaves out the Diário Pessoal, health and finance content until Odara decides otherwise. The archive holds older personal material, approved by Odara on 19 Nov 2026.

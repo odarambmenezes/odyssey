@@ -1,0 +1,245 @@
+{
+  "name": "Grab & Go",
+  "schema": {
+    "Assignee": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f",
+      "description": "Who picks it up: Hacker (structure), Chatty (visual/UX) or a Persona. Odara involvement is in Needs Odara.",
+      "name": "Assignee",
+      "type": "relation"
+    },
+    "Blocked by": {
+      "dataSourceUrl": "collection://d9baf9a3-2d3f-41be-8fdd-152d8ee1fd91",
+      "description": "",
+      "name": "Blocked by",
+      "propertyUrl": "collectionProperty://d9baf9a3-2d3f-41be-8fdd-152d8ee1fd91/V11fRg",
+      "type": "relation"
+    },
+    "Blocks": {
+      "dataSourceUrl": "collection://d9baf9a3-2d3f-41be-8fdd-152d8ee1fd91",
+      "description": "",
+      "name": "Blocks",
+      "propertyUrl": "collectionProperty://d9baf9a3-2d3f-41be-8fdd-152d8ee1fd91/W2lqXQ",
+      "type": "relation"
+    },
+    "Deadline": {
+      "description": "",
+      "name": "Deadline",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:Deadline:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Deadline:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Deadline:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    },
+    "Effort": {
+      "description": "",
+      "name": "Effort",
+      "options": [
+        {
+          "color": "green",
+          "description": "",
+          "name": "15 min"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "30 min"
+        },
+        {
+          "color": "yellow",
+          "description": "",
+          "name": "1 h"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "2 h+"
+        }
+      ],
+      "type": "select"
+    },
+    "Impact": {
+      "description": "",
+      "name": "Impact",
+      "options": [
+        {
+          "color": "red",
+          "description": "",
+          "name": "High"
+        },
+        {
+          "color": "yellow",
+          "description": "",
+          "name": "Medium"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Low"
+        }
+      ],
+      "type": "select"
+    },
+    "Last edited time": {
+      "description": "",
+      "name": "Last edited time",
+      "type": "last_edited_time"
+    },
+    "Mode": {
+      "description": "How it is done, so Odara can pick by moment and energy.",
+      "name": "Mode",
+      "options": [
+        {
+          "color": "green",
+          "description": "",
+          "name": "Quick on phone"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Desk session"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Persona chat"
+        }
+      ],
+      "type": "select"
+    },
+    "Needs Odara": {
+      "description": "You do = Odara executes it. You decide = a Builder/Persona prepares, Odara decides. No = runs without her.",
+      "name": "Needs Odara",
+      "options": [
+        {
+          "color": "purple",
+          "description": "",
+          "name": "You do"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "You decide"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "No"
+        }
+      ],
+      "type": "select"
+    },
+    "Pillar": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-8063-81e6-000b78bf6c2f",
+      "description": "",
+      "name": "Pillar",
+      "type": "relation"
+    },
+    "Status": {
+      "defaultOption": "Idea",
+      "description": "",
+      "groups": {
+        "complete": [
+          {
+            "color": "green",
+            "description": "",
+            "name": "Done"
+          },
+          {
+            "color": "gray",
+            "description": "",
+            "name": "Dropped"
+          }
+        ],
+        "current": [],
+        "future": [],
+        "in_progress": [
+          {
+            "color": "yellow",
+            "description": "",
+            "name": "In Progress"
+          },
+          {
+            "color": "red",
+            "description": "",
+            "name": "Blocked"
+          }
+        ],
+        "to_do": [
+          {
+            "color": "gray",
+            "description": "",
+            "name": "Idea"
+          },
+          {
+            "color": "blue",
+            "description": "",
+            "name": "Ready"
+          }
+        ]
+      },
+      "name": "Status",
+      "type": "status"
+    },
+    "Task": {
+      "description": "",
+      "name": "Task",
+      "type": "title"
+    },
+    "Type": {
+      "description": "Structure, Connection and Audit default to Hacker; Visual / UX to Chatty.",
+      "name": "Type",
+      "options": [
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Structure"
+        },
+        {
+          "color": "brown",
+          "description": "",
+          "name": "Connection / Automation"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Audit / Check"
+        },
+        {
+          "color": "pink",
+          "description": "",
+          "name": "Visual / UX"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Persona content"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "Decision"
+        }
+      ],
+      "type": "select"
+    },
+    "Why it matters": {
+      "description": "One line shown on the card: why this task exists.",
+      "name": "Why it matters",
+      "type": "text"
+    }
+  },
+  "url": "collection://d9baf9a3-2d3f-41be-8fdd-152d8ee1fd91"
+}

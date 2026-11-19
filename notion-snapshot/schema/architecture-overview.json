@@ -1,0 +1,90 @@
+{
+  "name": "Odyssey - Architecture Overview",
+  "schema": {
+    "Last Update": {
+      "description": "",
+      "name": "Last Update",
+      "type": "last_edited_time"
+    },
+    "Name": {
+      "description": "",
+      "name": "Name",
+      "type": "title"
+    },
+    "Pillar": {
+      "description": "",
+      "name": "Pillar",
+      "options": [
+        {
+          "color": "orange",
+          "description": "",
+          "name": "Estrutura"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "Experiencia"
+        },
+        {
+          "color": "brown",
+          "description": "",
+          "name": "Visual"
+        },
+        {
+          "color": "pink",
+          "description": "",
+          "name": "Execution"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Aprendizagem"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Presente"
+        }
+      ],
+      "type": "select"
+    },
+    "Purpose": {
+      "description": "",
+      "name": "Purpose",
+      "type": "text"
+    },
+    "Select": {
+      "description": "",
+      "name": "Select",
+      "options": [
+        {
+          "color": "default",
+          "description": "",
+          "name": "To Reconcile"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Stuck"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "In Progress"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "Reconciliada"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Fechada"
+        }
+      ],
+      "type": "select"
+    }
+  },
+  "url": "collection://3fe107b1-9b49-8063-81e6-000b78bf6c2f"
+}
