@@ -6,6 +6,7 @@ Every structural change to Project Odyssey is logged here by the Builder session
 - **Builder = environment, not chat (decided by Odara).** Personas keep autonomy over their own main page and Source of Truth content in chat; structure changes only in Claude Code or Codex, after reconciliation, and is versioned here. Written into: Operating Manual (glossary: Builder, Structure; G21 "Where work happens" and permission table), 02 O Navio (AI START HERE step 3, Builders), 04 AI Crew & Skills (Builders card, Shared SoT Operating Contract), Hacker's page.
 - **Crew Mapping:** new property `Environment` (Chat / Claude Code / Codex); Hacker = Claude Code, everyone else = Chat.
 - **AI Project Instructions v1.2:** chats are told they never change structure; Claude chat's default role is a general collaborator.
+- **02 O Navio GitHub card** now describes the live backup workflow (updated after the snapshot was taken; the next snapshot will include it).
 - **Repository restructured:** old Sep 2026 mirror moved to `archive/notion-mirror-2026-09-01/`; legacy package from the November audit added to `archive/`; first `notion-snapshot/`; Builder instructions in `AGENTS.md` / `CLAUDE.md`.
 
 ## 2026-11-17 · Hacker (Claude Code)
