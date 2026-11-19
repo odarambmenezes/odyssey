@@ -1,86 +1,67 @@
 {
-  "name": "Crew Mapping",
+  "name": "Skills Mapping",
   "schema": {
-    "Environment": {
-      "description": "Where this member works. Chat = conversations, Persona work and own SoT content. Claude Code / Codex = Builder environments, the only place where structure changes (Manual G21).",
-      "name": "Environment",
+    "Access": {
+      "description": "Open = qualquer agente, persona ou tarefa de fundo pode usar. Restricted = só a persona em Used by (ou o GM). Sensitive = mexe em dado protegido (G22): só leitura, nada sai do projeto sem aprovação da Odara.",
+      "name": "Access",
       "options": [
         {
-          "color": "blue",
+          "color": "green",
           "description": "",
-          "name": "Chat"
+          "name": "Open"
         },
         {
           "color": "orange",
           "description": "",
-          "name": "Claude Code"
+          "name": "Restricted"
         },
         {
-          "color": "gray",
+          "color": "red",
           "description": "",
-          "name": "Codex"
+          "name": "Sensitive"
         }
       ],
-      "type": "multi_select"
+      "type": "select"
+    },
+    "Documentação": {
+      "description": "Link da página real quando a documentação completa vive fora desta linha.",
+      "name": "Documentação",
+      "type": "url"
+    },
+    "Last edited time": {
+      "description": "",
+      "name": "Last edited time",
+      "type": "last_edited_time"
+    },
+    "Mission": {
+      "description": "",
+      "name": "Mission",
+      "type": "text"
     },
     "Name": {
       "description": "",
       "name": "Name",
       "type": "title"
     },
-    "Reporting Line": {
-      "description": "",
-      "name": "Reporting Line",
-      "options": [
-        {
-          "color": "green",
-          "description": "",
-          "name": "Lori Keeper"
-        },
-        {
-          "color": "default",
-          "description": "",
-          "name": "Odara"
-        },
-        {
-          "color": "brown",
-          "description": "",
-          "name": "Gibbs"
-        },
-        {
-          "color": "orange",
-          "description": "",
-          "name": "Cap"
-        },
-        {
-          "color": "yellow",
-          "description": "",
-          "name": "Hacker"
-        }
-      ],
-      "type": "select"
+    "Part of": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80fe-8401-000b3da753cf",
+      "description": "Workflow do qual esta skill faz parte. O lado Steps mostra, num Workflow, as skills que ele chama.",
+      "name": "Part of",
+      "propertyUrl": "collectionProperty://3fe107b1-9b49-80fe-8401-000b3da753cf/QH5ARQ",
+      "type": "relation"
     },
-    "Responsibilities": {
+    "Recurrency": {
       "description": "",
-      "name": "Responsibilities",
+      "name": "Recurrency",
       "type": "text"
     },
-    "Skills e Workflows": {
-      "dataSourceUrl": "collection://3fe107b1-9b49-80fe-8401-000b3da753cf",
+    "Referencia Interna": {
       "description": "",
-      "name": "Skills e Workflows",
-      "propertyUrl": "collectionProperty://3fe107b1-9b49-80fe-8401-000b3da753cf/QGNWQw",
-      "type": "relation"
-    },
-    "Source of Truth Mapping": {
-      "dataSourceUrl": "collection://401107b1-9b49-80d2-a3e4-000b3439df11",
-      "description": "",
-      "name": "Source of Truth Mapping",
-      "propertyUrl": "collectionProperty://401107b1-9b49-80d2-a3e4-000b3439df11/WGV0aA",
-      "type": "relation"
+      "name": "Referencia Interna",
+      "type": "text"
     },
     "Status": {
-      "defaultOption": "Screening",
+      "defaultOption": "On Draft",
       "description": "",
       "groups": {
         "complete": [
@@ -96,7 +77,7 @@
           {
             "color": "blue",
             "description": "",
-            "name": "Ready to Hire"
+            "name": "Paused"
           },
           {
             "color": "green",
@@ -106,48 +87,61 @@
         ],
         "to_do": [
           {
-            "color": "red",
+            "color": "default",
             "description": "",
-            "name": "TEMPLATE"
-          },
-          {
-            "description": "",
-            "name": "Screening"
+            "name": "On Draft"
           }
         ]
       },
       "name": "Status",
       "type": "status"
     },
+    "Steps": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80fe-8401-000b3da753cf",
+      "description": "",
+      "name": "Steps",
+      "propertyUrl": "collectionProperty://3fe107b1-9b49-80fe-8401-000b3da753cf/ZUxwZw",
+      "type": "relation"
+    },
+    "Trigger": {
+      "description": "O que a Odara diz para acionar, ou o horário em que roda sozinho.",
+      "name": "Trigger",
+      "type": "text"
+    },
     "Type": {
       "description": "",
       "name": "Type",
       "options": [
         {
+          "color": "blue",
+          "description": "",
+          "name": "Skill"
+        },
+        {
           "color": "purple",
           "description": "",
-          "name": "Persona"
+          "name": "Workflow"
         },
         {
           "color": "orange",
           "description": "",
-          "name": "Builder"
-        },
-        {
-          "color": "blue",
-          "description": "",
-          "name": "Pets"
+          "name": "Scheduled Task"
         }
       ],
       "type": "select"
     },
-    "📬 Noticeboard inbox": {
-      "dataSourceUrl": "collection://7cba836a-a6e5-48bf-b8fa-0468fee673d2",
+    "Use Cases": {
       "description": "",
-      "name": "📬 Noticeboard inbox",
-      "propertyUrl": "collectionProperty://7cba836a-a6e5-48bf-b8fa-0468fee673d2/QWlifg",
+      "name": "Use Cases",
+      "type": "text"
+    },
+    "Used by": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f",
+      "description": "Persona que usa. Vazio quer dizer aberta a qualquer agente, inclusive a Odara direto e tarefas de fundo. Dono não é obrigatório.",
+      "name": "Used by",
+      "propertyUrl": "collectionProperty://3fe107b1-9b49-80b4-bab3-000b9c907c0f/UXRsTA",
       "type": "relation"
     }
   },
-  "url": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f"
+  "url": "collection://3fe107b1-9b49-80fe-8401-000b3da753cf"
 }

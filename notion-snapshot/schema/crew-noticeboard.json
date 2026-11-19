@@ -1,153 +1,197 @@
 {
-  "name": "Crew Mapping",
+  "name": "⚓ Crew Noticeboard",
+  "notAvailableInQuerySql": [
+    "Days open"
+  ],
+  "pageLayout": {
+    "main": [
+      {
+        "type": "cover"
+      },
+      {
+        "pinnedProperties": [
+          "Priority",
+          "Status",
+          "From",
+          "To",
+          "Odara"
+        ],
+        "type": "title"
+      },
+      {
+        "type": "editor"
+      },
+      {
+        "type": "discussions"
+      }
+    ],
+    "sidebar": [
+      {
+        "properties": [
+          {
+            "property": "Posted on"
+          },
+          {
+            "property": "Days open"
+          },
+          {
+            "property": "Read by"
+          },
+          {
+            "property": "Source"
+          },
+          {
+            "property": "Outcome"
+          }
+        ],
+        "type": "properties"
+      }
+    ]
+  },
   "schema": {
-    "Environment": {
-      "description": "Where this member works. Chat = conversations, Persona work and own SoT content. Claude Code / Codex = Builder environments, the only place where structure changes (Manual G21).",
-      "name": "Environment",
-      "options": [
-        {
-          "color": "blue",
-          "description": "",
-          "name": "Chat"
-        },
-        {
-          "color": "orange",
-          "description": "",
-          "name": "Claude Code"
-        },
-        {
-          "color": "gray",
-          "description": "",
-          "name": "Codex"
-        }
-      ],
-      "type": "multi_select"
-    },
-    "Name": {
+    "Days open": {
+      "codeUrl": "formulaCode://7cba836a-a6e5-48bf-b8fa-0468fee673d2/bVxGWw",
       "description": "",
-      "name": "Name",
+      "name": "Days open",
+      "type": "formula"
+    },
+    "From": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f",
+      "description": "Sender (Crew Mapping). Empty when the note comes from Odara: use the Odara field.",
+      "name": "From",
+      "type": "relation"
+    },
+    "Note": {
+      "description": "",
+      "name": "Note",
       "type": "title"
     },
-    "Reporting Line": {
-      "description": "",
-      "name": "Reporting Line",
-      "options": [
-        {
-          "color": "green",
-          "description": "",
-          "name": "Lori Keeper"
-        },
-        {
-          "color": "default",
-          "description": "",
-          "name": "Odara"
-        },
-        {
-          "color": "brown",
-          "description": "",
-          "name": "Gibbs"
-        },
-        {
-          "color": "orange",
-          "description": "",
-          "name": "Cap"
-        },
-        {
-          "color": "yellow",
-          "description": "",
-          "name": "Hacker"
-        }
-      ],
-      "type": "select"
-    },
-    "Responsibilities": {
-      "description": "",
-      "name": "Responsibilities",
-      "type": "text"
-    },
-    "Skills e Workflows": {
-      "dataSourceUrl": "collection://3fe107b1-9b49-80fe-8401-000b3da753cf",
-      "description": "",
-      "name": "Skills e Workflows",
-      "propertyUrl": "collectionProperty://3fe107b1-9b49-80fe-8401-000b3da753cf/QGNWQw",
-      "type": "relation"
-    },
-    "Source of Truth Mapping": {
-      "dataSourceUrl": "collection://401107b1-9b49-80d2-a3e4-000b3439df11",
-      "description": "",
-      "name": "Source of Truth Mapping",
-      "propertyUrl": "collectionProperty://401107b1-9b49-80d2-a3e4-000b3439df11/WGV0aA",
-      "type": "relation"
-    },
-    "Status": {
-      "defaultOption": "Screening",
-      "description": "",
-      "groups": {
-        "complete": [
-          {
-            "color": "gray",
-            "description": "",
-            "name": "Archived"
-          }
-        ],
-        "current": [],
-        "future": [],
-        "in_progress": [
-          {
-            "color": "blue",
-            "description": "",
-            "name": "Ready to Hire"
-          },
-          {
-            "color": "green",
-            "description": "",
-            "name": "Active"
-          }
-        ],
-        "to_do": [
-          {
-            "color": "red",
-            "description": "",
-            "name": "TEMPLATE"
-          },
-          {
-            "description": "",
-            "name": "Screening"
-          }
-        ]
-      },
-      "name": "Status",
-      "type": "status"
-    },
-    "Type": {
-      "description": "",
-      "name": "Type",
+    "Odara": {
+      "description": "Odara is not in Crew Mapping: mark here when the note comes from her or is waiting on her.",
+      "name": "Odara",
       "options": [
         {
           "color": "purple",
           "description": "",
-          "name": "Persona"
+          "name": "From her"
         },
         {
-          "color": "orange",
+          "color": "red",
           "description": "",
-          "name": "Builder"
-        },
-        {
-          "color": "blue",
-          "description": "",
-          "name": "Pets"
+          "name": "For her"
         }
       ],
       "type": "select"
     },
-    "📬 Noticeboard inbox": {
-      "dataSourceUrl": "collection://7cba836a-a6e5-48bf-b8fa-0468fee673d2",
+    "Outcome": {
+      "description": "One line with the result, written by whoever marks the note Resolved. The full answer lives in the Answer section of the page.",
+      "name": "Outcome",
+      "type": "text"
+    },
+    "Posted on": {
       "description": "",
-      "name": "📬 Noticeboard inbox",
-      "propertyUrl": "collectionProperty://7cba836a-a6e5-48bf-b8fa-0468fee673d2/QWlifg",
+      "name": "Posted on",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:Posted on:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Posted on:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Posted on:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    },
+    "Priority": {
+      "description": "",
+      "name": "Priority",
+      "options": [
+        {
+          "color": "red",
+          "description": "",
+          "name": "Critical"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "Action Needed"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Discuss Live with Odara"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Announcement"
+        },
+        {
+          "color": "gray",
+          "description": "",
+          "name": "FYI"
+        }
+      ],
+      "type": "select"
+    },
+    "Read by": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f",
+      "description": "Each reader adds itself after actually reading. The unread rule checks this.",
+      "name": "Read by",
+      "type": "relation"
+    },
+    "Source": {
+      "description": "",
+      "name": "Source",
+      "type": "url"
+    },
+    "Status": {
+      "description": "",
+      "name": "Status",
+      "options": [
+        {
+          "color": "blue",
+          "description": "",
+          "name": "🆕 New"
+        },
+        {
+          "color": "orange",
+          "description": "",
+          "name": "💬 Sent Back"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "🗣️ To Discuss"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "✅ Resolved"
+        },
+        {
+          "color": "default",
+          "description": "",
+          "name": "📦 Archived"
+        }
+      ],
+      "type": "select"
+    },
+    "To": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f",
+      "description": "Recipient(s) from Crew Mapping. For everyone, add every Active Persona. Each Persona sees its notes in 📬 Noticeboard inbox on its Crew Mapping page.",
+      "name": "To",
+      "propertyUrl": "collectionProperty://3fe107b1-9b49-80b4-bab3-000b9c907c0f/U3hYYw",
       "type": "relation"
     }
   },
-  "url": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f"
+  "url": "collection://7cba836a-a6e5-48bf-b8fa-0468fee673d2"
 }

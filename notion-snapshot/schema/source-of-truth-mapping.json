@@ -1,153 +1,28 @@
 {
-  "name": "Crew Mapping",
+  "name": "Source of Truth Mapping",
   "schema": {
-    "Environment": {
-      "description": "Where this member works. Chat = conversations, Persona work and own SoT content. Claude Code / Codex = Builder environments, the only place where structure changes (Manual G21).",
-      "name": "Environment",
-      "options": [
-        {
-          "color": "blue",
-          "description": "",
-          "name": "Chat"
-        },
-        {
-          "color": "orange",
-          "description": "",
-          "name": "Claude Code"
-        },
-        {
-          "color": "gray",
-          "description": "",
-          "name": "Codex"
-        }
-      ],
-      "type": "multi_select"
+    "Last edited time": {
+      "description": "",
+      "name": "Last edited time",
+      "type": "last_edited_time"
     },
     "Name": {
       "description": "",
       "name": "Name",
       "type": "title"
     },
-    "Reporting Line": {
+    "Owner": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f",
       "description": "",
-      "name": "Reporting Line",
-      "options": [
-        {
-          "color": "green",
-          "description": "",
-          "name": "Lori Keeper"
-        },
-        {
-          "color": "default",
-          "description": "",
-          "name": "Odara"
-        },
-        {
-          "color": "brown",
-          "description": "",
-          "name": "Gibbs"
-        },
-        {
-          "color": "orange",
-          "description": "",
-          "name": "Cap"
-        },
-        {
-          "color": "yellow",
-          "description": "",
-          "name": "Hacker"
-        }
-      ],
-      "type": "select"
+      "name": "Owner",
+      "propertyUrl": "collectionProperty://3fe107b1-9b49-80b4-bab3-000b9c907c0f/anB0YQ",
+      "type": "relation"
     },
-    "Responsibilities": {
+    "Purpose": {
       "description": "",
-      "name": "Responsibilities",
+      "name": "Purpose",
       "type": "text"
-    },
-    "Skills e Workflows": {
-      "dataSourceUrl": "collection://3fe107b1-9b49-80fe-8401-000b3da753cf",
-      "description": "",
-      "name": "Skills e Workflows",
-      "propertyUrl": "collectionProperty://3fe107b1-9b49-80fe-8401-000b3da753cf/QGNWQw",
-      "type": "relation"
-    },
-    "Source of Truth Mapping": {
-      "dataSourceUrl": "collection://401107b1-9b49-80d2-a3e4-000b3439df11",
-      "description": "",
-      "name": "Source of Truth Mapping",
-      "propertyUrl": "collectionProperty://401107b1-9b49-80d2-a3e4-000b3439df11/WGV0aA",
-      "type": "relation"
-    },
-    "Status": {
-      "defaultOption": "Screening",
-      "description": "",
-      "groups": {
-        "complete": [
-          {
-            "color": "gray",
-            "description": "",
-            "name": "Archived"
-          }
-        ],
-        "current": [],
-        "future": [],
-        "in_progress": [
-          {
-            "color": "blue",
-            "description": "",
-            "name": "Ready to Hire"
-          },
-          {
-            "color": "green",
-            "description": "",
-            "name": "Active"
-          }
-        ],
-        "to_do": [
-          {
-            "color": "red",
-            "description": "",
-            "name": "TEMPLATE"
-          },
-          {
-            "description": "",
-            "name": "Screening"
-          }
-        ]
-      },
-      "name": "Status",
-      "type": "status"
-    },
-    "Type": {
-      "description": "",
-      "name": "Type",
-      "options": [
-        {
-          "color": "purple",
-          "description": "",
-          "name": "Persona"
-        },
-        {
-          "color": "orange",
-          "description": "",
-          "name": "Builder"
-        },
-        {
-          "color": "blue",
-          "description": "",
-          "name": "Pets"
-        }
-      ],
-      "type": "select"
-    },
-    "📬 Noticeboard inbox": {
-      "dataSourceUrl": "collection://7cba836a-a6e5-48bf-b8fa-0468fee673d2",
-      "description": "",
-      "name": "📬 Noticeboard inbox",
-      "propertyUrl": "collectionProperty://7cba836a-a6e5-48bf-b8fa-0468fee673d2/QWlifg",
-      "type": "relation"
     }
   },
-  "url": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f"
+  "url": "collection://401107b1-9b49-80d2-a3e4-000b3439df11"
 }
