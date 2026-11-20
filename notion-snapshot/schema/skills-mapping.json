@@ -28,10 +28,58 @@
       "name": "Documentação",
       "type": "url"
     },
+    "Integrations": {
+      "description": "Connectors and channels this line needs to run. Empty = only the chat itself. Used to see what each automation depends on (least privilege).",
+      "name": "Integrations",
+      "options": [
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Notion",
+          "url": "collectionPropertyOption://3fe107b1-9b49-80fe-8401-000b3da753cf/WmxUUA/MzA4NzEwYTEtODQ2Mi00YzcwLTkxZGItMzc1YTZlNjkyZjcz"
+        },
+        {
+          "color": "red",
+          "description": "",
+          "name": "Gmail",
+          "url": "collectionPropertyOption://3fe107b1-9b49-80fe-8401-000b3da753cf/WmxUUA/ODVmNjFjMDQtY2JlZi00YWE0LWEyNGUtNDIzM2JkOGY3ZDc5"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Google Calendar",
+          "url": "collectionPropertyOption://3fe107b1-9b49-80fe-8401-000b3da753cf/WmxUUA/MGJlNGY3NGItYTIwMC00OWIyLTljZTItNTYzOWU0ZWRlMDdi"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "Push",
+          "url": "collectionPropertyOption://3fe107b1-9b49-80fe-8401-000b3da753cf/WmxUUA/N2E4NzNkZjItMjg0MS00OWMxLWE0MzEtZjRiZjQ2NTI0YmQy"
+        },
+        {
+          "color": "yellow",
+          "description": "",
+          "name": "Chrome",
+          "url": "collectionPropertyOption://3fe107b1-9b49-80fe-8401-000b3da753cf/WmxUUA/N2I2Y2M0MDgtOTlmZC00MzllLTg1YmItOTRmOGE0ZGZmNzVh"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Web",
+          "url": "collectionPropertyOption://3fe107b1-9b49-80fe-8401-000b3da753cf/WmxUUA/YjNmZDIwODktYTIzYi00ZTBlLTg3MjMtYzlhYjQ4N2EyOTU4"
+        }
+      ],
+      "type": "multi_select"
+    },
     "Last edited time": {
       "description": "",
       "name": "Last edited time",
       "type": "last_edited_time"
+    },
+    "Last real run": {
+      "description": "Date of the last time this ran for real (not a draft or a test written on paper). Empty = never ran for real. Active without a date = not yet proven.",
+      "name": "Last real run",
+      "type": "date"
     },
     "Mission": {
       "description": "",
