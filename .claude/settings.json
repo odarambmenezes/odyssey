@@ -1,9 +1,10 @@
 {
   "permissions": {
-    "deny": [
-      "mcp__Gmail__send_message",
-      "mcp__Gmail__reply",
-      "mcp__Gmail__forward"
+    "allow": [
+      "mcp__Gmail__label_thread",
+      "mcp__Gmail__unlabel_thread",
+      "mcp__Gmail__label_message",
+      "mcp__Gmail__unlabel_message"
     ]
   }
 }
