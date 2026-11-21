@@ -75,6 +75,7 @@ Retention and category are independent. A thread can have <b>at most one retenti
 | Category | <code>Eventos</code> | Promotional newsletters from Fever, Ticketmaster and other event providers. |
 | Category | <code>Profissional</code> | Professional newsletters, AI updates, career content. |
 | Category (protected) | <code>🧾 Comprovantes</code> | Receipts and proof of payment. Archived for keeps: never retention, never Trash. |
+| Category (protected) | <code>💼 Carreira</code> | Job applications, employers, work accounts, career documents. Never retention, never Trash. Career <i>newsletters</i> go to Profissional. |
 | Status | <code>🔥 Action Needed</code> | She must act. Stays in the inbox. |
 | Status | <code>⏳ Waiting</code> | Waiting on someone else. Stays in the inbox during the pilot (where it goes is decided at the review). |
 
