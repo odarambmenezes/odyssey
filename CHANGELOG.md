@@ -2,6 +2,17 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-21 · Hacker (Claude Code)
+Gmail Sweep v2 pilot, Monthly Digital Declutter draft, G21 proposal (Designer handoff approved by Odara).
+- **Gmail Sweep rewritten in place as v2** (English): inbox triage + cleanup, protected classes, independent retention and category labels, 60-day pilot safeguard, no automatic deletion, on demand only (no schedule). Properties updated (Mission, Trigger, Use Cases, Recurrency, Referencia Interna, Last real run). Notion: https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355
+- **Bom Dia quick-action row** (Registro de Ações Rápidas) now points to the canonical skill instead of its own "blocks of 2-4" text. Bom Dia Steps relation unchanged. https://app.notion.com/p/3cf107b19b498149a587f93b3d37ad7c
+- **Gmail labels created** (none existed before): `Pré-Arquivo` › `Pré-Arquivo/30 dias`, `Pinterest`, `Eventos`, `Profissional`. Existing labels untouched. No filters created.
+- **Pilot sample:** 6 threads (3 Pinterest, 2 Fever marketing, 1 Zapier) labelled category + retention and removed from the inbox; ticket/purchase confirmations and uncertain threads left in the inbox. Nothing deleted, nothing sent. Counts-only record in the Grab & Go task.
+- **Monthly Digital Declutter** registered in Skills Mapping as On Draft, not activated, not scheduled. https://app.notion.com/p/41f107b19b4981ef8709fe715fbea608
+- **G21 amendment proposed, not applied** (chat Personas may register On Draft skill-idea rows). Wording in Grab & Go: https://app.notion.com/p/41f107b19b49819d884bdbb5915a6c63
+- Session Log #4: https://app.notion.com/p/41f107b19b49818cb48fdeeff71c5580
+- **Drift found:** Skills Mapping had gained `Integrations` and `Last real run` after the 2026-11-19 snapshot with no changelog entry. Not made in this session; snapshot refreshed to match Notion.
+
 ## 2026-11-19 · Hacker (Claude Code)
 - **Builder = environment, not chat (decided by Odara).** Personas keep autonomy over their own main page and Source of Truth content in chat; structure changes only in Claude Code or Codex, after reconciliation, and is versioned here. Written into: Operating Manual (glossary: Builder, Structure; G21 "Where work happens" and permission table), 02 O Navio (AI START HERE step 3, Builders), 04 AI Crew & Skills (Builders card, Shared SoT Operating Contract), Hacker's page.
 - **Crew Mapping:** new property `Environment` (Chat / Claude Code / Codex); Hacker = Claude Code, everyone else = Chat.

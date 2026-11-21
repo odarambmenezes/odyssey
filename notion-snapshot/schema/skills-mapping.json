@@ -28,10 +28,52 @@
       "name": "Documentação",
       "type": "url"
     },
+    "Integrations": {
+      "description": "Connectors and channels this line needs to run. Empty = only the chat itself. Used to see what each automation depends on (least privilege).",
+      "name": "Integrations",
+      "options": [
+        {
+          "color": "gray",
+          "description": "",
+          "name": "Notion"
+        },
+        {
+          "color": "red",
+          "description": "",
+          "name": "Gmail"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Google Calendar"
+        },
+        {
+          "color": "green",
+          "description": "",
+          "name": "Push"
+        },
+        {
+          "color": "yellow",
+          "description": "",
+          "name": "Chrome"
+        },
+        {
+          "color": "purple",
+          "description": "",
+          "name": "Web"
+        }
+      ],
+      "type": "multi_select"
+    },
     "Last edited time": {
       "description": "",
       "name": "Last edited time",
       "type": "last_edited_time"
+    },
+    "Last real run": {
+      "description": "Date of the last time this ran for real (not a draft or a test written on paper). Empty = never ran for real. Active without a date = not yet proven.",
+      "name": "Last real run",
+      "type": "date"
     },
     "Mission": {
       "description": "",
