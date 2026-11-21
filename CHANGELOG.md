@@ -2,6 +2,15 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-21 (later) · Hacker (Claude Code)
+Gmail Sweep v2.1, after Odara's own chat pilot with ChatGPT and two Noticeboard notes to Hacker.
+- **Gmail Sweep updated in place to v2.1:** Review (read-only) and Cleanup modes with natural triggers; Cleanup runs to the end with one report; status labels (🔥 Action Needed stays in the inbox, ⏳ Waiting stays during the pilot); `🧾 Comprovantes` registered as a protected category; DiR Tuset / Santander added to the protected list. https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355
+- **Retention decided by Odara:** pilot = archive only, the sweep never trashes; review on 2026-12-21. Target rule to test then: archive + 60-day manual review by default, straight to Trash only for an approved list (Gmail's 30-day Trash is the margin). Not active.
+- **Chat pilot findings (label counts only):** inbox 295 → 30 threads, Trash about +118 threads, all approved by Odara in that chat. 23 Eventos / Profissional threads were archived without the retention label; backfill waits for her OK. Trash contents cannot be listed through this connector.
+- **Noticeboard:** answered "Review Gmail Sweep skill proposal against the existing v2 pilot" (verdict: adapt) and "Decide the skill proposal review process" (proposal: Skill review request through existing Noticeboard → Grab & Go path); both 🗣️ To Discuss.
+- **Deferred by Odara:** moving rules/specs to a GitHub-first PR workflow. Documentation stays as it is until the audit closes.
+- Grab & Go pilot task deadline set to 2026-12-21: https://app.notion.com/p/41f107b19b49819d884bdbb5915a6c63
+
 ## 2026-11-21 · Hacker (Claude Code)
 Gmail Sweep v2 pilot, Monthly Digital Declutter draft, G21 proposal (Designer handoff approved by Odara).
 - **Gmail Sweep rewritten in place as v2** (English): inbox triage + cleanup, protected classes, independent retention and category labels, 60-day pilot safeguard, no automatic deletion, on demand only (no schedule). Properties updated (Mission, Trigger, Use Cases, Recurrency, Referencia Interna, Last real run). Notion: https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355
