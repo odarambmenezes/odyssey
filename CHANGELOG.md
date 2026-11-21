@@ -2,6 +2,9 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-21 (evening) · Hacker (Claude Code)
+- **Send lock removed, label tools pre-approved (asked by Odara):** `.claude/settings.json` no longer denies Gmail send / reply / forward, and now allows the Gmail label and unlabel tools (labelling and archiving) without a prompt in Builder sessions. Sending, Trash and new labels still follow G23 and the Gmail Sweep skill. The file never affected Claude chat or ChatGPT.
+
 ## 2026-11-21 (later) · Hacker (Claude Code)
 Gmail Sweep v2.1, after Odara's own chat pilot with ChatGPT and two Noticeboard notes to Hacker.
 - **Gmail Sweep updated in place to v2.1:** Review (read-only) and Cleanup modes with natural triggers; Cleanup runs to the end with one report; status labels (🔥 Action Needed stays in the inbox, ⏳ Waiting stays during the pilot); `🧾 Comprovantes` registered as a protected category; DiR Tuset / Santander added to the protected list. https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355
