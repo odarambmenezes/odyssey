@@ -9,6 +9,7 @@ Gmail Sweep v2.1, after Odara's own chat pilot with ChatGPT and two Noticeboard 
 - **Chat pilot findings (label counts only):** inbox 295 → 30 threads, Trash about +118 threads, all approved by Odara in that chat. 23 Eventos / Profissional threads were archived without the retention label; backfill waits for her OK. Trash contents cannot be listed through this connector.
 - **Noticeboard:** answered "Review Gmail Sweep skill proposal against the existing v2 pilot" (verdict: adapt) and "Decide the skill proposal review process" (proposal: Skill review request through existing Noticeboard → Grab & Go path); both 🗣️ To Discuss.
 - **Deferred by Odara:** moving rules/specs to a GitHub-first PR workflow. Documentation stays as it is until the audit closes.
+- **Retention backfill (approved by Odara):** of 20 Eventos / Profissional threads without retention, 3 newsletters got `Pré-Arquivo/30 dias`; 17 were transactional or employment mail mislabelled in the chat pilot and got no retention (relabelling left for the 2026-12-21 review).
 - Grab & Go pilot task deadline set to 2026-12-21: https://app.notion.com/p/41f107b19b49819d884bdbb5915a6c63
 
 ## 2026-11-21 · Hacker (Claude Code)
