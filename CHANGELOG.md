@@ -2,6 +2,16 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-21 (night) · Hacker (Claude Code, parallel session)
+Autonomous scan while Odara was away, at her request. Content of Sources of Truth and Persona pages is not in the snapshot (G22); only what changed is listed here.
+- **Trip History:** new text property `Companions` (who went on the trip). "Sevilha e Málaga" set to Post Mortem Needed, Companions Solo, with a post-mortem section for Cap.
+- **Calê's page** aligned to TEMPLATE > PERSONA (hero brief, summon phrase, 01–08); the October audit notes were kept in a toggle in 08.
+- **Health & Wellness Profile** v0.1: plan DKV Famedic Plus (outpatient only, company policy), care map pointing to the Backlog, light tracking proposal. Hospital coverage gap flagged; new Backlog item "Decidir cobertura de saúde: lacuna hospitalar e pós-Fortis".
+- **Entertainment Hub:** taste map v0.1, inferred from Radar de Shows and ticket emails.
+- **Tenant Profile:** housing search paused until the retreat (Odara's decision); Grab & Go "Moradia (Clau)" set to Blocked.
+- **Grab & Go:** "Wake up Calê" → Ready; "Align Calê, Bardim and Gibbs pages" → In Progress; new Idea "Design the Islands (Inside Out style) for O Hoje" (Chatty + Hacker).
+- No schema snapshot refresh for Trip History: it is not among the core databases in `notion-snapshot/schema/`.
+
 ## 2026-11-21 (evening) · Hacker (Claude Code)
 - **Send lock removed, label tools pre-approved (asked by Odara):** `.claude/settings.json` no longer denies Gmail send / reply / forward, and now allows the Gmail label and unlabel tools (labelling and archiving) without a prompt in Builder sessions. Sending, Trash and new labels still follow G23 and the Gmail Sweep skill. The file never affected Claude chat or ChatGPT.
 
