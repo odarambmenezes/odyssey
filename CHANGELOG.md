@@ -11,6 +11,15 @@ Odara answered the 21 Nov scan questions. Content only (Sources of Truth and Per
 - **Trip History:** Sevilha e Málaga companions → "Solo (met people there)".
 - **Session Log numbering:** the 21 Nov (night) entry was renumbered #7, since a parallel session used #5 and #6. This session: #8 https://app.notion.com/p/420107b19b4981dcb681ffee9059346d
 
+## 2026-11-22 (afternoon) · Hacker (Claude Code)
+Backlog fresh start and retreat squad, approved by Odara batch by batch.
+- **Life Backlog cleaned (bulk):** 63 open items with 33 overdue became 29 open with 0 overdue. Stale September/October items and the CNH reference closed; duplicate passport and choir items merged ("Mapear aulas de música"); 11 routines restarted from 22/11; 7 medical appointments, all 7 Main Quests and the long-term rental contract paused (Calê, retreat); health-coverage decision closed to be redone with Calê. The status `Done` was used for obsolete items because the Backlog has no "dropped" status. https://app.notion.com/p/c72071d037784ba5b6308c82a5a36d07
+- **Passport task** set In Progress with the state read from Gmail (electoral clearance pending).
+- **Cap's 10 items:** 1 closed (already registered), 1 kept as Odara's own planning, 1 to Grab & Go (Side Quest format), 6 handed to Cap on the Noticeboard; a cross-Persona "street mode" rule proposed in Grab & Go.
+- **Calendar:** blocks created for 23/11 (DKV appointment, creating the Prazos and Rotinas calendars, TSE certificate). The connector cannot create calendars; Odara creates them, then routines move from the Backlog to the calendar.
+- **Retreat squad (Odara, Lori, Gibbs):** pack posted on the Noticeboard listing what exists and nine decisions the project needs back. https://app.notion.com/p/420107b19b498101ae6ae2af1633c635
+- Session Log #7.
+
 ## 2026-11-22 · Hacker (Claude Code)
 Gmail Sweep becomes Sweep (Gmail + Agenda), after Chatty's experience proposal on the Noticeboard and Odara's approval of three decisions.
 - **Same Skills Mapping row, renamed and extended to v3:** reads Google Calendar (primary, Pessoal, Travel in full; Fortis busy only; Família and Brazil holidays when relevant); dashboard My Day / What's New / Needs Me / Waiting / Cleanup; voice-first decisions; resolution reconciliation; events passed to Bardim only on her word, as one rolling note. Integrations now Gmail + Google Calendar. `Last real run` stores date + time of the last completed sweep. https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355
