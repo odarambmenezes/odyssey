@@ -2,6 +2,15 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-22 · Hacker (Claude Code)
+Gmail Sweep becomes Sweep (Gmail + Agenda), after Chatty's experience proposal on the Noticeboard and Odara's approval of three decisions.
+- **Same Skills Mapping row, renamed and extended to v3:** reads Google Calendar (primary, Pessoal, Travel in full; Fortis busy only; Família and Brazil holidays when relevant); dashboard My Day / What's New / Needs Me / Waiting / Cleanup; voice-first decisions; resolution reconciliation; events passed to Bardim only on her word, as one rolling note. Integrations now Gmail + Google Calendar. `Last real run` stores date + time of the last completed sweep. https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355
+- **Live references renamed:** Bom Dia Claude page, the Bom Dia quick-action row, Monthly Digital Declutter. Historical pages keep the old name. Snapshot file renamed to `notion-snapshot/pages/skills/sweep-gmail-agenda.md` (personal email address redacted).
+- **First Review run:** 4 calendars and 27 new emails read, 0 Gmail changes.
+- **Housing alerts:** found already routed to `Spain Housing 2026` and out of the inbox by an existing Gmail filter; documented in the skill, nothing changed in Gmail.
+- **Noticeboard:** proposal note resolved; its separate investigation request (chats skipping the Noticeboard checks) moved to Grab & Go: https://app.notion.com/p/420107b19b4981aab2a6c4205e47dd95
+- Session Log #5: https://app.notion.com/p/420107b19b4981fdae63d10d28088a89
+
 ## 2026-11-21 (night) · Hacker (Claude Code, parallel session)
 Autonomous scan while Odara was away, at her request. Content of Sources of Truth and Persona pages is not in the snapshot (G22); only what changed is listed here.
 - **Trip History:** new text property `Companions` (who went on the trip). "Sevilha e Málaga" set to Post Mortem Needed, Companions Solo, with a post-mortem section for Cap.
