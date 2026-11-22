@@ -2,6 +2,15 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-22 (later) · Hacker (Claude Code)
+Odara answered the 21 Nov scan questions. Content only (Sources of Truth and Persona-domain pages, not in the snapshot, G22) plus record updates:
+- **Islands** clarified by Odara: pillars of her life built from core memories (Inside Out), not Personas; list and names come from the retreat. Grab & Go task corrected and set to Blocked: https://app.notion.com/p/41f107b19b49810788c4cc1c390f3b6b
+- **Health:** Odara is in the Fortis ERE; hospital insurance waits for the retreat and the ERE terms. Backlog coverage item → Em Pausa / Flexível. Last check-up: Brazil, around Apr–May 2026. Noticeboard note to Calê to design check-ins (weight, photo, more health data): https://app.notion.com/p/420107b19b4981669205c5f5ad2ae706
+- **ERE context** added to the Professional Profile (Gibbs) and Financial Reports (Marty); Tenant Profile corrected (housing alerts already filtered out of the inbox).
+- **Entertainment Hub:** taste is eclectic and mood-driven; Spotify reading approved.
+- **Trip History:** Sevilha e Málaga companions → "Solo (met people there)".
+- **Session Log numbering:** the 21 Nov (night) entry was renumbered #7, since a parallel session used #5 and #6. This session: #8 https://app.notion.com/p/420107b19b4981dcb681ffee9059346d
+
 ## 2026-11-22 · Hacker (Claude Code)
 Gmail Sweep becomes Sweep (Gmail + Agenda), after Chatty's experience proposal on the Noticeboard and Odara's approval of three decisions.
 - **Same Skills Mapping row, renamed and extended to v3:** reads Google Calendar (primary, Pessoal, Travel in full; Fortis busy only; Família and Brazil holidays when relevant); dashboard My Day / What's New / Needs Me / Waiting / Cleanup; voice-first decisions; resolution reconciliation; events passed to Bardim only on her word, as one rolling note. Integrations now Gmail + Google Calendar. `Last real run` stores date + time of the last completed sweep. https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355
