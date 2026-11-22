@@ -90,6 +90,7 @@ Retention and category are independent. A thread can have <b>at most one retenti
 
 - New retention periods are siblings under <code>Pré-Arquivo/</code>. New labels need Odara's yes.
 - Existing labels (RADAR, Newsletters, Spain Housing 2026, Compras, ✈️ Spain, etc.) are left as they are; never removed or renamed during a sweep.
+- Housing alerts (Idealista, Habitaclia, Fotocasa) already arrive labelled <code>Spain Housing 2026</code> and out of the inbox through an existing Gmail filter set up by Odara (verified 22/11/2026). The sweep counts them in What's New, gives no retention label and does not touch the filter. Messages from landlords or agencies are housing correspondence and stay protected.
 - Never add a retention label to a thread that needs action, and never treat a thread as disposable just because the sender is promotional.
 
 <callout icon="🛡️" color="red_bg">
