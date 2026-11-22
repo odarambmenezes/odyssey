@@ -10,6 +10,8 @@ Gmail Sweep becomes Sweep (Gmail + Agenda), after Chatty's experience proposal o
 - **Housing alerts:** found already routed to `Spain Housing 2026` and out of the inbox by an existing Gmail filter; documented in the skill, nothing changed in Gmail.
 - **Noticeboard:** proposal note resolved; its separate investigation request (chats skipping the Noticeboard checks) moved to Grab & Go: https://app.notion.com/p/420107b19b4981aab2a6c4205e47dd95
 - Session Log #5: https://app.notion.com/p/420107b19b4981fdae63d10d28088a89
+- **Odara's Voice calibrated (approved by Odara):** seven rules from her feedback on a birthday draft (per-contact nicknames, diacritics as register in casual tiers, continuation lowercase, carioca dialect, connotation blocklist, relational callback slot, affectionate teasing) and a first person card, kept inside the voice profile until a friendship space exists. The old hygiene rule treating omitted accents as typos was replaced. Birthday table updated with the missing date. Not snapshotted: the voice profile holds personal details of third parties (G22). https://app.notion.com/p/3fe107b19b498044b5edfba6128ba15a · Session Log #6: https://app.notion.com/p/420107b19b4981949425e007aa748b74
+- **Grab & Go idea:** friendship space with one card per close person: https://app.notion.com/p/420107b19b4981368ea6fa82a94a09af
 
 ## 2026-11-21 (night) · Hacker (Claude Code, parallel session)
 Autonomous scan while Odara was away, at her request. Content of Sources of Truth and Persona pages is not in the snapshot (G22); only what changed is listed here.
