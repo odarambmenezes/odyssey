@@ -61,6 +61,11 @@
           "color": "purple",
           "description": "",
           "name": "Web"
+        },
+        {
+          "color": "blue",
+          "description": "",
+          "name": "Outlook"
         }
       ],
       "type": "multi_select"

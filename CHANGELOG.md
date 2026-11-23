@@ -2,6 +2,16 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-23 · Hacker (Claude Code)
+Hotmail (Outlook.com) connected through the Microsoft 365 connector and registered as Odara's Brazil life archive, approved by Odara.
+- **Source of Truth Mapping:** new entry "Hotmail — Brazil Life Archive" (no owner, open to every Persona in its domain, Access Sensitive): what it holds, folders (Recibos, Santander - Negocia, Contas Mensais), rules, connector notes. Not snapshotted (personal context). https://app.notion.com/p/421107b19b4981e0a44fed727aea0508
+- **Operating Manual G22:** one bullet: mailboxes (Gmail, Hotmail) are context for every Persona in its domain; changes only in a sweep she started or with her yes; never send; email content stays in the mailbox.
+- **Sweep (Gmail + Agenda):** connectors row, new section Hotmail with her rules (Trash allowed for approved classes, Recibos folder, no Archive, inbox = actions only), Trigger, Referencia Interna, decision log. **Skills Mapping schema:** Integrations option `Outlook` added and set on the Sweep.
+- **AI Project Instructions v1.3:** Claude connectors line includes Outlook (Hotmail). Odara must re-paste the Claude text.
+- **Crew Noticeboard:** Announcement to all Personas: https://app.notion.com/p/421107b19b498150aa08e4fb9a10649b
+- **First Hotmail clean-up with Odara (content, not structure):** inbox ~850 → 9; nothing sent. Santander complaint handed to Gibbs: https://app.notion.com/p/421107b19b4981c09f38cdb9ee973812
+- Grab & Go: https://app.notion.com/p/421107b19b498154b3d3f81b209b0207 · Session Log #9: https://app.notion.com/p/421107b19b498121b908d7e4b0f73dfa
+
 ## 2026-11-22 (later) · Hacker (Claude Code)
 Odara answered the 21 Nov scan questions. Content only (Sources of Truth and Persona-domain pages, not in the snapshot, G22) plus record updates:
 - **Islands** clarified by Odara: pillars of her life built from core memories (Inside Out), not Personas; list and names come from the retreat. Grab & Go task corrected and set to Blocked: https://app.notion.com/p/41f107b19b49810788c4cc1c390f3b6b

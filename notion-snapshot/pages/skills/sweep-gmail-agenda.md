@@ -1,10 +1,10 @@
-<!-- Read through the Notion connector on 2026-11-22T13:33Z (Builder session, v3). Canonical spec lives in Notion. Formerly gmail-sweep.md. Personal email address redacted. -->
+<!-- Read through the Notion connector on 2026-11-22T13:33Z (Builder session, v3); Hotmail edits of 2026-11-23 applied by the Builder (other 23/11 chat edits, e.g. the output contract, not re-read here). Canonical spec lives in Notion. Formerly gmail-sweep.md. Personal email address redacted. -->
 <page url="https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355">
 <ancestor-path>
 <parent-data-source url="collection://3fe107b1-9b49-80fe-8401-000b3da753cf" name="Skills Mapping"/>
 </ancestor-path>
 <properties>
-{"Access":"Sensitive","Integrations":["Gmail","Google Calendar"],"Mission":"One daily look at email and calendar: what Odara has today, what is new, what needs her, what she is waiting on, and a safe archive-only cleanup of low-value mail. Protects sensitive and transactional mail. Never sends, never deletes automatically.","Name":"Sweep (Gmail + Agenda)","Part of":["https://app.notion.com/p/415107b19b4981c89304d079c61d31f1"],"Recurrency":"On demand (also offered in Bom Dia). No schedule.","Referencia Interna":"22/11/2026 v3 (Builder): renamed from Gmail Sweep; reads Google Calendar (primary, Pessoal, Travel in full; Fortis busy only). Last real run stores date + time of the last completed sweep (What's New). Pilot: archive only, review 21/12/2026. No filters, no schedule. Pilot record in the Grab & Go task.","Status":"Active","Trigger":"Review (read-only): \"roda o Sweep\", \"vamos ver meu Gmail\", \"vamos ver minha agenda\", and the Bom Dia quick action. Cleanup: \"gmail sweep\", \"limpa meu Gmail\", \"organiza minha Inbox\". Ambiguous → Review. A direct calendar instruction does only that.","Type":"Skill","Use Cases":"Runs the Obligations Checar Emails and Responder Amigos / Famílias. Dashboard My Day / What's New / Needs Me / Waiting / Cleanup; drafts replies in Odara's Voice when asked; archives newsletters into Pré-Arquivo/30 dias; up to 3 events, passed to Bardim only on her word.","Last real run":"2026-11-22T13:30:00Z"}
+{"Access":"Sensitive","Integrations":["Gmail","Google Calendar","Outlook"],"Mission":"One daily look at email and calendar: what Odara has today, what is new, what needs her, what she is waiting on, and a safe archive-only cleanup of low-value mail. Protects sensitive and transactional mail. Never sends, never deletes automatically.","Name":"Sweep (Gmail + Agenda)","Part of":["https://app.notion.com/p/415107b19b4981c89304d079c61d31f1"],"Recurrency":"On demand (also offered in Bom Dia). No schedule.","Referencia Interna":"22/11/2026 v3 (Builder): renamed from Gmail Sweep; reads Google Calendar (primary, Pessoal, Travel in full; Fortis busy only). Last real run stores date + time of the last completed sweep (What's New). Pilot: archive only, review 21/12/2026. No filters, no schedule. Pilot record in the Grab & Go task. 23/11/2026: Hotmail added as a second mailbox with its own rules (section Hotmail).","Status":"Active","Trigger":"Review (read-only): \"roda o Sweep\", \"vamos ver meu Gmail\", \"vamos ver minha agenda\", and the Bom Dia quick action. Cleanup: \"gmail sweep\", \"limpa meu Gmail\", \"organiza minha Inbox\". Hotmail only when named: \"limpa meu Hotmail\", \"roda o Sweep no Hotmail\". Ambiguous → Review. A direct calendar instruction does only that.","Type":"Skill","Use Cases":"Runs the Obligations Checar Emails and Responder Amigos / Famílias. Dashboard My Day / What's New / Needs Me / Waiting / Cleanup; drafts replies in Odara's Voice when asked; archives newsletters into Pré-Arquivo/30 dias; up to 3 events, passed to Bardim only on her word.","Last real run":"2026-11-22T13:30:00Z"}
 </properties>
 <content>
 <callout icon="📬" color="purple_bg">
@@ -44,7 +44,7 @@ Active · pilot since 21/11/2026, review on 21/12/2026. Archive only: the sweep 
 | Access | <b>Sensitive (G22)</b>: reads her inbox and calendar |
 | Recurrency | On demand. A scheduled run needs a separate approval. |
 | Sources of truth | Gmail for messages. Google Calendar for confirmed events and time blocks. Existing tasks: Task Backlog <code>collection://a4f2dc93-71ae-44c6-8049-b2cd8f752220</code>. Travel events: <mention url="https://app.notion.com/p/403107b19b49816b9c61e1d080ff5a4e">Regras do Odyssey Travel Calendar</mention>. Reply tone: <mention url="https://app.notion.com/p/3fe107b19b498044b5edfba6128ba15a">Odara's Voice</mention>. |
-| Connectors | Gmail ✅ (read, labels, archive, drafts) · Google Calendar ✅ (read; create only on direct request) · WhatsApp ❌ (test pending in Grab & Go) · Outlook ❌ |
+| Connectors | Gmail ✅ (read, labels, archive, drafts) · Google Calendar ✅ (read; create only on direct request) · Outlook / Hotmail ✅ (read, move to folder, trash; connected 23/11/2026, see the Hotmail section) · WhatsApp ❌ (test pending in Grab & Go) |
 | Delivery | A short dashboard, then only real decisions, one question at a time if needed. Drafts saved in Gmail. Sending is always hers. |
 | Last test | 22/11/2026: Review run, Gmail + Calendar (see the pilot task in Grab & Go). |
 
@@ -98,6 +98,24 @@ Retention and category are independent. A thread can have <b>at most one retenti
 
 Immigration, visa, residence, consular · employment, termination, legal · banking, billing, important financial records · healthcare · housing agreements and administrative documents · tickets, reservations, receipts, purchase confirmations, event changes, cancellations, refunds · anything that needs a reply or decision · anything whose importance is uncertain · explicit exclusions until Odara releases them: <b>DiR Tuset / Santander</b>. <b>Uncertain stays in the inbox.</b> Never infer that a bill was paid, an account secured or a government notice resolved.
 </callout>
+
+<callout icon="📮" color="purple_bg">
+## Hotmail (Brazil life archive)
+</callout>
+
+Hotmail is a second mailbox with its own rules, set by Odara on 23/11/2026. What it holds and who may read it: Source of Truth "Hotmail — Brazil Life Archive" (https://app.notion.com/p/421107b19b4981e0a44fed727aea0508). A Hotmail sweep runs only when she asks for it ("limpa meu Hotmail", "roda o Sweep no Hotmail"); the Gmail sweep does not touch Hotmail.
+
+| Class | Hotmail rule |
+| --- | --- |
+| Promotions, newsletters, job alerts | Trash, and the sender goes on an unsubscribe list for Odara (she unsubscribes herself, G23). |
+| LinkedIn | Trash for now; Gibbs follows LinkedIn from early 2027. |
+| Delivery, food and ride receipts under 50 € / R$ 100, other day-to-day receipts | Trash. |
+| Significant purchases worth a future check | Folder <code>Recibos</code>. |
+| Evidence for an open dispute | A named folder (today <code>Santander - Negocia</code>) until it closes. |
+| Notices she already knows, with no action for anyone | Trash. No Archive: she chose not to use Outlook's Archive folder. |
+| Needs an action from her | Stays in the inbox. |
+
+Trash is allowed in Hotmail, unlike the Gmail pilot, but only for these classes and only in a sweep she started; the first batch of each new sender type is shown to her before it goes. The protected list below applies to Hotmail as well: when in doubt, it stays in the inbox and she is asked.
 
 <callout icon="🪜" color="blue_bg">
 ## Steps
@@ -198,6 +216,7 @@ If Gmail or Calendar does not answer, or an action needs in-app approval that wa
 | 11/11/2026 | Back from Paused to Active; Trigger field filled. | Test OK on record and Bom Dia kept the quick action. |
 | 21/11/2026 | v2: retention and category labels; no automatic deletion; on demand only. | Approved by Odara (Designer handoff). |
 | 21/11/2026 | v2.1: Review / Cleanup modes, one report, status labels, 🧾 Comprovantes and 💼 Carreira protected, DiR Tuset / Santander excluded. Pilot = archive only, review 21/12/2026. | Odara, live with the Builder, after her chat pilot. |
+| 23/11/2026 | Hotmail added as a second mailbox with its own rules (Trash allowed for approved classes, Recibos folder, inbox = actions only). | Odara, live with the Builder, after the first Hotmail clean-up. |
 | 22/11/2026 | v3: renamed Sweep (Gmail + Agenda); reads Google Calendar; dashboard My Day / What's New / Needs Me / Waiting / Cleanup; resolution reconciliation; events to Bardim only on her word, one rolling note. | Odara + Chatty experience design, Builder review; Odara approved the three decisions. |
 
 <callout icon="🔗" color="gray_bg">

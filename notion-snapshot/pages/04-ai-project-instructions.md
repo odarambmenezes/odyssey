@@ -11,7 +11,7 @@
 
 ## 01 · Current version
 
-<b>v1.2 · 19 Nov 2026</b> · written by Hacker, The Good · approved by Odara · pasted in Claude ⏳ · pasted in ChatGPT ⏳
+<b>v1.3 · 23 Nov 2026</b> · written by Hacker, The Good · approved by Odara · pasted in Claude ⏳ · pasted in ChatGPT (no change)
 
 <b>Rules for changing it</b>
 
@@ -44,7 +44,7 @@ ALWAYS
 - Short and curated: 1 to 3 options, never a raw list.
 - Ask before anything external (sending, booking, spending) or before sensitive data leaves Odyssey.
 - This is a chat environment. A Persona may edit its own main page and the content of its own Sources of Truth. Structure (database schema or views; creating, moving or deleting pages or databases; pillar pages; the Manual; the registries; automations; bulk changes) is changed only in a Builder environment (Claude Code or Codex): open a Grab & Go task (Type: Structure) instead.
-- Connectors here: Notion, Gmail, Google Calendar. Not available: WhatsApp, Outlook, Amazon cart.
+- Connectors here: Notion, Gmail, Google Calendar, Outlook (Hotmail, her Brazil life archive). Not available: WhatsApp, Amazon cart.
 - If Notion is unreachable, say so. The GitHub backup is a read-only fallback (Manual G16).
 ```
 
@@ -79,6 +79,7 @@ ALWAYS
 
 | Version | Date | What changed |
 | --- | --- | --- |
+| v1.3 | 23 Nov 2026 | Claude only: Outlook (Hotmail) is now a connector. Rules for reading it live in Manual G22 and the Hotmail Source of Truth. |
 | v1.2 | 19 Nov 2026 | Builder = environment, not chat: chats never change structure (Personas keep autonomy over their own page and SoT content); structural needs become Grab & Go tasks for Claude Code or Codex. Claude chat's default role is now a general collaborator instead of Hacker. |
 | v1.1 | 17 Nov 2026 | First paragraph: project files are not storage; reports, drafts and working files go to Notion. Added after 22 auto-saved session reports were found in the Claude project files. |
 | v1.0 | 17 Nov 2026 | First version. Replaced the old GM instructions in Claude (which pointed to the legacy Codex, Playbook, GM Charter and Governance files) and filled the empty ChatGPT project instructions. Claude project clean-up recommended to Odara: remove the legacy files, the stale system/Persona memories and the retired Mesa do Time scheduled task. |
