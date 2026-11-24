@@ -2,6 +2,14 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-24 · Hacker (Claude Code)
+Task calendars and notes to self, approved by Odara.
+- **Google Calendar (main account):** Odara created 🪶 Tarefas, 🔺 Prazos, 🔁 Rotinas. Builder filled them: 6 task blocks (24–26/11, moved from Odara (Pessoal) and primary, originals deleted), 7 hard dates (incl. the 2027 Receita exit, passport and Modelo 151; the old 2023 "Pagar as contas de casa" series moved here as monthly on day 02), 14 recurring routines (the 8 monthly ones due 22/12 spread two per weekend). PS Plus reminder moved from primary to Prazos.
+- **Backlog:** Próximo Deadline aligned for 9 routines to the new spread (bulk, approved).
+- **Sweep (Gmail + Agenda):** reads the three calendars; new sections "Task calendars" (✅ = done, never delete) and "Notes to self (📥 Notas)" via the Gmail "+odyssey" plus address and a filter Odara creates. Last real run 24/11 12:25 UTC (Review run; process write-up sent to Odara).
+- **Ownership:** Gibbs owns the task calendars; Noticeboard note for the retreat: https://app.notion.com/p/422107b19b49819db770c4f33c4f5583
+- **Output v4 draft:** tab "v4 · proposta" added to Odara's Google Doc (her original tab kept); not yet in the skill.
+
 ## 2026-11-23 · Hacker (Claude Code)
 Hotmail (Outlook.com) connected through the Microsoft 365 connector and registered as Odara's Brazil life archive, approved by Odara.
 - **Source of Truth Mapping:** new entry "Hotmail — Brazil Life Archive" (no owner, open to every Persona in its domain, Access Sensitive): what it holds, folders (Recibos, Santander - Negocia, Contas Mensais), rules, connector notes. Not snapshotted (personal context). https://app.notion.com/p/421107b19b4981e0a44fed727aea0508

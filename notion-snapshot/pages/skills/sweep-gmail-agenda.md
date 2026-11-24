@@ -1,4 +1,4 @@
-<!-- Read through the Notion connector on 2026-11-22T13:33Z (Builder session, v3); Hotmail edits of 2026-11-23 applied by the Builder (other 23/11 chat edits, e.g. the output contract, not re-read here). Canonical spec lives in Notion. Formerly gmail-sweep.md. Personal email address redacted. -->
+<!-- Read through the Notion connector on 2026-11-22T13:33Z (Builder session, v3); Hotmail edits of 2026-11-23 and task-calendar / notes edits of 2026-11-24 applied by the Builder (other 23/11 chat edits, e.g. the output contract, not re-read here). Canonical spec lives in Notion. Formerly gmail-sweep.md. Personal email address redacted. -->
 <page url="https://app.notion.com/p/3fe107b19b4980a7a771d69a0746f355">
 <ancestor-path>
 <parent-data-source url="collection://3fe107b1-9b49-80fe-8401-000b3da753cf" name="Skills Mapping"/>
@@ -57,6 +57,32 @@ Active · pilot since 21/11/2026, review on 21/12/2026. Archive only: the sweep 
 | Primary ([redacted]) · Odara (Pessoal) · Odyssey Travel Calendar | In full. |
 | Odara Menezes \[Fortis\] | Busy blocks only, no titles or details. |
 | Família · Holidays in Brazil | Only when relevant to today or a decision. |
+
+<callout icon="🗓️" color="blue_bg">
+## Task calendars
+</callout>
+
+Since 24/11/2026 tasks also live in Google Calendar, in three calendars of the main account that Odara can switch on and off. **Gibbs owns them** (review at the retreat). The Backlog stays the record of done / not done; the calendar says when she plans to do it.
+
+| Calendar | What goes in | Form | Window |
+| --- | --- | --- | --- |
+| 🪶 Tarefas | Flexible tasks from the Backlog with a suggested slot | Timed block, 15–60 min, Backlog link in the description | Next 7 days only, refilled weekly |
+| 🔺 Prazos | Hard dates: renewals, government deadlines, bills | All-day, free, reminder days before | Current month + the few big hard dates ahead |
+| 🔁 Rotinas | Recurring Backlog routines | All-day recurring, free, no reminder; monthly ones spread two per weekend | Recurring |
+
+- Appointments with other people stay in the primary calendar; personal fixed appointments and birthdays stay in Odara (Pessoal).
+- **Done = ✅ at the start of the title.** When Odara says a calendar task or routine is done, add "✅ " to that event (for a recurring routine, only that occurrence) and update the Backlog row (Marca como feito). Never delete a done event.
+- A flexible task whose time passed without ✅ is **not** lost: the sweep lists it under Needs Me ("ficou para trás") with a new slot to propose.
+
+<callout icon="📥" color="blue_bg">
+## Notes to self (📥 Notas)
+</callout>
+
+Odara captures ideas at night by email. Address: Gmail plus address "+odyssey" on her main account (same inbox). Her Gmail filter labels these `📥 Notas`. Optional subject tags: `#tarefa`, `#ideia`, `#retiro`, `#hacker`, `#compra`.
+
+- Each run reads `label:📥 Notas` plus `from:me to:me in:inbox` since Last real run.
+- Output block **🗒️ Suas notas**, right after the day's priorities: one line per note with a proposed home and a reply code (N1, N2…).
+- On her code: register it, then archive the note. Never route without her code.
 
 <callout icon="🧭" color="blue_bg">
 ## The dashboard
@@ -216,6 +242,7 @@ If Gmail or Calendar does not answer, or an action needs in-app approval that wa
 | 11/11/2026 | Back from Paused to Active; Trigger field filled. | Test OK on record and Bom Dia kept the quick action. |
 | 21/11/2026 | v2: retention and category labels; no automatic deletion; on demand only. | Approved by Odara (Designer handoff). |
 | 21/11/2026 | v2.1: Review / Cleanup modes, one report, status labels, 🧾 Comprovantes and 💼 Carreira protected, DiR Tuset / Santander excluded. Pilot = archive only, review 21/12/2026. | Odara, live with the Builder, after her chat pilot. |
+| 24/11/2026 | Task calendars (🪶 Tarefas, 🔺 Prazos, 🔁 Rotinas; Gibbs owns), ✅ done convention, 📥 Notas capture via +odyssey. Output v4 layout in progress with Odara. | Odara, live with the Builder. |
 | 23/11/2026 | Hotmail added as a second mailbox with its own rules (Trash allowed for approved classes, Recibos folder, inbox = actions only). | Odara, live with the Builder, after the first Hotmail clean-up. |
 | 22/11/2026 | v3: renamed Sweep (Gmail + Agenda); reads Google Calendar; dashboard My Day / What's New / Needs Me / Waiting / Cleanup; resolution reconciliation; events to Bardim only on her word, one rolling note. | Odara + Chatty experience design, Builder review; Odara approved the three decisions. |
 
