@@ -8,6 +8,7 @@ Task calendars and notes to self, approved by Odara.
 - **Backlog:** Próximo Deadline aligned for 9 routines to the new spread (bulk, approved).
 - **Sweep (Gmail + Agenda):** reads the three calendars; new sections "Task calendars" (✅ = done, never delete) and "Notes to self (📥 Notas)" via the Gmail "+odyssey" plus address and a filter Odara creates. Last real run 24/11 12:25 UTC (Review run; process write-up sent to Odara).
 - **Ownership:** Gibbs owns the task calendars; Noticeboard note for the retreat: https://app.notion.com/p/422107b19b49819db770c4f33c4f5583
+- **Archive = read:** the Sweep now marks the threads it archives as read (unread counts on archived labels were noise for Odara); 🔥 Action Needed and inbox untouched. Notes label renamed to her "🤌🏻 Eu comiga mesma! +Odyssey" (filter: to the +odyssey address).
 - **Output v4 draft:** tab "v4 · proposta" added to Odara's Google Doc (her original tab kept); not yet in the skill.
 
 ## 2026-11-23 · Hacker (Claude Code)
