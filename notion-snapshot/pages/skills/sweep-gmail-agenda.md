@@ -75,12 +75,12 @@ Since 24/11/2026 tasks also live in Google Calendar, in three calendars of the m
 - A flexible task whose time passed without ✅ is **not** lost: the sweep lists it under Needs Me ("ficou para trás") with a new slot to propose.
 
 <callout icon="📥" color="blue_bg">
-## Notes to self (📥 Notas)
+## Notes to self (🤌🏻 Eu comiga mesma! +Odyssey)
 </callout>
 
-Odara captures ideas at night by email. Address: Gmail plus address "+odyssey" on her main account (same inbox). Her Gmail filter labels these `📥 Notas`. Optional subject tags: `#tarefa`, `#ideia`, `#retiro`, `#hacker`, `#compra`.
+Odara captures ideas at night by email. Address: Gmail plus address "+odyssey" on her main account (same inbox). Her Gmail filter labels these `🤌🏻 Eu comiga mesma! +Odyssey`. Optional subject tags: `#tarefa`, `#ideia`, `#retiro`, `#hacker`, `#compra`.
 
-- Each run reads `label:📥 Notas` plus `from:me to:me in:inbox` since Last real run.
+- Each run reads `label:🤌🏻 Eu comiga mesma! +Odyssey` plus `from:me to:me in:inbox` since Last real run.
 - Output block **🗒️ Suas notas**, right after the day's priorities: one line per note with a proposed home and a reply code (N1, N2…).
 - On her code: register it, then archive the note. Never route without her code.
 
@@ -242,7 +242,7 @@ If Gmail or Calendar does not answer, or an action needs in-app approval that wa
 | 11/11/2026 | Back from Paused to Active; Trigger field filled. | Test OK on record and Bom Dia kept the quick action. |
 | 21/11/2026 | v2: retention and category labels; no automatic deletion; on demand only. | Approved by Odara (Designer handoff). |
 | 21/11/2026 | v2.1: Review / Cleanup modes, one report, status labels, 🧾 Comprovantes and 💼 Carreira protected, DiR Tuset / Santander excluded. Pilot = archive only, review 21/12/2026. | Odara, live with the Builder, after her chat pilot. |
-| 24/11/2026 | Task calendars (🪶 Tarefas, 🔺 Prazos, 🔁 Rotinas; Gibbs owns), ✅ done convention, 📥 Notas capture via +odyssey. Output v4 layout in progress with Odara. | Odara, live with the Builder. |
+| 24/11/2026 | Task calendars (🪶 Tarefas, 🔺 Prazos, 🔁 Rotinas; Gibbs owns), ✅ done convention, 🤌🏻 Eu comiga mesma! +Odyssey capture via +odyssey. Output v4 layout in progress with Odara. | Odara, live with the Builder. |
 | 23/11/2026 | Hotmail added as a second mailbox with its own rules (Trash allowed for approved classes, Recibos folder, inbox = actions only). | Odara, live with the Builder, after the first Hotmail clean-up. |
 | 22/11/2026 | v3: renamed Sweep (Gmail + Agenda); reads Google Calendar; dashboard My Day / What's New / Needs Me / Waiting / Cleanup; resolution reconciliation; events to Bardim only on her word, one rolling note. | Odara + Chatty experience design, Builder review; Odara approved the three decisions. |
 
