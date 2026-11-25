@@ -16,6 +16,7 @@ Cross-chat consolidation. Odara closed most open chats; each left a numbered han
 - **Calendar rule:** reminders and task blocks are free and never early (from about 13:00). Passport check moved to 26/11 13:00; 15-minute block to answer the psychologist on WhatsApp (new Backlog task).
 - **ChatGPT automations** for the passport retired by Odara (she removes them in ChatGPT); the Sweep covers consulate replies.
 - **Trip History template** confirmed final.
+- **Wake-up prompts:** Gibbs (Claude chat, prompt v2 in English, no fixed language rule) and Lori (ChatGPT, written by Odara with ChatGPT). Lori also becomes the experience director, taking over Chatty's narrative, art and UX direction. Both prompts are kept in their Grab & Go tasks: https://app.notion.com/p/423107b19b4981da9c30f6c9e07b52c1 · https://app.notion.com/p/423107b19b4981d09354d0525bd3a4b3
 - **All 17 handoff notes** marked Resolved, pointing to one consolidated memory page (the Session Log entry below).
 - Session Log: https://app.notion.com/p/423107b19b4981d5be90ec82d88edb3e
 
