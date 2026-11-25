@@ -49,6 +49,7 @@ Since 24/11/2026 tasks also live in Google Calendar, in three calendars of the m
 | 🔺 Prazos | Hard dates: renewals, government deadlines, bills | All-day, free, reminder days before | Current month + the few big hard dates ahead |
 | 🔁 Rotinas | Recurring Backlog routines | All-day recurring, free, no reminder; monthly ones spread two per weekend | Recurring |
 
+- **Reminders and task blocks are flexible:** mark them free so other things can go on top, and never place them early in the morning (from about 13:00 on, unless Odara picks a time). Odara, 25/11/2026.
 - Appointments with other people stay in the primary calendar; personal fixed appointments and birthdays stay in Odara (Pessoal).
 - **Done = ✅ at the start of the title.** When Odara says a calendar task or routine is done, add "✅ " to that event (for a recurring routine, only that occurrence) and update the Backlog row (Marca como feito). Never delete a done event.
 - A flexible task whose time passed without ✅ is **not** lost: the sweep lists it under Needs Me ("ficou para trás") with a new slot to propose.
