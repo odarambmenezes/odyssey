@@ -4,7 +4,7 @@ Every structural change to Project Odyssey is logged here by the Builder session
 
 ## 2026-11-25 · Hacker (Claude Code)
 Cross-chat consolidation. Odara closed most open chats; each left a numbered handoff on the Crew Noticeboard (HANDOFF 01–15, two notes numbered 12, and two titled HANDOFF CLAUDE 02). All 17 were read together, checked against live Notion, Calendar, Gmail and Hotmail, and turned into yes/no decisions that Odara answered live.
-- **Operating model:** two main chats. Gibbs works in the Builder environment (Claude Code) and absorbs the Builder role; Lori works in ChatGPT, or wherever a task runs best. In force now; Crew Mapping is formalized at the retreat (no Persona page changed).
+- **Operating model:** two main chats. Gibbs gets his own Claude chat as operational lead; Lori works in ChatGPT, or wherever a task runs best. Hacker stays the Builder in Claude Code, invoked by Gibbs or Odara (this corrects an earlier wording the same day that had Gibbs absorbing the Builder role). Crew Mapping is formalized at the retreat (no Persona page changed). Grab & Go: write Gibbs' wake-up prompt with Odara.
 - **Life Backlog (records, G22-light):** the passport task is set to Aguardando Terceiros (electoral clearance 24/11, e-Consular sent 24/11, no consulate reply yet, deadline 14/03/2027); its duplicate stays closed as history. The psychologist task was closed and consolidated into Pagar contas mensais (due on the 5th, notified with the other bills). Cap's "Reconciliar Perfil de Viagem" was marked Done.
 - **Calendar:** the 26/11 passport event, created by a closing chat for an already-resolved step, now checks the consulate's reply instead.
 - **Skills Mapping:** Cap's Journey registered as On Draft (Restricted, used by Cap): https://app.notion.com/p/423107b19b4981f6b602e0ead0b60d2f
@@ -12,6 +12,11 @@ Cross-chat consolidation. Odara closed most open chats; each left a numbered han
 - **05 A Jornada:** Archive toggle removed; Session Log named as the decision record (the "Decision Log not verified" text is gone). **06 O Hoje:** Grab & Go placement recorded as decided (stays in 02 O Navio).
 - **Future Horizons:** business ideas index (Empresa de Layoff, Urban Transit Lounge, Escambo, VR for phobias, hospitality); header updated. HANDOFF 12 said Escambo had never been saved; it had been, since 02/11.
 - Parked: Volta pra Base iPad dashboard (same surface as the Captain's Deck), Lola's hair, Jaume's SoT test, Cap's voice fixes, Radar de Shows artifact sync, the resolve-is-fun UX principle. Shopping List waits for Gibbs.
+- **Bills:** all November bills paid (Odara); the table now reads November. New Grab & Go task for Gibbs: specific payment reminders and a receipts system across Gmail and Hotmail.
+- **Calendar rule:** reminders and task blocks are free and never early (from about 13:00). Passport check moved to 26/11 13:00; 15-minute block to answer the psychologist on WhatsApp (new Backlog task).
+- **ChatGPT automations** for the passport retired by Odara (she removes them in ChatGPT); the Sweep covers consulate replies.
+- **Trip History template** confirmed final.
+- **All 17 handoff notes** marked Resolved, pointing to one consolidated memory page (the Session Log entry below).
 - Session Log: https://app.notion.com/p/423107b19b4981d5be90ec82d88edb3e
 
 ## 2026-11-22 (later) · Hacker (Claude Code)
