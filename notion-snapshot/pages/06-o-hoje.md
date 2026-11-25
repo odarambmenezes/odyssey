@@ -183,7 +183,7 @@ The future iPad-friendly interface selects and displays just the timely pieces, 
 
 <b>Language:</b> English is the editorial working choice for this page, in line with the other pillar guides. The founding sentence remains in Portuguese; a global language decision has not been recorded here.
 
-<b>Grab & Go:</b> the project build-task database already lives in the main Odyssey workspace. Whether its home should be O Hoje or A Jornada is <b>unresolved</b>; its role as the <i>project construction backlog</i> is distinct from Odara's personal living Backlog.
+<b>Grab & Go:</b> decided by Odara (Session Log, 05/06 reconciliation): it stays in <mention url="https://app.notion.com/p/40c107b19b498031b5e5f5fa01cc84b6">02 O Navio</mention> as the <i>project construction backlog</i>, separate from Odara's personal living Backlog. It does not move to O Hoje or A Jornada.
 
 <b>Other signals of the present:</b> consider only when they answer the one-glance question more accurately, without creating new tracking obligations or overlapping another Source of Truth.
 

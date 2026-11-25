@@ -18,7 +18,7 @@
 
 <b>One truth, one home:</b> current instructions stay with canonical owners; unresolved findings become tasks in <mention url="https://app.notion.com/p/1ee7ad29377949e2af70cb3ca6c3faa6" type="database">Grab & Go</mention>; <b>A Jornada</b> makes meaningful history findable.
 
-<b>State:</b> the main-page structure is consolidated for use. Historical records, their final destinations and the Decision Log still require separate reconciliation.
+<b>State:</b> the main-page structure is consolidated for use. Decisions are recorded in the Session Log (section 04). The Personal Diary vs Diário Pessoal and the Memory Log home are still being reconciled with Lori.
 </callout>
 
 <quote color="green_bg">
@@ -89,7 +89,7 @@ Evidence and recollections of meaningful Quests completed—not every ordinary o
 
 <b>Status matters:</b> Proposed → Approved → Implemented → Validated, with Superseded / Archived when applicable. Approval alone does not imply successful implementation.
 
-<b>Decision Log status:</b> a single canonical Decision Log was <b>not verified</b> during this audit. Do not claim it exists or create a competing database prematurely; preserve important reasoning in the existing records until its destination is reconciled.
+<b>Where decisions live:</b> the <b>Session Log</b> (section 04) is the official decision record. Do not create a separate Decision Log.
 
 <b>Ideas are not decisions:</b> <mention url="https://app.notion.com/p/3e9107b19b498189bd3ee202cb47f744">🌊 Odyssey Future Horizons & Backlog</mention> is for explorations and possibilities, not automatic commitments. It is also the home of the idea backlog: when Odara asks a Persona to save an idea for later, it goes there.
 
@@ -110,12 +110,6 @@ Session Log - Odyssey
 <callout icon="📦" color="gray_bg">
 The former AI Notice Board has been retired and its actionable entries migrated; the live channel is <mention url="https://app.notion.com/p/410107b19b4981009b2ada911ec304fb">Crew Noticeboard</mention>. The Memory Log design remains with Lori for reconciliation. Historic governance pages are retirement candidates, not current instructions.
 </callout>
-
-<toggle heading="h3">
-🗂️ Archive
-
-Legacy material held here is temporary retirement staging, not a permanent archive or instruction source. Do not add new retired pages to this area. After distillation and dependency checks, Odara decides whether originals are deleted or preserved privately outside Project Odyssey (G21). A historical record is context, never current authority.
-</toggle>
 
 <callout icon="🔄" color="purple_bg">
 ## 05 · Knowledge Lifecycle — Remember, reconcile, release
