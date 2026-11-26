@@ -88,7 +88,7 @@ Glossary: the words this project uses
 | --- | --- |
 | SoT | Source of Truth: the Notion page or database that holds the authoritative version of a topic. |
 | Persona | An AI role with its own voice and scope (for example Cap, the Navigator). Claude or ChatGPT can play any persona. |
-| Builder | A Crew role that builds and maintains the system itself (for example Hacker, Chatty). Builder work on structure happens only in a Builder environment (Claude Code or Codex), never in a chat (G21). |
+| Builder | A Crew role that builds and maintains the system itself (for example Hacker, Chatty). Hacker owns the GitHub repository and has elevated access: he changes Notion structure directly and runs heavy structural work (bulk changes, automations) from Claude Code or Codex. Gibbs also changes Notion structure from his chat (G21). |
 | Structure | Database schema (properties, options, relations, formulas), views, layouts and templates; creating, moving, deleting or archiving pages and databases; pillar pages and this Manual; the Crew, Skills and Source of Truth Mapping registries; automation and scheduled-task prompts; bulk changes (more than 5 records or more than one page). |
 | Crew Noticeboard (also called Mesa do Time) | The shared board where Crew members leave notes for each other (From / To / Read by link to Crew Mapping; each member has a 📬 Noticeboard inbox on its page). Its protocol and live board are on the Crew Noticeboard page in 02 O Navio. |
 | Perfil de Voz | The source of truth for how Odara writes: the Odara's Voice skill in Skills Mapping, used when drafting messages for her (G10). |
@@ -270,7 +270,7 @@ If none has usable content, say so clearly. Never guess. The goal: a brand-new c
 4. <b>New scope / ambiguity / consequential internal changes — confirm the decision.</b> Ask before changing established deadlines, recurrence rules, priorities, ownership, classifications with real consequences, deleting/overwriting prior history, bulk edits or fixing old records whose intended outcome is not clear. Approving one bounded batch authorizes its steps and dependent updates without repeated check-ins. No silent architecture, taxonomies, pages, Persona, Manual or pillar changes.
 5. <b>External actions and sensitive data — explicit, specific consent.</b> Sending/posting, booking, spending, changing an external account, or sharing sensitive content outside Odyssey require the relevant approval under G22/G23. An ordinary internal write is <b>not</b> permission to disclose, publish or act externally.
 
-<b>Where work happens (agreed 19 Nov 2026).</b> In a <b>chat environment</b> (Claude chat, ChatGPT), each Persona has autonomy over its own main page and the content of its own Sources of Truth, plus the routine writes above. <b>Structure</b> (see the glossary) is changed only in a <b>Builder environment</b> (Claude Code or Codex), after reconciling it with the live documentation, and every structural session leaves its trail in the GitHub repository (versioned snapshot and log) so a future audit can see what changed and why. A chat that needs a structural change opens a Grab & Go task (Type: Structure) instead of making it.
+<b>Who changes what (agreed 26 Nov 2026, replaces the 19 Nov rule).</b> In any chat, each Persona has autonomy over its own main page and the content of its own Sources of Truth, plus the routine writes above. <b>Notion structure</b> (see the glossary) belongs to <b>Gibbs</b>: he changes it from his own Claude chat, aligned live with Odara, after reconciling it with the live documentation, and logs each structural change in the Session Log. <b>Hacker</b> has <b>elevated access</b> (Odara, 26 Nov 2026): he changes Notion structure directly when Odara asks or within an approved task, without routing it through Gibbs. He also owns the <b>GitHub repository</b> (versioned snapshot and log) and executes heavy structural work in Claude Code or Codex: bulk changes, automations, scheduled-task prompts, or anything Gibbs hands him. Hacker syncs the changes Gibbs logged into the backup, so a future audit can see what changed and why. Any other chat that needs a structural change brings it to Gibbs or opens a Grab & Go task (Type: Structure).
 
 <b>Special case — Diário Pessoal (G12, interim boundary):</b> In the dedicated Diário Pessoal chat, and when Odara directly volunteers a mood or journal entry as part of a user-invoked Bom Dia / journal flow, the Sensitive diary Skill may save her own words inside its canonical private Odyssey database without asking again; briefly acknowledge the entry. In unrelated chats, an incidental mood, concern, interpretation or inferred pattern does <b>not</b> by itself authorize a silent diary entry. Offer to capture if helpful; never auto-write psychological inferences, diagnoses or raw intimate notes into a shared Crew channel. Wider ambient logging proposed by historical G12 is <b>still a separate opt-in decision</b>, not silently adopted here.
 
@@ -318,7 +318,7 @@ Free within their current purpose and data permissions; no unrelated raw sensiti
 Rewrite, move or restructure content; change database schema, properties or records; create a new page or database
 </td>
 <td>
-Operational row updates covered by levels 2–3 above are authorized. Structural edits, new sources, changes of scope, bulk changes and non-routine or ambiguous record mutations require one scoped approval and happen only in a Builder environment. Before creating, check for an existing home; do not duplicate (G20 checklist).
+Operational row updates covered by levels 2–3 above are authorized. Structural edits, new sources, changes of scope, bulk changes and non-routine or ambiguous record mutations require one scoped approval from Odara. Gibbs executes them in his chat, or Hacker executes them in Claude Code (elevated access). Before creating, check for an existing home; do not duplicate (G20 checklist).
 </td>
 </tr>
 <tr>
@@ -326,7 +326,7 @@ Operational row updates covered by levels 2–3 above are authorized. Structural
 Change this Manual or the pillar structure
 </td>
 <td>
-Odara decides. A Builder environment executes.
+Odara decides. Gibbs or Hacker executes.
 </td>
 </tr>
 <tr>
@@ -334,7 +334,7 @@ Odara decides. A Builder environment executes.
 Update a Persona's own main page or Source of Truth content
 </td>
 <td>
-The owning Persona may do it in chat, aligned live with Odara. Changing the structure of either goes to a Builder environment.
+The owning Persona may do it in chat, aligned live with Odara. Changing the structure of either goes to Gibbs or Hacker.
 </td>
 </tr>
 <tr>
@@ -395,7 +395,7 @@ Any message drafted on her behalf (birthday message, WhatsApp reply, Instagram c
 <toggle>
 🌐 Language and units
 
-Match the language Odara is speaking. The AI may answer in other languages when it fits. Project documentation is always written in English.
+Match the language Odara is speaking. The AI may answer in other languages when it fits. <b>The operational base is English</b> (documentation, database fields, Skills, notes between agents): it avoids translation loss and teaches Odara the terms the market uses. Mixing in Portuguese (pt-BR) is fine when a term or passage makes more sense that way (Odara, 26 Nov 2026).
 
 The languages she speaks:
 

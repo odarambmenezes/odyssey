@@ -1,6 +1,28 @@
 {
   "name": "Grab & Go",
   "schema": {
+    "Answered on": {
+      "description": "Set by the Check panel when Odara answers every card.",
+      "name": "Answered on",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:Answered on:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Answered on:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Answered on:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    },
     "Assignee": {
       "dataSourceUrl": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f",
       "description": "Who picks it up: Hacker (structure), Chatty (visual/UX) or a Persona. Odara involvement is in Needs Odara.",
@@ -21,6 +43,11 @@
       "propertyUrl": "collectionProperty://d9baf9a3-2d3f-41be-8fdd-152d8ee1fd91/W2lqXQ",
       "type": "relation"
     },
+    "Cards": {
+      "description": "How many Check cards the ticket body carries. Set by whoever writes the deck. Above 0 puts the ticket in the panel lane With cards.",
+      "name": "Cards",
+      "type": "number"
+    },
     "Deadline": {
       "description": "",
       "name": "Deadline",
@@ -36,6 +63,28 @@
           },
           {
             "name": "date:Deadline:is_datetime",
+            "sqlType": "INTEGER"
+          }
+        ],
+        "usage": "For connections.notion.querySql. Main schema name not queryable."
+      },
+      "type": "date"
+    },
+    "Delivered on": {
+      "description": "Set by the Check panel checkout when Odara pastes the report to Hacker. Answered and not delivered = waiting in checkout.",
+      "name": "Delivered on",
+      "querySqlColumns": {
+        "columns": [
+          {
+            "name": "date:Delivered on:start",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Delivered on:end",
+            "sqlType": "TEXT"
+          },
+          {
+            "name": "date:Delivered on:is_datetime",
             "sqlType": "INTEGER"
           }
         ],
@@ -145,6 +194,17 @@
       "dataSourceUrl": "collection://3fe107b1-9b49-8063-81e6-000b78bf6c2f",
       "description": "",
       "name": "Pillar",
+      "type": "relation"
+    },
+    "Proof": {
+      "description": "Link to what changed (page, event, commit). A ticket closes as Done only with Proof.",
+      "name": "Proof",
+      "type": "url"
+    },
+    "Requested by": {
+      "dataSourceUrl": "collection://3fe107b1-9b49-80b4-bab3-000b9c907c0f",
+      "description": "Who opened the ticket (a Persona). Odara-opened tickets leave it empty.",
+      "name": "Requested by",
       "type": "relation"
     },
     "Status": {

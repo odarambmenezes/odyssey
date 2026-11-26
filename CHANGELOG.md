@@ -2,6 +2,17 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-26 · Hacker (Claude Code)
+Hacker's elevated access, Grab & Go as the ticket system, and the tickets panel pilot v1 ("Mesa do Capitão", provisional name).
+- **Manual G21:** Hacker has elevated access (Odara, live): he changes Notion structure directly when she asks or within an approved task, without routing it through Gibbs; Gibbs also changes structure from his chat. Glossary, "Who changes what" and the permissions table updated. Language rule: English is the operational base, pt-BR mixed in when it fits. Snapshot synced.
+- **Grab & Go becomes the ticket system:** description widened (project tasks plus alignment requests for Odara); new relation "Requested by" (Crew Mapping); new view 🎫 Tickets (Needs Odara = You decide / You do, not Dropped, sorted by Impact). The Crew Noticeboard keeps messages and FYI only; anything that needs Odara's answer becomes a ticket.
+- **Product proposal** from four UX research passes, approved by Odara as pilot v1 with one change: a single checkout report, always to Hacker, who acts on his items and posts a Noticeboard note for any other Persona. https://claude.ai/artifact/8kKx6EfmE8K3Ge3qVQ1dRW
+- **Grab & Go schema:** new properties Cards (number of Check cards), Answered on, Delivered on, Proof. Done needs Proof.
+- **Tickets panel v4** at the same link: lanes 🃏 com cartas / 🫵 para você fazer / 👀 com a tripulação / ⛔ / 💡 / ✅; "Resolver 5 agora" with a finish screen and a "mutirão" for everything with cards; "Agora não" and 4-second undo on every card; recommended option and consequence line; stale and "sem prova" flags; checkout that builds one report for Hacker and sets Delivered on. https://claude.ai/artifact/3JAv7SUbpTZDeTTHQeSCQg
+- **Check Interativo skill:** lanes, card rule for all Personas, Cards property, checkout and Hacker's handling rule. Snapshot added: `notion-snapshot/pages/skills/check-interativo.md`.
+- Open: triage of about 40 old rows in the 🎫 Tickets view (bulk change, needs Odara's go-ahead); Odara runs a first round; phase 2 adds the weekly metrics summary and Hacker reading answers directly from Notion.
+- Session Log: https://app.notion.com/p/424107b19b4981f3b0f6e44c5c035112 · https://app.notion.com/p/424107b19b498113b161cc7c435ca857 · https://app.notion.com/p/424107b19b4981dd84cfd924a9ad097a
+
 ## 2026-11-25 · Hacker (Claude Code)
 Cross-chat consolidation. Odara closed most open chats; each left a numbered handoff on the Crew Noticeboard (HANDOFF 01–15, two notes numbered 12, and two titled HANDOFF CLAUDE 02). All 17 were read together, checked against live Notion, Calendar, Gmail and Hotmail, and turned into yes/no decisions that Odara answered live.
 - **Operating model:** two main chats. Gibbs gets his own Claude chat as operational lead; Lori works in ChatGPT, or wherever a task runs best. Hacker stays the Builder in Claude Code, invoked by Gibbs or Odara (this corrects an earlier wording the same day that had Gibbs absorbing the Builder role). Crew Mapping is formalized at the retreat (no Persona page changed). Grab & Go: write Gibbs' wake-up prompt with Odara.
