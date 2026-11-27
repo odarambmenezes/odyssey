@@ -10,6 +10,7 @@ Odara asked for a last check that Notion is live documentation, not a dump. Appr
 - **Crew Mapping:** Lori and Hacker Status set to Active.
 - **Test leftovers:** fictional shared-check answers, replies and the mention test ticket exported to `archive/notion-legacy/shared-check-test-pages_2026-11-27.md` and moved to Trash. Lori's deck pages kept.
 - **Finding:** "the untitled pages" around the Noticeboard are layout blocks of 02 O Navio, not pages. Lori's deck "Como a gente trabalha" (4 cards) lives only on a test page, so Mesa Rápida does not show it.
+- **Lori's deck "Como a gente trabalha"** (4 cards) moved from the test page into its own Grab & Go ticket (Ready, Cards 4), so Mesa Rápida shows it: https://app.notion.com/p/425107b19b498144bb90deb3542ff749 . Lori's recommended options marked `rec`; the test page points to the ticket.
 - **Still open:** 05 A Jornada (Diary and Memory Log, with Lori).
 - Snapshot refreshed: `pages/02-o-navio.md`, `pages/06-o-hoje.md`. Session Log: https://app.notion.com/p/425107b19b498189b525d82f13acd917
 
