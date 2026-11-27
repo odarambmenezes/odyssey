@@ -57,10 +57,10 @@ Odyssey - Architecture Overview
 ## The Captain's Deck — <i>Your ship at a glance!</i>
 </callout>
 
-<callout icon="🧪" color="gray_bg">
-<b>COMING SOON · Future Live Dashboard</b>
+<callout icon="🧭" color="green_bg">
+<b>LIVE · MVP since 27 Nov 2026:</b> [Open the Captain's Deck](https://claude.ai/artifact/QrhEpSQEGxgaM4voXoWUqf)
 
-The Captain's Deck is Odyssey's future <b>interactive home base</b>. This section is a vision and placeholder — <b>not a working live dashboard yet</b>. Until the MVP is ready, Notion remains our reliable navigation point and fallback.
+Odyssey's interactive home base, built by Hacker. Rearrangeable widgets (move, resize, minimize, remove) with live data from Notion and Google Calendar: today, agenda, tickets with quick links into the cards, tasks, quests, islands, Crew, Noticeboard, personal Sources of Truth, Skills, Radar de Shows, documentation audit, recent decisions, documentation and databases. Each screen size (phone, tablet, desktop/TV) keeps its own arrangement, synced through Odara's account. Notion stays the source of truth and the fallback.
 </callout>
 
 <quote color="green_bg">
@@ -149,7 +149,7 @@ next available project tasks on sight
 
 <b>Keep on the main page only:</b> information that helps the Captain make a decision or take action immediately. Detailed instructions and system specifications stay in their canonical homes; meaningful history stays in Jornada, and retired original documentation leaves the project under G21.
 
-<b>Not implemented yet:</b> automatic refresh, full live status, drag-and-drop customization and cross-platform synchronization are future capabilities, not promises of today's setup.
+<b>In the MVP (27 Nov 2026):</b> live reads, refresh every 10 minutes, drag-and-drop widgets and layout sync across devices. <b>Not yet:</b> Quick Actions that run Skills from the deck, and a Radars feed beyond the Skills Mapping status.
 </toggle>
 
 ---
