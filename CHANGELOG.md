@@ -2,6 +2,16 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-27 · Hacker (Claude Code)
+Captain's Deck MVP, ticket deep links, and the tickets v2 groundwork.
+- **Captain's Deck (home dashboard), approved by Odara:** https://claude.ai/artifact/QrhEpSQEGxgaM4voXoWUqf. Widgets on a snap grid (12/8/4 columns) that Odara drags, resizes, minimizes and removes; each screen size keeps its own layout, synced in the artifact's private per-user store. Reads Notion views (Tickets, Backlog Tasks and Quests, Crew Tree, Noticeboard Open, Source of Truth Mapping, Skills, Session Log, Architecture Overview) and Google Calendar (personal, Prazos, Rotinas, Tarefas, Travel). Home page section changed from "coming soon" to live; Grab & Go "Design the Captain's Deck MVP on the home page" closed with Proof.
+- **Tickets panel:** the cards lane now holds the deck itself (no separate screen); `#t-` plus a page id opens that ticket directly, used by the deck's quick choice.
+- **Mesa do Capitão v2:** Lori's experience brief received as a Grab & Go ticket; navigable prototype with fictional data and a behaviour contract written into the ticket (https://claude.ai/artifact/3HerzoFD4tXLpf8RaD5YDa). Production waits for Odara's go-ahead.
+- **Lori review request** posted on the Noticeboard; Lori answered with the v2 brief.
+- **House tidy-up (26/11):** four finished Grab & Go rows closed with Proof (shared Check test, Lori wake-up, Gibbs prompt, Grab & Go placement); two stale Noticeboard notes resolved. The rest became a ticket with 8 cards for Odara ("Arrumar a casa"), not executed yet.
+- **New tickets from Gibbs and Lori (27/11):** eight decks covering career, ERE, money, housing, legacy clean-up, shopping list and Lori's Crew check, to close the documentation audit.
+- Session Log: https://app.notion.com/p/425107b19b4981ca80a1fd362054a690
+
 ## 2026-11-26 · Hacker (Claude Code)
 Hacker's elevated access, Grab & Go as the ticket system, and the tickets panel pilot v1 ("Mesa do Capitão", provisional name).
 - **Manual G21:** Hacker has elevated access (Odara, live): he changes Notion structure directly when she asks or within an approved task, without routing it through Gibbs; Gibbs also changes structure from his chat. Glossary, "Who changes what" and the permissions table updated. Language rule: English is the operational base, pt-BR mixed in when it fits. Snapshot synced.
