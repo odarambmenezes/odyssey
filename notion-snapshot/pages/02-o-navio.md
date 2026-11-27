@@ -5,9 +5,8 @@
 <ancestor-3-page url="https://app.notion.com/p/3aa107b19b49808bbf8cd2719803ed0d" title="Project Odyssey"/>
 </ancestor-path>
 <properties>
-{"Last Update":"2026-11-19T14:23:50.069Z","Name":"02 O Navio","Pillar":"Estrutura","Purpose":"Establishes the operational foundation of Odyssey — its architecture, governance, systems, and the rules that keep everything connected and working together.","Select":"Reconciliada","url":"https://app.notion.com/p/40c107b19b498031b5e5f5fa01cc84b6"}
+{"Last Update":"2026-11-27T23:01:37.658Z","Name":"02 O Navio","Pillar":"Estrutura","Purpose":"Establishes the operational foundation of Odyssey — its architecture, governance, systems, and the rules that keep everything connected and working together.","Select":"Reconciliada","url":"https://app.notion.com/p/40c107b19b498031b5e5f5fa01cc84b6"}
 </properties>
-<iconMetadata>{"type":"emoji","emoji":"🚢"}</iconMetadata>
 <content>
 <quote color="green_bg">
 <b>The ship should carry the complexity, so the Captain can enjoy the journey.</b>
@@ -24,7 +23,7 @@
 <b>Boundary: </b><mention url="https://app.notion.com/p/3fe107b19b49805c9585dc8b9b21c8f6">01 A Bússula</mention> says <i>why</i> Odyssey exists. O Navio shows <i>how its parts work together</i>. Universal instructions and permissions live in the <mention url="https://app.notion.com/p/3aa107b19b4981079aaecf1f72b1bb98">Odyssey Operating Manual</mention>; Persona-specific behavior lives with the <mention url="https://app.notion.com/p/3fe107b19b49800e9135e9e895749250">04 AI Crew & Skills</mention>.
 </toggle>
 
-<b>Operational state:</b> <b><span color="orange">UNDER AUDIT</span></b> — the architecture described here includes both existing practices and capabilities still being tested. A documented intention is not proof of a working integration.
+<b>Operational state:</b> <b>Reconciled (27 Nov 2026)</b>. The architecture here separates what works today from what is still a proposal; a documented intention is not proof of a working integration.
 </callout>
 
 <columns>
@@ -52,7 +51,7 @@ The Navio supports the practical side: sources, ownership, coordination, permiss
 
 1. <b>Find the home:</b> locate the current page/database responsible for the topic. Notion is the live documentation, not the chat transcript.
 2. <b>Understand the mission:</b> read the <mention url="https://app.notion.com/p/3fe107b19b49805c9585dc8b9b21c8f6">01 A Bússula</mention>, <mention url="https://app.notion.com/p/3aa107b19b4981079aaecf1f72b1bb98">Odyssey Operating Manual</mention> and <mention url="https://app.notion.com/p/3aa107b19b4981b192b1fc071711e4b0">Player / Character Sheet</mention> when needed for the interaction.
-3. <b>Know your role and environment:</b> determine whether you are acting as a general AI collaborator, a Builder or a Crew Persona. Model names are tools, not fixed job descriptions. In a chat you never change structure; that happens only in a Builder environment (Operating Manual G21).
+3. <b>Know your role and environment:</b> determine whether you are acting as a general AI collaborator, a Builder or a Crew Persona. Model names are tools, not fixed job descriptions. Structural changes happen in a Builder environment (Hacker, with elevated access) or from Gibbs's chat aligned live with Odara; heavy work (bulk, automations, GitHub) goes to Hacker (Operating Manual G21).
 4. <b>Verify before claiming:</b> read the actual source, check access/tool availability and distinguish proposed, approved, implemented and validated.
 5. <b>Act within authority:</b> the Operating Manual governs edits, sharing, external commitments, sensitive information and deletion.
 6. <b>Leave continuity:</b> with authorization, update the existing canonical home in place; provide a clear handoff if another agent must continue.
@@ -76,15 +75,15 @@ Odara is the primary player and final decision-maker for meaningful choices abou
 
 Builder responsibilities include documentation architecture, tools, technical foundations, integrations, quality checks and repair.
 
-<b>A Builder is an environment, not a chat or a Persona.</b> Structural work happens only in <b>Claude Code</b> or <b>Codex</b>, which can run long multi-step changes, verify them and version them in GitHub. Chats (Claude, ChatGPT) are where Odara lives with the Crew: conversations, decisions, Persona work and each Persona's own Sources of Truth. Either model may build, as long as it does so from a Builder environment.
+<b>Who builds (G21, 26 Nov 2026).</b> <b>Gibbs</b> owns Notion structure and can change it from his Claude chat, aligned live with Odara, logging each change in the Session Log. <b>Hacker</b> works in <b>Claude Code</b> or <b>Codex</b> with elevated access: structural sessions, GitHub, bulk changes, automations, the Captain's Deck and anything Gibbs hands him. Other chats (Claude, ChatGPT) are where Odara lives with the Crew: conversations, decisions, Persona work and each Persona's own Sources of Truth.
 
 <p>
 <b>Builders at a glance:</b> 
 </p>
 
-- 🖥️ <mention url="https://app.notion.com/p/3fe107b19b4980aaabbee3096706ac52">Hacker, The Good</mention> (works in Claude Code) leads infrastructure and structural construction: documentation architecture, databases, shared surfaces, integrations, technical health, scheduled tasks and GitHub. The former Mayor role was absorbed here; legacy pages that mention Mayor now mean Hacker.
-- 🎨 <mention url="https://app.notion.com/p/3fe107b19b4980f6addcec870cbe6619">Chatty, The Designer</mention> is the Art Director: experience, visual direction and narrative, designed with Odara in chat; structural implementation of her designs happens in a Builder environment (“Experience Director” and “Art Director / ChatGPT” are older names for the same role).
-- Both Builders are registered in <mention url="https://app.notion.com/p/3fe107b19b4980979bc6ccfd5c1a2c4b" type="database">Crew Mapping</mention>.
+- 🖥️ <mention url="https://app.notion.com/p/3fe107b19b4980aaabbee3096706ac52">Hacker, The Good</mention> (works in Claude Code) leads infrastructure and structural construction: documentation architecture, databases, shared surfaces, integrations, technical health, scheduled tasks and GitHub. Reports to Gibbs. The former Mayor role was absorbed here; legacy pages that mention Mayor now mean Hacker.
+- 🎨 Experience direction (narrative, art, UX) is led by Lori since 25 Nov 2026; <mention url="https://app.notion.com/p/3fe107b19b4980f6addcec870cbe6619">Chatty, The Designer</mention> is now her pet (26 Nov 2026).
+- Roles are registered in <mention url="https://app.notion.com/p/3fe107b19b4980979bc6ccfd5c1a2c4b" type="database">Crew Mapping</mention>.
 
 <b>Authority:</b> <mention url="https://app.notion.com/p/3fe107b19b4980979bc6ccfd5c1a2c4b" type="database">Crew Mapping</mention> governs role assignments. Model ≠ Persona ≠ ownership. The currently documented edit permissions remain in <mention url="https://app.notion.com/p/3aa107b19b4981079aaecf1f72b1bb98">Odyssey Operating Manual</mention>; future autonomy changes require explicit approval.
 </callout>
@@ -107,8 +106,6 @@ Odara has historically used <b>Claude</b> heavily for structural, analytic and c
 
 <b>Plans reported for the current workflow:</b> Claude Pro and ChatGPT Plus. These are account context, not guarantees of access to a connector, feature, quota or specialized tool. Model plans, tools and capabilities change; verify the active session and choose the tool suited to the task. Both systems can assist with rational and emotional aspects without being cast as opposites.
 </toggle>
-
-<p />
 </column>
 </columns>
 
@@ -134,13 +131,13 @@ Current instructions, principles, Persona definitions and canonical project reco
 </column>
 <column ratio="50">
 <callout icon="💾" color="gray_bg">
-<b>GitHub — Code & potential backup</b>
+<b>GitHub — Backup, archive & code</b>
 
 [odarambmenezes/odyssey](https://github.com/odarambmenezes/odyssey)
 
-<b>Documented workflow:</b> manually updated after structural sessions, not synchronized live with Notion. The Operating Manual (G16) names it as a fallback <b>when Notion is unavailable</b>, not a competing current source.
+<b>Workflow (since 19 Nov 2026):</b> Gibbs's structural changes from chat are listed in the Session Log and synced here by Hacker; every structural session in a Builder environment ends with a fresh Notion snapshot (core pages and database schemas), a CHANGELOG entry and one commit, so structure is versioned and drift is visible. It also holds the offline Odyssey archive and the Builder instructions. A fallback <b>when Notion is unavailable</b> (G16), never a competing current source.
 
-<b>Technical custodian:</b> Hacker, The Good / authorized Builders. <b>Unverified:</b> repository contents, most recent update, completeness and ability to restore. Do not report a successful backup without checking those facts.
+<b>Technical custodian:</b> Hacker, The Good. <b>Verified 19 Nov 2026:</b> read and write access, first snapshot and archive on main. <b>Not yet tested:</b> restoring from the snapshot. Not included: Diário, health, finance and Persona pages (G22).
 </callout>
 </column>
 </columns>
@@ -153,84 +150,18 @@ Notion is the primary live documentation. GitHub is not a verified real-time mir
 
 ### 🗺️ One concept, one home
 
-<table header-row="true">
-<colgroup>
-<col width="371.99998474121094" />
-<col width="322.3522644042969" />
-</colgroup>
-<tr>
-<td>
-Need
-</td>
-<td>
-Canonical destination
-</td>
-</tr>
-<tr>
-<td>
-Purpose, values, experience principles
-</td>
-<td>
-<mention url="https://app.notion.com/p/3fe107b19b49805c9585dc8b9b21c8f6">01 A Bússula</mention>
-</td>
-</tr>
-<tr>
-<td>
-Universal AI rules, permission boundaries
-</td>
-<td>
-<mention url="https://app.notion.com/p/3aa107b19b4981079aaecf1f72b1bb98">Odyssey Operating Manual</mention>
-</td>
-</tr>
-<tr>
-<td>
-Interaction preferences of the player
-</td>
-<td>
-<mention url="https://app.notion.com/p/3aa107b19b4981b192b1fc071711e4b0">Player / Character Sheet</mention>
-</td>
-</tr>
-<tr>
-<td>
-Architecture, coordination, integration model
-</td>
-<td>
-<b>02 · O Navio (this page)</b>
-</td>
-</tr>
-<tr>
-<td>
-Visual identity, typography, assets
-</td>
-<td>
-<mention url="https://app.notion.com/p/3fe107b19b49800f8af1f79ebedd1f20">03 A Paisagem </mention>
-</td>
-</tr>
-<tr>
-<td>
-Persona definitions, roles, domain ownership
-</td>
-<td>
-<mention url="https://app.notion.com/p/3fe107b19b49800e9135e9e895749250">04 AI Crew & Skills</mention>
-</td>
-</tr>
-<tr>
-<td>
-History, logs and lessons — not a permanent archive of retired documentation
-</td>
-<td>
-<mention url="https://app.notion.com/p/3fe107b19b4980a3b94de83b692dd5fb">05 A Jornada</mention>
-</td>
-</tr>
-<tr>
-<td>
-Live operational state: open obligations, shopping, birthdays
-</td>
-<td>
-<mention url="https://app.notion.com/p/416107b19b4981f4beeeecc87e51b8bd">06 O Hoje</mention>
-</td>
-</tr>
-</table>
+| Need | Canonical destination |
+| --- | --- |
+| Purpose, values, experience principles | 01 A Bússula |
+| Universal AI rules, permission boundaries | Odyssey Operating Manual |
+| Interaction preferences of the player | Player / Character Sheet |
+| Architecture, coordination, integration model | 02 · O Navio (this page) |
+| Visual identity, typography, assets | 03 A Paisagem |
+| Persona definitions, roles, domain ownership | 04 AI Crew & Skills |
+| History, logs and lessons — not a permanent archive of retired documentation | 05 A Jornada |
+| Live operational state: open obligations, shopping, birthdays | 06 O Hoje |
+
+(Rendered in Notion as a table with page mentions.)
 
 <callout icon="📜" color="blue_bg">
 ### THE CODE — Live documentation, not a dump
@@ -278,8 +209,8 @@ Follow the documented instruction hierarchy and identify the canonical owner. Wi
 <toggle heading="h3">
 🔎 Maintenance, provenance & legacy reconciliation
 
-- <b>Permission:</b> the authoritative G20/G21 rules live in the <mention url="https://app.notion.com/p/3aa107b19b4981079aaecf1f72b1bb98">Odyssey Operating Manual</mention>, not in a duplicate rulebook here.
-- <b>History:</b> Significant session records and lessons belong in <mention url="https://app.notion.com/p/3fe107b19b4980a3b94de83b692dd5fb">05 A Jornada</mention>. Retired source documents leave Odyssey after the G21 checks and Odara's decision. Important decisions are recorded in the Session Log (see the Operating Manual glossary).
+- <b>Permission:</b> the authoritative G20/G21 rules live in the Odyssey Operating Manual, not in a duplicate rulebook here.
+- <b>History:</b> Significant session records and lessons belong in 05 A Jornada. Retired source documents leave Odyssey after the G21 checks and Odara's decision. Important decisions are recorded in the Session Log (see the Operating Manual glossary).
 - <b>Reconciliation method:</b> inventory → choose owner/destination → classify confirmed/provisional/superseded → propose/approve → validate links and behavior → preserve superseded records appropriately. No silent deletion.
 - <b>Source check:</b> use the live Operating Manual and the canonical pillar/Skills Mapping pages. Former Notion Playbook and legacy Codex are retired and must not be consulted as operational sources.
 - <b>Cleanup:</b> correct drift when authorized; otherwise flag it for the established project reconciliation workflow. Avoid spawning another page or backlog.
@@ -316,7 +247,14 @@ Target experience: Odara opens one chat and asks for the Cap, another Persona or
 
 <b>Minimum useful handoff:</b> objective · current status · relevant links/SoT · decisions already approved · next action · blocker/owner. Keep it short; avoid reproducing sensitive material or entire chat transcripts.
 
-<b>Handoffs between agents:</b> two skills, <b>Leave a Note for a Persona</b> and <b>Hand Off to Persona</b>, are the intended mechanism (both On Draft, to be tested when the Personas are reactivated), so this is <b>not an active automated handoff</b> yet. The board is kept tidy by a fortnightly clean-up run by Lori (skill Noticeboard Clean-up, process still to be designed). Notes have no expiry date: an unread limit applies instead, and notes are never deleted.
+<b>How work moves today (27 Nov 2026):</b>
+
+- <b>Tickets:</b> work for any Crew member is a row in Grab & Go. When a ticket needs Odara, it carries a deck of cards; she answers them in the Mesa Rápida (iPad) or the tickets panel, and the answers are saved inside the ticket. One checkout hands the round to Hacker, who distributes it through the Noticeboard.
+- <b>Captain's Deck:</b> Odara's home window. Its chat rooms let Personas answer and, when she asks, create tasks, tickets, notes or Session Log decisions. Replies come from Claude inside the Deck, speaking as the Persona; they are not the Persona's own chat.
+- <b>Slack:</b> a workspace with one channel per area exists for future notifications. Nothing posts to it automatically yet.
+- <b>Automations:</b> none running. The Crew runner and Lori's weekly clean-up are paused scheduled tasks; nothing spends Claude usage on a timer.
+
+Notes have no expiry date: an unread limit applies instead, and notes are never deleted.
 
 <toggle heading="h3">
 🔧 Cross-model asset exchange — an open integration need
@@ -332,17 +270,18 @@ Desired behavior: assets stored at a verifiable address; Notion links to the can
 
 <b>One crucial distinction:</b> <b>Documented</b> is not necessarily <b>working</b>. These statuses guide what to verify before relying on a capability.
 
-<b>Operational permission:</b> reading, researching and drafting are generally available; editing, restructuring, sharing, scheduling and external commitments follow the <mention url="https://app.notion.com/p/3aa107b19b4981079aaecf1f72b1bb98">Odyssey Operating Manual</mention>. Do not treat future ideas about autonomous Builders as current authorization.
+<b>Operational permission:</b> reading, researching and drafting are generally available; editing, restructuring, sharing, scheduling and external commitments follow the Odyssey Operating Manual. Do not treat future ideas about autonomous Builders as current authorization.
 
 | Area | Current reading | Required check |
 | --- | --- | --- |
 | Notion as project SoT | Established practice | Page and connector access in the active session |
 | ChatGPT / Claude collaboration | Both used; coordination is manual or via shared records | Handoff readability and permissions |
 | Crew Noticeboard | Existing documented channel | Whether messages can be retrieved and followed up |
-| GitHub repository | Linked, technical use intended | Contents, access, last valid backup and sync method |
+| GitHub repository | Backup, archive and structure log active since 19 Nov 2026 (updated per Builder session) | Restore from the snapshot (not yet tested) |
 | Single-entry Persona routing | Concept / not validated | Persona fidelity, context, handoff and user effort |
 | Shared images / HTML review | Need identified; bridge not validated | Two-way file access and real screenshots |
-| Automations / scheduled work | Tool- and account-dependent | Actual active schedule, ownership, quotas and timezone |
+| Automations / scheduled work | None active (27 Nov 2026); Crew runner and weekly clean-up paused | Actual active schedule, ownership, quotas and timezone |
+| Captain's Deck, tickets panel, Mesa Rápida | Live (Claude artifacts, Odara's own connectors) | Read and write work through Notion; refresh is on open/focus |
 
 <toggle heading="h3">
 ⚙️ Practical learnings — verify before relying on them
@@ -367,19 +306,3 @@ Odyssey — Backlog de Tarefas
 </database>
 </content>
 </page>
-
-<parent-data-source-schema url="collection://3fe107b1-9b49-8063-81e6-000b78bf6c2f">
-The SQLite table definition for this page's parent data source. Use these column names and option values to set this page's properties, create sibling pages, or query the data source.
-These columns are read-only, so don't set them: "Last Update".
-<sqlite-table>
-CREATE TABLE IF NOT EXISTS "collection://3fe107b1-9b49-8063-81e6-000b78bf6c2f" (
-	url TEXT UNIQUE,
-	createdTime TEXT, -- ISO-8601 datetime string, automatically set. This is the canonical time for when the page was created.
-	"Pillar" TEXT, -- one of ["Estrutura", "Experiencia", "Visual", "Execution", "Aprendizagem", "Presente"]
-	"Select" TEXT, -- one of ["To Reconcile", "Stuck", "In Progress", "Reconciliada", "Fechada"]
-	"Last Update" TEXT NOT NULL, -- ISO-8601 datetime string, automatically set. This is the canonical time for when the page was last edited.
-	"Purpose" TEXT,
-	"Name" TEXT
-)
-</sqlite-table>
-</parent-data-source-schema>

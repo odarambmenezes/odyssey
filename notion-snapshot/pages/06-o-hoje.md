@@ -5,9 +5,8 @@
 <ancestor-3-page url="https://app.notion.com/p/3aa107b19b49808bbf8cd2719803ed0d" title="Project Odyssey"/>
 </ancestor-path>
 <properties>
-{"Last Update":"2026-11-17T12:09:25.188Z","Name":"06 O Hoje","Pillar":"Presente","Purpose":"Shows where Odara stands right now — what is open, in motion or waiting on a decision — and is the home of the live bases the system reads and writes every day.","Select":"To Reconcile","url":"https://app.notion.com/p/416107b19b4981f4beeeecc87e51b8bd"}
+{"Last Update":"2026-11-27T23:01:25.739Z","Name":"06 O Hoje","Pillar":"Presente","Purpose":"Shows where Odara stands right now — what is open, in motion or waiting on a decision — and is the home of the live bases the system reads and writes every day.","Select":"Reconciliada","url":"https://app.notion.com/p/416107b19b4981f4beeeecc87e51b8bd"}
 </properties>
-<iconMetadata>{"type":"emoji","emoji":"📍"}</iconMetadata>
 <content>
 <callout icon="📍" color="blue_bg">
 <b>06 · O HOJE — The Living Present</b>
@@ -18,7 +17,7 @@ Odyssey already knows why it sails, how the ship works, what it looks like, who 
 
 <b>Purpose:</b> be the home of the living operational state that Odyssey reads and writes every day, and make it possible to understand that state without digging through databases.
 
-<b>Current readiness:</b> narrative and structure defined; relocation is partly done, and the sources listed here are <b>not yet connected into live views</b>. The three windows below are a designed surface, not real-time status indicators.
+<b>Current readiness (27 Nov 2026):</b> narrative and structure defined. The live window exists: the <b>Captain's Deck</b> reads the task Backlog, Grab & Go, the Noticeboard and Google Calendar when it opens or refreshes. Bases have not been relocated here; that remains a controlled migration.
 </callout>
 
 <quote color="green_bg">
@@ -44,9 +43,9 @@ Odyssey already knows why it sails, how the ship works, what it looks like, who 
 </callout>
 
 <callout icon="🧪" color="gray_bg">
-<b>DESIGNED VIEW · NOT CONNECTED YET</b>
+<b>LIVE IN THE CAPTAIN'S DECK · NOT ON THIS PAGE</b>
 
-These are the three questions the live surface must answer, using verified source data and a visible freshness signal. <b>No counts, statuses or urgency claims are being generated from this placeholder.</b>
+These are the three questions the live surface answers, using verified source data and a visible freshness signal. The Captain's Deck shows them ("Ponte", "Hoje" and "Riscos" widgets). <b>This page generates no counts, statuses or urgency claims itself.</b>
 </callout>
 
 <columns>
@@ -99,7 +98,7 @@ O Hoje gives living records a <b>clear address</b>. Its first residents are alre
 
 | Living source | Steward | Role in the present |
 | --- | --- | --- |
-| <mention url="https://app.notion.com/p/c72071d037784ba5b6308c82a5a36d07" type="database">Odyssey — Backlog de Tarefas</mention> | Gibbs (GM in interim custody) | Open obligations, quests, recurrence and deadlines |
+| <mention url="https://app.notion.com/p/c72071d037784ba5b6308c82a5a36d07" type="database">Odyssey — Backlog de Tarefas</mention> | Gibbs | Open obligations, quests, recurrence and deadlines |
 | <mention url="https://app.notion.com/p/9adfc4b8cd10447d94cc7754a1c0231c" type="database">Odyssey — Shopping List</mention> | Yaikes | Things to buy and their current status |
 | <mention url="https://app.notion.com/p/3af107b19b4981959168f487a7dca9ee">Aniversários dos Amigos (Birthday Alert)</mention> | Lori | Timely relationship reminders |
 | <mention url="https://app.notion.com/p/8479aaff21b5456abc2deb61df7ce8fa" type="database">Odyssey — Diário Pessoal (Mood, Decisões &amp; Highlights)</mention> | Lori | Today's reflections, mood and highlights |
@@ -158,9 +157,9 @@ Even without a dashboard, this page gives the live system a coherent address.
 <callout icon="⚓" color="gray_bg">
 <b>Captain's Deck / Command Center · The window</b>
 
-The future iPad-friendly interface selects and displays just the timely pieces, offers quick navigation and actions, and points back to the actual sources.
+Live since 26 Nov 2026 as a Claude artifact, iPad-friendly: it selects and displays just the timely pieces, offers quick navigation and actions, and points back to the actual sources. Linked from the Project Odyssey home.
 
-<b>It is not a second database.</b> Its MVP and production versions should be able to share the same source model.
+<b>It is not a second database.</b> It reads and writes the same Notion sources; refresh is on open, on focus or every 5–30 minutes, and uses no Claude runs.
 </callout>
 </column>
 </columns>
@@ -174,7 +173,7 @@ The future iPad-friendly interface selects and displays just the timely pieces, 
 - <b>O Hoje is the name</b> and is the <b>sixth pillar</b> at the same level as the first five.
 - <b>Today is for what is open.</b> Meaningful completed history belongs to A Jornada, not an accumulating dump on this page.
 - <b>The pillar displays state, not policy.</b> Recurrence/closing rules belong to the existing operating rules and respective owners.
-- <b>Gibbs is steward of the Backlog's structure and hygiene</b>; every task still belongs to its domain Persona. <b>Gibbs is in Screening</b> in the Crew registry; <b>GM holds interim custody</b> until there is an active, validated steward.
+- <b>Gibbs is steward of the Backlog's structure and hygiene</b> (Active in the Crew registry); every task still belongs to its domain Persona.
 - <b>One-glance test:</b> if this page becomes only a list of database links, it has missed its reason to exist. Its primary surface is the Current Tide.
 - <b>No unapproved scope changes:</b> adding new source types, moving domain boundaries or changing these principles returns to Odara.
 
@@ -187,123 +186,11 @@ The future iPad-friendly interface selects and displays just the timely pieces, 
 
 <b>Other signals of the present:</b> consider only when they answer the one-glance question more accurately, without creating new tracking obligations or overlapping another Source of Truth.
 
-<b>Next implementation pass:</b> test filtered live views for attention / motion / waiting, validate source freshness and owner permissions, then evaluate moving the seven identified databases one at a time. Check the Bom Dia dependencies and the previously reported failures before saying the system is reliable.
+<b>Next implementation pass:</b> evaluate moving the task Backlog and the Shopping List here, one at a time, checking the Bom Dia dependencies and the previously reported failures first. The Bom Dia registers already live in their workflow and do not move.
 
-<b>Current limitations:</b> no automatic real-time refresh, end-to-end daily workflow validation, or migration of the seven sources is evidenced by this page.
+<b>Current limitations:</b> no end-to-end daily workflow validation and no migration of the bases is evidenced by this page.
 </toggle>
 
-<toggle heading="h3">
-📜 Founding brief — preserved from 12 Nov 2026
-
-This is the original handoff and scope record. The six approved decisions above remain authoritative; implementation ideas inside the historical brief are not proof of deployment.
-
-<callout icon="🚧" color="yellow_bg">
-<b>Página de setup — a narrativa ainda não foi escrita.</b>
-
-O que está aqui é <b>briefing</b>, não é o conteúdo final. A direção e a narrativa deste pilar são trabalho do Chatty (ChatGPT), a pedido da Odara em 12/11/2026.
-
-O conceito, o nome e as fronteiras já estão aprovados. O que falta é a voz.
-</callout>
-
-## 🧩 O problema que este pilar resolve
-
-O Odyssey tem cinco pilares e nenhum deles é a vida da Odara <b>como ela está hoje</b>. Todos falam do sistema: por que ele existe, como foi construído, como se parece, quem o opera, o que já aconteceu.
-
-A consequência prática é que o <b>dado vivo</b> — o que o sistema lê e escreve todo dia — nunca teve casa. E dado sem casa se perde:
-
-- O Backlog de Tarefas estava dentro de <b>🗂️ Archive / To be trashed</b> e foi resgatado em 11/11/2026. Hoje está na última linha do <mention url="https://app.notion.com/p/40c107b19b498031b5e5f5fa01cc84b6">02 O Navio</mention>, onde a Odara não acha.
-- Os três Registros do Bom Dia estão <b>fora do projeto</b>, no topo do workspace.
-- Isso causou aproximadamente <b>40 execuções falhas</b> do Bom Dia Claude, com erros de "base inacessível". Uma obrigação 🔺 de status legal venceu sem nunca aparecer.
-
-O diagnóstico: essas bases não são documentação (os pilares) nem conhecimento de domínio (o Source of Truth Mapping). São <b>estado</b>. E estado precisava de um lugar.
-
-## 🧭 A ideia
-
-<quote color="blue_bg">
-<b>A Bússola é para onde eu vou. A Jornada é o rastro atrás do navio. O Hoje é onde o navio está agora.</b>
-</quote>
-
-| Pilar | Responde |
-| --- | --- |
-| <mention url="https://app.notion.com/p/3fe107b19b49805c9585dc8b9b21c8f6">01 A Bússula</mention> | por quê |
-| <mention url="https://app.notion.com/p/40c107b19b498031b5e5f5fa01cc84b6">02 O Navio</mention> | como é construído |
-| <mention url="https://app.notion.com/p/3fe107b19b49800f8af1f79ebedd1f20">03 A Paisagem </mention> | como se parece |
-| <mention url="https://app.notion.com/p/3fe107b19b49800e9135e9e895749250">04 AI Crew & Skills</mention> | quem |
-| <mention url="https://app.notion.com/p/3fe107b19b4980a3b94de83b692dd5fb">05 A Jornada</mention> | o que já aconteceu |
-| <b>06 O Hoje</b> | <b>onde eu estou</b> |
-
-<callout icon="📱" color="blue_bg">
-<b>O Command Center é a janela do Hoje.</b>
-
-O painel que a Odara quer rodando num iPad sempre aceso é a cara visual deste pilar. Era por isso que ele nunca encaixava em lugar nenhum — era a interface de uma coisa que não existia ainda.
-</callout>
-
-## ✅ O que já está decidido — não reabrir
-
-1. <b>Nome: O Hoje.</b> Escolhido pela Odara.
-2. <b>É o sexto pilar</b>, no mesmo nível dos outros cinco. Não é subpágina de ninguém.
-3. <b>Fechou, virou Jornada.</b> O Hoje guarda só o que está aberto. Histórico não acumula aqui.
-4. <b>O Hoje mostra, não decide.</b> As regras de fechamento e recorrência vivem nas Skills ativas <mention url="https://app.notion.com/p/415107b19b4981988fe3fde17d3bd1d0">Marca como feito</mention> e <mention url="https://app.notion.com/p/415107b19b4981fe822dd169b7baeb68">O que tá pendente</mention>, em 04 AI Crew & Skills; o Codex antigo está aposentado. Aqui é estado, não lei.
-5. <b>O Backlog é do Gibbs</b>, o Quartermaster — quem cuida dos mantimentos e dos livros do navio. Mas o Backlog é cross-domain: <b>Gibbs é dono do livro</b> (schema, higiene, prazos serem verdade) e <b>cada linha responde à persona do domínio</b>. Dentista é da Calê, maiô é da Lola com o Yaikes, contrato é do Clau.
-6. <b>O teste do pilar:</b> se esta página só tiver uma lista de links de banco de dados, é gaveta com nome bonito. Ela só se justifica se responder "onde eu estou agora?" numa olhada.
-
-## 📦 O que vai morar aqui
-
-| Base | Dono | Onde está hoje |
-| --- | --- | --- |
-| <mention url="https://app.notion.com/p/c72071d037784ba5b6308c82a5a36d07" type="database">Odyssey — Backlog de Tarefas</mention> | Gibbs | fim do 02 O Navio |
-| <mention url="https://app.notion.com/p/9adfc4b8cd10447d94cc7754a1c0231c" type="database">Odyssey — Shopping List</mention> | Yaikes | 04 AI Crew & Skills / Skills, Workflows and Automations |
-| <mention url="https://app.notion.com/p/3af107b19b4981959168f487a7dca9ee">Aniversários dos Amigos (Birthday Alert)</mention> | Lori | solta |
-| <mention url="https://app.notion.com/p/8479aaff21b5456abc2deb61df7ce8fa" type="database">Odyssey — Diário Pessoal (Mood, Decisões &amp; Highlights)</mention> | Lori | 04 AI Crew & Skills / Lori, The Keeper |
-| <mention url="https://app.notion.com/p/d0b4bec77b2f4297b25d1f2aed300072" type="database">Registro de Cartas</mention> | GM / Bom Dia | 04 AI Crew & Skills / Bom Dia Claude |
-| <mention url="https://app.notion.com/p/38ff8a5679304531af0ed5e4a0d4bd2c" type="database">Registro de Temas</mention> | GM / Bom Dia | 04 AI Crew & Skills / Bom Dia Claude |
-| <mention url="https://app.notion.com/p/e07163015bd3472f943aa2ef3f0bc815" type="database">Registro de Ações Rápidas</mention> | GM / Bom Dia | 04 AI Crew & Skills / Bom Dia Claude |
-
-<b>Localização verificada em 13/11:</b> Backlog está em 02 O Navio; Shopping List em 04 AI Crew & Skills; Diário Pessoal sob Lori; Registro de Cartas, Temas e Ações Rápidas estão reunidos dentro de Bom Dia Claude em 04 AI Crew & Skills. Essas bases <b>ainda não foram transferidas para 06 O Hoje</b>; eventual migração é um serviço separado que exige planejamento e verificação dos workflows. A localização da página Aniversários requer checagem específica.
-
-## 🎨 O que precisamos de você, Chatty
-
-A estrutura está de pé. O que falta é o que você faz melhor:
-
-- <b>A voz e a narrativa da página</b> — no mesmo registro dos outros cinco pilares, mas sem copiar nenhum deles. O Hoje é o pilar mais próximo do corpo: não é arquitetura, é a vida da Odara agora.
-- <b>Como esta página responde "onde eu estou agora?"</b> numa olhada — as 🔺 dela, o que está em movimento, o que está travado esperando decisão. Isso é o conteúdo próprio que impede a página de virar gaveta.
-- <b>A relação narrativa com o Command Center</b> — se o painel é a janela, o que a página mostra que a janela não mostra, e vice-versa.
-- <b>O que mais pertence ao presente</b> além das bases listadas. Essa pergunta está aberta de propósito.
-
-## ❓ Em aberto
-
-- <b>Idioma.</b> Os outros cinco pilares estão em inglês. Este briefing está em português porque é material de trabalho. A página final provavelmente deve seguir os outros, mas é escolha da Odara.
-- <b>Gibbs está em </b><b><code>Screening</code></b>, não <code>Active</code>. Enquanto isso, o GM segura o Backlog em custódia. Precisa estar escrito, senão o dono é um nome sem ninguém atrás.
-- <b>Grab & Go</b> é uma segunda base de tarefas, de construção do próprio projeto. Não foi decidido se pertence ao Hoje ou à Jornada.
-- <b>Session Log</b> fica na Jornada, onde já está. Não migra.
-
-## ⚖️ Governança
-
-Pela regra G21, mudança estrutural é decisão da Odara. Ela aprovou o conceito, o nome e as fronteiras na conversa de 12/11/2026. Qualquer mudança de escopo — incluir outro tipo de conteúdo, mexer na fronteira com a Jornada, renomear — volta para ela.
-
-O <mention url="https://app.notion.com/p/3fe107b19b4980d788f3dfea3689fbb5" type="database">Skills Mapping</mention> é onde as skills que leem e escrevem nessas bases estão registradas, caso precise entender o que depende de quê.
-</toggle>
-
-<page url="https://app.notion.com/p/419107b19b49811caa2bfffd696af21a">
-(Realinhar) Planejamento de Retiro
-</page>
-
-<p />
+<b>History:</b> the founding brief of 12 Nov 2026 is preserved in the Session Log (<mention url="https://app.notion.com/p/425107b19b49814499c0cc8fd5fd7376">06 O Hoje · founding brief (12 Nov 2026), moved from the live page</mention>); the retreat plan now lives with <mention url="https://app.notion.com/p/3fe107b19b4980809e73e3c5427afcb3">Lori, The Keeper</mention>.
 </content>
 </page>
-
-<parent-data-source-schema url="collection://3fe107b1-9b49-8063-81e6-000b78bf6c2f">
-The SQLite table definition for this page's parent data source. Use these column names and option values to set this page's properties, create sibling pages, or query the data source.
-These columns are read-only, so don't set them: "Last Update".
-<sqlite-table>
-CREATE TABLE IF NOT EXISTS "collection://3fe107b1-9b49-8063-81e6-000b78bf6c2f" (
-	url TEXT UNIQUE,
-	createdTime TEXT, -- ISO-8601 datetime string, automatically set. This is the canonical time for when the page was created.
-	"Pillar" TEXT, -- one of ["Estrutura", "Experiencia", "Visual", "Execution", "Aprendizagem", "Presente"]
-	"Select" TEXT, -- one of ["To Reconcile", "Stuck", "In Progress", "Reconciliada", "Fechada"]
-	"Last Update" TEXT NOT NULL, -- ISO-8601 datetime string, automatically set. This is the canonical time for when the page was last edited.
-	"Purpose" TEXT,
-	"Name" TEXT
-)
-</sqlite-table>
-</parent-data-source-schema>

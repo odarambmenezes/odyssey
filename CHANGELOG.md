@@ -2,6 +2,17 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-27 · Hacker (Claude Code) · documentation audit
+Odara asked for a last check that Notion is live documentation, not a dump. Approved as one batch ("lote ok").
+- **06 O Hoje → Reconciliada:** the text matches the real state (Captain's Deck is the live window; Gibbs is Active, no GM custody; only the task Backlog and the Shopping List remain to migrate). Founding brief of 12 Nov moved to the Session Log. https://app.notion.com/p/416107b19b4981f4beeeecc87e51b8bd
+- **Retreat plan** ("(Realinhar) Planejamento de Retiro") moved from inside 06 O Hoje to Lori, The Keeper, with a current status line. Consolidation of its content stays with Lori (Persona content). Not in this repository (G22).
+- **02 O Navio:** "UNDER AUDIT" removed; G21 wording includes Hacker's elevated access; Communication section describes how work moves today (tickets, Captain's Deck, Slack, no automations running); readiness table updated. https://app.notion.com/p/40c107b19b498031b5e5f5fa01cc84b6
+- **Crew Mapping:** Lori and Hacker Status set to Active.
+- **Test leftovers:** fictional shared-check answers, replies and the mention test ticket exported to `archive/notion-legacy/shared-check-test-pages_2026-11-27.md` and moved to Trash. Lori's deck pages kept.
+- **Finding:** "the untitled pages" around the Noticeboard are layout blocks of 02 O Navio, not pages. Lori's deck "Como a gente trabalha" (4 cards) lives only on a test page, so Mesa Rápida does not show it.
+- **Still open:** 05 A Jornada (Diary and Memory Log, with Lori).
+- Snapshot refreshed: `pages/02-o-navio.md`, `pages/06-o-hoje.md`. Session Log: https://app.notion.com/p/425107b19b498189b525d82f13acd917
+
 ## 2026-11-27 · Hacker (Claude Code)
 Captain's Deck MVP, ticket deep links, and the tickets v2 groundwork.
 - **Captain's Deck (home dashboard), approved by Odara:** https://claude.ai/artifact/QrhEpSQEGxgaM4voXoWUqf. Widgets on a snap grid (12/8/4 columns) that Odara drags, resizes, minimizes and removes; each screen size keeps its own layout, synced in the artifact's private per-user store. Reads Notion views (Tickets, Backlog Tasks and Quests, Crew Tree, Noticeboard Open, Source of Truth Mapping, Skills, Session Log, Architecture Overview) and Google Calendar (personal, Prazos, Rotinas, Tarefas, Travel). Home page section changed from "coming soon" to live; Grab & Go "Design the Captain's Deck MVP on the home page" closed with Proof.
