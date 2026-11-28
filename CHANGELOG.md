@@ -2,6 +2,12 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-28 · Hacker (Claude Code) · room mode for Persona chats
+From Lori's ticket "Reconcile Open a Room with @ with the Persona handoff workflow" (https://app.notion.com/p/426107b19b498178aa4fff9519ce7901), approved by Odara.
+- **Hand Off to Persona** gains a room mode ("abrir sala com @Lola e @Cap"): each Persona reads its page and inbox first, labeled messages, each from its own sources, writes only on Odara's ask (G21), continuation through the Noticeboard, a closing line per Persona. Status On Draft → Active; Mission, Trigger and Use Cases updated.
+- Ticket: comparison of chat rooms and Captain's Deck rooms; In Progress until one live test.
+- Session Log: https://app.notion.com/p/426107b19b49819daf60ff9e21d360ae . Snapshot: `skills/hand-off-to-persona.md` (changed sections).
+
 ## 2026-11-28 · Hacker (Claude Code) · cards become the main decision skill
 After the gym session (15 tickets, "nem vi a hora passar"), Odara made the card system Odyssey's main way to ask her for decisions and froze the tickets panel MVP until Lori's v2 is approved. The Captain's Deck dashboard is a separate track.
 - **Operating Manual:** G18 gains "Asking for her decisions: cards first"; glossary gains "Ticket".
