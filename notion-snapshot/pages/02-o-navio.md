@@ -249,7 +249,7 @@ Target experience: Odara opens one chat and asks for the Cap, another Persona or
 
 <b>How work moves today (27 Nov 2026):</b>
 
-- <b>Tickets:</b> work for any Crew member is a row in Grab & Go. When a ticket needs Odara, it carries a deck of cards; she answers them in the Mesa Rápida (iPad) or the tickets panel, and the answers are saved inside the ticket. One checkout hands the round to Hacker, who distributes it through the Noticeboard.
+- <b>Tickets (the main way to ask Odara for decisions, 28 Nov 2026):</b> work for any Crew member is a row in Grab & Go. When a ticket needs her decision, it carries a deck of cards (Check Interativo skill). She answers in the tickets panel, anywhere; when she finishes a ticket, the panel saves the answers in it, marks it answered and delivered, and leaves a Noticeboard note for whoever asked. There is no checkout and no copy-paste. The panel's MVP is frozen until Lori's v2 is approved.
 - <b>Captain's Deck:</b> Odara's home window. Its chat rooms let Personas answer and, when she asks, create tasks, tickets, notes or Session Log decisions. Replies come from Claude inside the Deck, speaking as the Persona; they are not the Persona's own chat.
 - <b>Slack:</b> a workspace with one channel per area exists for future notifications. Nothing posts to it automatically yet.
 - <b>Automations:</b> none running. The Crew runner and Lori's weekly clean-up are paused scheduled tasks; nothing spends Claude usage on a timer.

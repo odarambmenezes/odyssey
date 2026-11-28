@@ -2,6 +2,15 @@
 
 Every structural change to Project Odyssey is logged here by the Builder session that made it (Operating Manual G21). Newest first. Decisions are also recorded in Notion's Session Log.
 
+## 2026-11-28 · Hacker (Claude Code) · cards become the main decision skill
+After the gym session (15 tickets, "nem vi a hora passar"), Odara made the card system Odyssey's main way to ask her for decisions and froze the tickets panel MVP until Lori's v2 is approved. The Captain's Deck dashboard is a separate track.
+- **Operating Manual:** G18 gains "Asking for her decisions: cards first"; glossary gains "Ticket".
+- **Check Interativo skill** rewritten in place around tickets: opening a ticket, card rule, what the panel writes back (answers, Answered on, Delivered on, Noticeboard note), how the Persona picks up. Properties updated (Mission, Trigger, Use Cases, Documentação = tickets panel, Last real run 28/11).
+- **Grab & Go:** description and the "Delivered on" field no longer mention the checkout.
+- **02 O Navio:** the Tickets bullet describes the current flow.
+- **Mesa do Capitão v2 ticket:** what works in the MVP and must stay; Lori leads v2 in a separate project with Odara.
+- Session Log: https://app.notion.com/p/426107b19b498163b9b4eaa87034dafc . Snapshot: `00-operating-manual.md`, `02-o-navio.md`, `skills/check-interativo.md`, `schema/grab-and-go.json`.
+
 ## 2026-11-28 · Hacker (Claude Code)
 - **Tickets panel navigation** (https://claude.ai/artifact/3JAv7SUbpTZDeTTHQeSCQg, version 9), after Odara's report that the counters did nothing: each counter (com cartas, para você fazer, com a tripulação, travados, ideias, fechados, checkout) is now a button that filters the list to that lane, with "← Todos os tickets" to go back; the header count opens the cards filter; checkout always opens and explains when it is empty; every screen is a route (#f-<lane>, #tudo, #checkout, #t-<id>), so the browser's back gesture works and "← Tickets" keeps the active filter. Merged on top of the small-screen layout another session published the same morning.
 - **Tickets panel, start menu and cards mode** (version 10), for answering on the go: the panel opens on a menu (Responder cartas, Para você fazer, Com a tripulação, Checkout, with counts); choosing one opens that lane full screen with "← Menu"; the cards mode keeps the screen on where the browser allows. Reliability: every answer is kept as a draft on the device until Notion confirms it and is recovered if the tab closes; a save retries by itself up to three times on a weak signal.

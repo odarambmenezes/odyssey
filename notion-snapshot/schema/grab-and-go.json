@@ -71,7 +71,7 @@
       "type": "date"
     },
     "Delivered on": {
-      "description": "Set by the Check panel checkout when Odara pastes the report to Hacker. Answered and not delivered = waiting in checkout.",
+      "description": "Set by the tickets panel together with Answered on when Odara finishes every card; the panel then leaves a Noticeboard note for whoever asked.",
       "name": "Delivered on",
       "querySqlColumns": {
         "columns": [
