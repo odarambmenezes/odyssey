@@ -5,7 +5,7 @@ Every structural change to Project Odyssey is logged here by the Builder session
 ## 2026-11-28 · Hacker (Claude Code) · room mode for Persona chats
 From Lori's ticket "Reconcile Open a Room with @ with the Persona handoff workflow" (https://app.notion.com/p/426107b19b498178aa4fff9519ce7901), approved by Odara.
 - **Hand Off to Persona** gains a room mode ("abrir sala com @Lola e @Cap"): each Persona reads its page and inbox first, labeled messages, each from its own sources, writes only on Odara's ask (G21), continuation through the Noticeboard, a closing line per Persona. Status On Draft → Active; Mission, Trigger and Use Cases updated.
-- Ticket: comparison of chat rooms and Captain's Deck rooms; In Progress until one live test.
+- Ticket: comparison of chat rooms and Captain's Deck rooms. Live test the same evening (Odara opened the Project Hong Kong room: "funcionou sim! ficou ótimo"); ticket closed as Done with the room's home page as Proof; Hand Off to Persona Last real run 28/11.
 - Session Log: https://app.notion.com/p/426107b19b49819daf60ff9e21d360ae . Snapshot: `skills/hand-off-to-persona.md` (changed sections).
 - **Saved rooms (same evening):** new Backlog quest **Project Hong Kong** (Travel, Em Andamento, next deadline 28/12) as the trip's home and its room's home: members Odara, Lori (host), Cap and Marty, how to host, current state (https://app.notion.com/p/426107b19b4981e58f5bdf10619e6ea4). Hand Off to Persona gets a saved-rooms table ("me conecta na sala do projeto HK"); Manual glossary gets "Room (sala)"; the Hong Kong bucket-list page points to the project; Noticeboard announcement to Lori, Cap and Marty. Session Log: https://app.notion.com/p/426107b19b49815ea3ddcbb54a3ba470 .
 
