@@ -4,6 +4,7 @@ Every structural change to Project Odyssey is logged here by the Builder session
 
 ## 2026-11-28 · Hacker (Claude Code)
 - **Tickets panel navigation** (https://claude.ai/artifact/3JAv7SUbpTZDeTTHQeSCQg, version 9), after Odara's report that the counters did nothing: each counter (com cartas, para você fazer, com a tripulação, travados, ideias, fechados, checkout) is now a button that filters the list to that lane, with "← Todos os tickets" to go back; the header count opens the cards filter; checkout always opens and explains when it is empty; every screen is a route (#f-<lane>, #tudo, #checkout, #t-<id>), so the browser's back gesture works and "← Tickets" keeps the active filter. Merged on top of the small-screen layout another session published the same morning.
+- **Tickets panel, start menu and cards mode** (version 10), for answering on the go: the panel opens on a menu (Responder cartas, Para você fazer, Com a tripulação, Checkout, with counts); choosing one opens that lane full screen with "← Menu"; the cards mode keeps the screen on where the browser allows. Reliability: every answer is kept as a draft on the device until Notion confirms it and is recovered if the tab closes; a save retries by itself up to three times on a weak signal.
 
 ## 2026-11-27 · Hacker (Claude Code) · documentation audit
 Odara asked for a last check that Notion is live documentation, not a dump. Approved as one batch ("lote ok").
