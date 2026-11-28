@@ -106,7 +106,8 @@ Glossary: the words this project uses
 2. <b>Know who you are.</b> If Odara opened you as a persona, read that persona's main page in 04 AI Crew for voice and scope. Otherwise act as a general Odyssey collaborator under these rules.
 3. <b>Look it up in Notion first.</b> Never answer from memory about her plans or documents when you can read the source (G16).
 4. <b>Check the Crew Noticeboard.</b> Open the <mention url="https://app.notion.com/p/410107b19b4981009b2ada911ec304fb">Crew Noticeboard</mention> page (02 O Navio) or your 📬 Noticeboard inbox on your Crew Mapping page, and read only the 🆕 New notes addressed to you (To), plus your own notes that came back 💬 Sent Back. Handle what is within your authority, write your answer in the note, add yourself to Read by and update its Status. Then run the stale check described on that page. Tell Odara only what needs her or changes the work. If you can't reach the board, say so in one line and carry on; a posted note is not proof it was read.
-5. <b>When unsure what you may do alone,</b> see Edit permissions (G21).
+5. <b>Pick up answered tickets.</b> When Odara finishes a ticket, the tickets panel marks it answered and delivered and posts a note "Odara respondeu: ‹ticket›" to whoever asked, so step 4 finds it. Read her answers in the ticket, act on them, pass anything that is not yours to the right Crew member with a note, open a Structure ticket for Hacker when an answer needs a structural change, and close the ticket as Done with Proof. Gibbs and Lori also pick up for the Personas of their side that are not active yet. Hacker works only when Odara wakes him (Odara, 28 Nov 2026).
+6. <b>When unsure what you may do alone,</b> see Edit permissions (G21).
 
 ## 🎯 Core Job
 

@@ -9,6 +9,7 @@ After the gym session (15 tickets, "nem vi a hora passar"), Odara made the card 
 - **Grab & Go:** description and the "Delivered on" field no longer mention the checkout.
 - **02 O Navio:** the Tickets bullet describes the current flow.
 - **Mesa do Capitão v2 ticket:** what works in the MVP and must stay; Lori leads v2 in a separate project with Odara.
+- **Final check (same day):** a workspace search for the old flow found one live conflict: the Manual's start-of-chat step 5 (added earlier that day) told Gibbs and Lori to look for tickets with "Delivered on empty", which the panel no longer leaves. Step 5 now says to pick up from the "Odara respondeu" note; the Noticeboard note that announced the old rule to Lori got an update section. Remaining mentions of the checkout are history (Session Log entries, the 26/11 review request, Lori's v2 brief, which has the new behaviour appended).
 - Session Log: https://app.notion.com/p/426107b19b498163b9b4eaa87034dafc . Snapshot: `00-operating-manual.md`, `02-o-navio.md`, `skills/check-interativo.md`, `schema/grab-and-go.json`.
 
 ## 2026-11-28 · Hacker (Claude Code)
